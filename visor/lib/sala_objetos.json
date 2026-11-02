@@ -1,0 +1,1332 @@
+{
+ "event_rl00": {
+  "objetos": [
+   {
+    "parte": 11,
+    "tex": 12,
+    "en": [],
+    "motivo": "rl escena 1 objeto 39 (Phenom, cnst 0x4d67d0)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "rl00a": {
+  "objetos": [
+   {
+    "parte": 7,
+    "tex": 1,
+    "en": [],
+    "motivo": "rl escena 1 objeto 85 (ObjDontMove, cnst 0x54b320)"
+   },
+   {
+    "parte": 8,
+    "tex": 1,
+    "en": [],
+    "motivo": "rl escena 1 objeto 85 (ObjDontMove, cnst 0x54b320)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "rl00b": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 1,
+    "en": [],
+    "motivo": "rl escena 1 objeto 85 (ObjDontMove, cnst 0x54b320)"
+   },
+   {
+    "parte": 6,
+    "tex": 1,
+    "en": [],
+    "motivo": "rl escena 1 objeto 85 (ObjDontMove, cnst 0x54b320)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "rl00c": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 1,
+    "en": [],
+    "motivo": "rl escena 1 objeto 85 (ObjDontMove, cnst 0x54b320)"
+   },
+   {
+    "parte": 6,
+    "tex": 1,
+    "en": [],
+    "motivo": "rl escena 1 objeto 85 (ObjDontMove, cnst 0x54b320)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "rl00d": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 1,
+    "en": [],
+    "motivo": "rl escena 1 objeto 85 (ObjDontMove, cnst 0x54b320)"
+   },
+   {
+    "parte": 6,
+    "tex": 1,
+    "en": [],
+    "motivo": "rl escena 1 objeto 85 (ObjDontMove, cnst 0x54b320)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "rl00e": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 1,
+    "en": [],
+    "motivo": "rl escena 1 objeto 85 (ObjDontMove, cnst 0x54b320)"
+   },
+   {
+    "parte": 6,
+    "tex": 1,
+    "en": [],
+    "motivo": "rl escena 1 objeto 85 (ObjDontMove, cnst 0x54b320)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "rl00h": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 1,
+    "en": [],
+    "motivo": "rl escena 1 objeto 85 (ObjDontMove, cnst 0x54b320)"
+   },
+   {
+    "parte": 6,
+    "tex": 1,
+    "en": [],
+    "motivo": "rl escena 1 objeto 85 (ObjDontMove, cnst 0x54b320)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "rl01a": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 1,
+    "en": [],
+    "motivo": "rl escena 2 objeto 1 (ObjDontMove, cnst 0x54b880)"
+   },
+   {
+    "parte": 6,
+    "tex": 1,
+    "en": [],
+    "motivo": "rl escena 2 objeto 4 (ItemEvent, cnst ?)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "rl03a": {
+  "objetos": [
+   {
+    "parte": 6,
+    "tex": 1,
+    "en": [],
+    "motivo": "rl escena 4 objeto 32 (ObjDontMove, cnst 0x54b910)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "fr07": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 6,
+    "en": [],
+    "motivo": "fr escena 7 objeto 4 (ObjDontMove, cnst 0x4df930)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "fr20": {
+  "objetos": [
+   {
+    "parte": 6,
+    "tex": 5,
+    "en": [
+     [
+      1220,
+      -210,
+      321.46,
+      0,
+      1
+     ],
+     [
+      1220,
+      -210,
+      330.343,
+      0,
+      2
+     ]
+    ],
+    "motivo": "fr escena 20 objeto 1 (ObjDontMove, cnst 0x4df560)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "fr22": {
+  "objetos": [
+   {
+    "parte": 6,
+    "tex": 5,
+    "en": [
+     [
+      -462.867,
+      -240,
+      604.773,
+      0,
+      1
+     ],
+     [
+      -462.867,
+      -240,
+      604.773,
+      0,
+      2
+     ]
+    ],
+    "motivo": "fr escena 22 objeto 2 (ObjDontMove, cnst 0x4df800)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "mz03": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": null,
+    "en": [
+     [
+      0,
+      0,
+      -85.567,
+      0,
+      1
+     ],
+     [
+      0,
+      0,
+      -85.567,
+      0,
+      2
+     ]
+    ],
+    "motivo": "mz escena 3 objeto 13 (ObjDontMove, cnst 0x4eb3d0)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "mz13": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": null,
+    "en": [
+     [
+      0,
+      0,
+      -85.567,
+      0,
+      1
+     ],
+     [
+      0,
+      0,
+      -85.567,
+      0,
+      2
+     ]
+    ],
+    "motivo": "mz escena 13 objeto 14 (ObjDontMove, cnst 0x4eb3f0)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "bd12": {
+  "objetos": [
+   {
+    "parte": 12,
+    "tex": 5,
+    "en": [
+     [
+      800,
+      -3200,
+      0,
+      0,
+      1
+     ],
+     [
+      800,
+      -3200,
+      0,
+      0,
+      2
+     ]
+    ],
+    "motivo": "bd escena 12 objeto 7 (ObjDontMove, cnst 0x4dd500)"
+   },
+   {
+    "parte": 14,
+    "tex": 7,
+    "en": [
+     [
+      800,
+      0,
+      510,
+      0,
+      1
+     ],
+     [
+      800,
+      -1600,
+      510,
+      0,
+      1
+     ],
+     [
+      800,
+      -3200,
+      510,
+      0,
+      1
+     ],
+     [
+      800,
+      -1600,
+      -510,
+      -3.14,
+      1
+     ],
+     [
+      800,
+      -3200,
+      -510,
+      -3.14,
+      1
+     ],
+     [
+      0,
+      0,
+      510,
+      0,
+      1
+     ],
+     [
+      0,
+      -1600,
+      510,
+      0,
+      1
+     ],
+     [
+      0,
+      -3200,
+      510,
+      0,
+      1
+     ],
+     [
+      0,
+      -1600,
+      -510,
+      -3.14,
+      1
+     ],
+     [
+      0,
+      -3200,
+      -510,
+      -3.14,
+      1
+     ],
+     [
+      800,
+      0,
+      510,
+      0,
+      2
+     ],
+     [
+      800,
+      -1600,
+      510,
+      0,
+      2
+     ],
+     [
+      800,
+      -3200,
+      510,
+      0,
+      2
+     ],
+     [
+      800,
+      -1600,
+      -510,
+      -3.14,
+      2
+     ],
+     [
+      800,
+      -3200,
+      -510,
+      -3.14,
+      2
+     ],
+     [
+      0,
+      0,
+      510,
+      0,
+      2
+     ],
+     [
+      0,
+      -1600,
+      510,
+      0,
+      2
+     ],
+     [
+      0,
+      -3200,
+      510,
+      0,
+      2
+     ],
+     [
+      0,
+      -1600,
+      -510,
+      -3.14,
+      2
+     ],
+     [
+      0,
+      -3200,
+      -510,
+      -3.14,
+      2
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4dcf10 (FUN_004cdd00): 10 objetos en bd12"
+   }
+  ],
+  "ocultar": {}
+ },
+ "ie01": {
+  "objetos": [
+   {
+    "parte": 6,
+    "tex": 1,
+    "en": [],
+    "motivo": "ie escena 1 objeto 7 (ObjDontMove, cnst 0x4e1ef0) — el modelo ya viene en coordenadas de la sala: se deja donde está"
+   },
+   {
+    "parte": 5,
+    "tex": 1,
+    "en": [],
+    "motivo": "ie escena 1 objeto 7 (ObjDontMove, cnst 0x4e1ef0) — el modelo ya viene en coordenadas de la sala: se deja donde está"
+   }
+  ],
+  "ocultar": {}
+ },
+ "ie05": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 1,
+    "en": [
+     [
+      0,
+      0,
+      0,
+      0,
+      1
+     ]
+    ],
+    "motivo": "ie escena 5 objeto 11 (ObjDontMove, cnst 0x4e2120)"
+   },
+   {
+    "parte": 6,
+    "tex": 1,
+    "en": [
+     [
+      0,
+      0,
+      0,
+      0,
+      1
+     ]
+    ],
+    "motivo": "ie escena 5 objeto 11 (ObjDontMove, cnst 0x4e2120)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "ie24": {
+  "objetos": [
+   {
+    "parte": 6,
+    "tex": 2,
+    "en": [],
+    "motivo": "ie escena 24 objeto 18 (ObjDontMove, cnst 0x4e2710)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "hs21": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 7,
+    "en": [
+     [
+      -158.375,
+      -325.361,
+      -124.099,
+      0,
+      1
+     ],
+     [
+      -158.375,
+      -325.361,
+      -124.099,
+      0,
+      2
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4e3f90 (tabla 0x625cb0, se mece: exec 0x4e40a0)"
+   },
+   {
+    "parte": 6,
+    "tex": 7,
+    "en": [
+     [
+      -158.375,
+      -335.566,
+      -124.099,
+      0,
+      1
+     ],
+     [
+      -158.375,
+      -335.566,
+      -124.099,
+      0,
+      2
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4e3f90 (tabla 0x625cb0, se mece: exec 0x4e40a0)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "hs04": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 6,
+    "en": [
+     [
+      -324.264,
+      -219.403,
+      3105.71,
+      0,
+      1
+     ]
+    ],
+    "motivo": "hs escena 4 objeto 11 (ObjDontMove, cnst 0x4e4330): el modelo está armado alrededor del origen y el exec 0x4e43e0 lo pone en la tabla 0x625d30 (con la bandera 0x013d8144 & 0x40 se va a y = 9999 y deja pasar)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "hs09": {
+  "objetos": [
+   {
+    "parte": 6,
+    "tex": 5,
+    "en": [],
+    "motivo": "hs escena 9 objeto 1 (ObjDontMove, cnst 0x4e31f0)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "hs13": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 6,
+    "en": [],
+    "motivo": "hs escena 13 objeto 1 (ObjDontMove, cnst 0x4e32b0)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "hs14": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 6,
+    "en": [],
+    "motivo": "hs escena 14 objeto 1 (ObjDontMove, cnst 0x4e36f0)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "hs20": {
+  "objetos": [
+   {
+    "parte": 8,
+    "tex": 6,
+    "en": [
+     [
+      1027.418,
+      -639.463,
+      40.87,
+      0,
+      1
+     ],
+     [
+      1027.418,
+      -639.463,
+      40.87,
+      0,
+      2
+     ]
+    ],
+    "motivo": "hs escena 20 objeto 3 (ObjDontMove, cnst 0x4e3070): la peluca de Eileen, en la tabla 0x625b20"
+   }
+  ],
+  "ocultar": {}
+ },
+ "hs28": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 6,
+    "en": [],
+    "motivo": "hs escena 28 objeto 1 (ObjDontMove, cnst 0x4e4590)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "hs32": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 7,
+    "en": [
+     [
+      320.178,
+      0.178,
+      -3840.057,
+      3.141592653589793,
+      1
+     ],
+     [
+      320.178,
+      0.178,
+      -3040,
+      3.141592653589793,
+      1
+     ],
+     [
+      320.178,
+      0.178,
+      -2240.163,
+      3.141592653589793,
+      1
+     ],
+     [
+      320.178,
+      0.178,
+      -1440.293,
+      3.141592653589793,
+      1
+     ],
+     [
+      320.178,
+      0.178,
+      -639.999,
+      3.141592653589793,
+      1
+     ],
+     [
+      320.178,
+      0.178,
+      159.997,
+      3.141592653589793,
+      1
+     ],
+     [
+      320.178,
+      0.178,
+      960.001,
+      3.141592653589793,
+      1
+     ],
+     [
+      320.178,
+      0.178,
+      1760.019,
+      3.141592653589793,
+      1
+     ],
+     [
+      320.178,
+      0.178,
+      2559.947,
+      3.141592653589793,
+      1
+     ],
+     [
+      320.178,
+      0.178,
+      3360.006,
+      3.141592653589793,
+      1
+     ],
+     [
+      320.178,
+      0.178,
+      4159.625,
+      3.141592653589793,
+      1
+     ],
+     [
+      -319.822,
+      0.178,
+      -4000,
+      0,
+      1
+     ],
+     [
+      -319.822,
+      0.178,
+      -3200,
+      0,
+      1
+     ],
+     [
+      -319.822,
+      0.178,
+      -2400,
+      0,
+      1
+     ],
+     [
+      -319.822,
+      0.178,
+      -1600,
+      0,
+      1
+     ],
+     [
+      -319.822,
+      0.178,
+      -800,
+      0,
+      1
+     ],
+     [
+      -319.822,
+      0.178,
+      0,
+      0,
+      1
+     ],
+     [
+      -319.822,
+      0.178,
+      800,
+      0,
+      1
+     ],
+     [
+      -319.822,
+      0.178,
+      1600,
+      0,
+      1
+     ],
+     [
+      -319.822,
+      0.178,
+      2400,
+      0,
+      1
+     ],
+     [
+      -319.822,
+      0.178,
+      3200,
+      0,
+      1
+     ],
+     [
+      -319.822,
+      0.178,
+      4000,
+      0,
+      1
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4e3c20: puertas del pasillo, giradas π si el grupo es < 11"
+   }
+  ],
+  "ocultar": {}
+ },
+ "cm01": {
+  "objetos": [
+   {
+    "parte": 8,
+    "tex": 6,
+    "en": [],
+    "motivo": "cm escena 1 objeto 6 (ObjDontMove, cnst 0x4e5df0)"
+   },
+   {
+    "parte": 9,
+    "tex": 7,
+    "en": [
+     [
+      600,
+      0,
+      560,
+      0,
+      1
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4e5ea0 (FUN_004cdd00)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "cm09": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 6,
+    "en": [
+     [
+      260,
+      0,
+      1040,
+      0,
+      1
+     ],
+     [
+      260,
+      0,
+      1040,
+      0,
+      2
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4e5cb0 (FUN_004e5530): puerta en posición fija"
+   }
+  ],
+  "ocultar": {}
+ },
+ "cm24": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 9,
+    "en": [
+     [
+      -344,
+      0,
+      3924,
+      0,
+      1
+     ],
+     [
+      -344,
+      0,
+      3924,
+      0,
+      2
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4e5d70 (FUN_004e5530): puerta en posición fija"
+   }
+  ],
+  "ocultar": {}
+ },
+ "bd20": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 6,
+    "en": [
+     [
+      -840,
+      -7.539,
+      -96.041,
+      0,
+      2
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4dc0f0 (segunda mitad)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "bd24": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 9,
+    "en": [
+     [
+      889.934,
+      -381.091,
+      -1155.117,
+      0,
+      1
+     ],
+     [
+      889.934,
+      -381.091,
+      -1155.117,
+      0,
+      2
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4dbe10 (se balancea: exec 0x4dbe40)"
+   },
+   {
+    "parte": 6,
+    "tex": 10,
+    "en": [
+     [
+      889.934,
+      -337.061,
+      -1153.176,
+      0,
+      1
+     ],
+     [
+      889.934,
+      -337.061,
+      -1153.176,
+      0,
+      2
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4dbcf0 grupo 0 (gira: exec 0x4dbd40)"
+   },
+   {
+    "parte": 8,
+    "tex": 12,
+    "en": [
+     [
+      889.934,
+      -337.061,
+      -1153.176,
+      0,
+      1
+     ],
+     [
+      889.934,
+      -337.061,
+      -1153.176,
+      0,
+      2
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4dbcf0 grupo 1 (gira: exec 0x4dbd40)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "fr03": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 6,
+    "en": [
+     [
+      2085.123,
+      477.99,
+      568.564,
+      0,
+      1
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4e09c0 (FUN_004cdd00)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "cm03": {
+  "objetos": [
+   {
+    "parte": 26,
+    "tex": 27,
+    "en": [
+     [
+      0,
+      -5,
+      300,
+      0,
+      1
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4e5fa0: solo con DAT_013d812e & 0x40 (rend 0x4e5fe0)",
+    "oculto": "bandera de estado 0x013d812e & 0x40 apagada"
+   },
+   {
+    "parte": 5,
+    "tex": 11,
+    "en": [
+     [
+      555.885,
+      -645.914,
+      -276.571,
+      0,
+      1
+     ],
+     [
+      555.885,
+      -645.914,
+      -276.571,
+      0,
+      2
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4e5bb0 (tabla 0x627250): se ve con la bandera 0x470 apagada"
+   },
+   {
+    "parte": 6,
+    "tex": 12,
+    "en": [
+     [
+      508.653,
+      -546.381,
+      -292.433,
+      0,
+      1
+     ],
+     [
+      508.653,
+      -546.381,
+      -292.433,
+      0,
+      2
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4e5bb0 (tabla 0x627250): se ve con la bandera 0x49a apagada"
+   },
+   {
+    "parte": 7,
+    "tex": 13,
+    "en": [
+     [
+      479.833,
+      -523.11,
+      -261.357,
+      0,
+      1
+     ],
+     [
+      479.833,
+      -523.11,
+      -261.357,
+      0,
+      2
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4e5bb0 (tabla 0x627250): se ve con la bandera 0x49b apagada"
+   },
+   {
+    "parte": 8,
+    "tex": 14,
+    "en": [
+     [
+      439.48,
+      -587.392,
+      -280.029,
+      0,
+      1
+     ],
+     [
+      439.48,
+      -587.392,
+      -280.029,
+      0,
+      2
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4e5bb0 (tabla 0x627250): se ve con la bandera 0x49c apagada"
+   },
+   {
+    "parte": 9,
+    "tex": 15,
+    "en": [
+     [
+      430.824,
+      -613.601,
+      -285.236,
+      0,
+      1
+     ],
+     [
+      430.824,
+      -613.601,
+      -285.236,
+      0,
+      2
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4e5bb0 (tabla 0x627250): se ve con la bandera 0x49d apagada"
+   },
+   {
+    "parte": 10,
+    "tex": 16,
+    "en": [
+     [
+      459.956,
+      -470.135,
+      -259.109,
+      0,
+      1
+     ],
+     [
+      459.956,
+      -470.135,
+      -259.109,
+      0,
+      2
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4e5bb0 (tabla 0x627250): se ve con la bandera 0x49e apagada"
+   }
+  ],
+  "ocultar": {}
+ },
+ "hs01": {
+  "objetos": [
+   {
+    "parte": 5,
+    "tex": 7,
+    "en": [
+     [
+      337.819,
+      -389.132,
+      363.377,
+      0,
+      1
+     ],
+     [
+      337.819,
+      -389.132,
+      363.377,
+      0,
+      2
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4e3f90 (tabla 0x625cb0, se mece: exec 0x4e40a0)"
+   },
+   {
+    "parte": 6,
+    "tex": 7,
+    "en": [
+     [
+      337.819,
+      -389.132,
+      363.377,
+      0,
+      1
+     ],
+     [
+      337.819,
+      -389.132,
+      363.377,
+      0,
+      2
+     ]
+    ],
+    "motivo": "ObjDontMove 0x4e3f90 (tabla 0x625cb0, se mece: exec 0x4e40a0)"
+   }
+  ],
+  "ocultar": {}
+ },
+ "mz02": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz04": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz05": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz06": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz07": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz08": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz09": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz10": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz12": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz14": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz15": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz16": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz17": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz18": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz19": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz20": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz22": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz24": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz25": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz26": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz27": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz28": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz29": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz30": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz36": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz37": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ },
+ "mz38": {
+  "objetos": [],
+  "ocultar": {
+   "0": "el mapa de la sala es la parte 1 (lista de archivos de escena del EXE, 0x62fdb4); esta la dibuja la torre al girar (FUN_004e8680)"
+  }
+ }
+}

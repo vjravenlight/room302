@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>SH4 · Estado</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;background:#070505;color:#d6cdbd;font:17px/1.5 Cormorant Garamond,Garamond,Georgia,serif}main{max-width:760px;margin:0 auto;padding:56px 16px 40px}h1{font-weight:400;letter-spacing:.3em;text-transform:uppercase;font-size:22px;color:#ece3d2;margin:0 0 4px}.sub{color:#8f857a;font-style:italic;margin:0 0 28px}h2{font-weight:500;font-size:14px;letter-spacing:.4em;text-transform:uppercase;color:#a8463a;margin:34px 0 12px;display:flex;gap:12px;align-items:center}h2:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(122,59,30,.7),transparent)}.barra{height:14px;background:#120c0a;border:1px solid rgba(122,59,30,.5);position:relative;overflow:hidden}.barra i{position:absolute;inset:0 auto 0 0;width:0;background:linear-gradient(90deg,#5a1410,#a8261a);transition:width .8s}.barra.fin i{background:linear-gradient(90deg,#3d4a2a,#6d8a44)}.datos{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 16px;margin-top:8px;color:#b8ad9c;font-size:15px}.grande{font-size:40px;color:#ece3d2;line-height:1.1}ul{list-style:none;padding:0;margin:0}li{display:flex;justify-content:space-between;gap:12px;padding:9px 2px;border-bottom:1px dotted rgba(122,59,30,.35)}li span:last-child{font-style:italic;color:#8f857a;white-space:nowrap}li.listo span:last-child{color:#8fae6a;font-style:normal}li.curso span:last-child{color:#d0786a}.pie{margin-top:30px;font-size:13px;color:#5f574f;font-style:italic}a{color:#c7a77c}.latido{display:inline-block;width:8px;height:8px;border-radius:50%;background:#a8261a;margin-right:8px;animation:late 1.6s infinite;vertical-align:middle}@keyframes late{50%{opacity:.2}}
+</style>
+</head>
+<body>
+<main>
+  <h1>SH4 · Estado</h1>
+  <p class="sub">Lo que se está haciendo ahora en la PC de casa. Se actualiza solo.</p>
+
+  <h2>Subida al hosting</h2>
+  <div class="grande" id="pct">—</div>
+  <div class="barra" id="barra"><i></i></div>
+  <div class="datos"><span id="partes">—</span><span id="mb">—</span><span id="tiempo">—</span></div>
+  <p id="msj" style="color:#8f857a;font-style:italic"></p>
+
+  <h2>Agentes trabajando</h2>
+  <ul id="agentes"><li><span>—</span><span></span></li></ul>
+
+  <p class="pie"><span class="latido"></span><span id="act">esperando datos…</span> · <a href="./suite.html">ir a la Suite</a></p>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+
+const hace = iso => {
+  const s = Math.round((Date.now() - new Date(iso)) / 1e3);
+  return s < 60 ? `hace ${s} s` : `hace ${Math.round(s / 60)} min`;
+};
+
+async function actualizar() {
+  try {
+    const e = await (await fetch("./estado.json?t=" + Date.now(), {
+      cache: "no-store"
+    })).json();
+    const s = e.subida || {};
+    const pct = s.total ? Math.round(s.parte / s.total * 100) : 0;
+    $("pct").textContent = s.terminado ? "¡Online!" : pct + " %";
+    $("barra").firstElementChild.style.width = (s.terminado ? 100 : pct) + "%";
+    $("barra").classList.toggle("fin", !!s.terminado);
+    $("partes").textContent = s.total ? `parte ${s.parte} de ${s.total}` : "—";
+    $("mb").textContent = s.mb != null ? `${s.mb.toFixed(1)} MB subidos (zip)` : "";
+    $("tiempo").textContent = s.segundos != null ? `${Math.floor(s.segundos / 60)} min ${s.segundos % 60} s` : "";
+    $("msj").textContent = s.mensaje || "";
+    $("agentes").innerHTML = (e.agentes || []).map(a => `<li class="${a.estado === "listo" ? "listo" : "curso"}"><span>${a.nombre}</span><span>${a.estado === "listo" ? "✓ listo" : a.estado}</span></li>`).join("");
+    $("act").textContent = "actualizado " + hace(e.actualizado);
+  } catch {
+    $("act").textContent = "todavía no hay datos";
+  }
+}
+
+actualizar();
+
+setInterval(actualizar, 1e4);
+</script>
+<script type="module" src="./suite_nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>SH4 · Sonido (prueba)</title>
+<style>
+:root{--fondo: #0b0908;--panel: #15100e;--borde: #3a302a;--texto: #c9c2b6;--suave: #8f857a;--acento: #b59c7a}html,body{margin:0;background:var(--fondo);color:var(--texto);font:14px/1.45 Georgia,serif}header{padding:14px 16px 6px;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}h1{font-size:20px;font-weight:400;margin:0;letter-spacing:.04em}h2{font-size:15px;font-weight:400;color:var(--acento);margin:14px 0 6px}.barra{background:var(--panel);border-bottom:1px solid var(--borde);padding:10px 16px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}select,input,button{font:inherit;background:#1a1412;color:var(--texto);border:1px solid #4a3c34;padding:3px 8px}button:hover{border-color:var(--acento)}button.on{background:#3a2a1e;border-color:var(--acento)}main{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:16px;padding:12px 16px 40px}@media (max-width: 900px){main{grid-template-columns:minmax(0,1fr)}}#mapa{width:100%;aspect-ratio:1 / 1;background:#100c0a;border:1px solid var(--borde);display:block;cursor:crosshair;touch-action:none}pre{white-space:pre-wrap;background:#100c0a;border:1px solid var(--borde);padding:8px;margin:0;font:12px/1.4 Consolas,monospace;color:var(--suave)}.botones{display:flex;flex-wrap:wrap;gap:6px}.botones button{font-size:13px}.dato{color:var(--suave);font-size:12px}#aviso{color:#e0b070}#vumetro{width:140px;height:10px;background:#100c0a;border:1px solid var(--borde);position:relative}#vumetro i{position:absolute;left:0;top:0;bottom:0;background:var(--acento);width:0}
+</style>
+</head>
+<body>
+<header><h1>Sonido · prueba</h1><span class="dato">música por zonas (SDB), pasos por material, puertas, enemigos y 3D. Lee el juego en vivo · <a href="../suite.html" style="color:var(--acento)">Suite</a></span></header>
+<div class="barra">
+  <label>Sala <select id="sala"></select></label>
+  <label><input type="checkbox" id="mitad"> segunda mitad</label>
+  <button id="activar">Activar audio</button>
+  <button id="combate">Pelea (página 11)</button>
+  <label>Música <input type="range" id="vmus" min="0" max="1" step="0.05" value="1"></label>
+  <label>Efectos <input type="range" id="vef" min="0" max="1" step="0.05" value="1"></label>
+  <span id="vumetro"><i></i></span>
+  <span id="aviso"></span>
+</div>
+<main>
+  <section>
+    <canvas id="mapa" width="900" height="900"></canvas>
+    <p class="dato">Vista de arriba de las zonas de sonido de la escena (unidades del juego). Gris: zona con fundidos por pista (tipo 0). Azul: toca música o ambiente al entrar (tipo 2). Rojo: corta (tipo 3). Hacé clic o arrastrá para mover a Henry; flechas o WASD para caminar (con pasos).</p>
+  </section>
+  <section>
+    <h2>Estado</h2>
+    <pre id="estado">—</pre>
+    <h2>Pasos de Henry por material</h2>
+    <div class="botones" id="pasos"></div>
+    <h2>Puertas (abrir / cerrar)</h2>
+    <div class="botones" id="puertas"></div>
+    <h2>3D (HRTF)</h2>
+    <div class="botones"><button id="orbita">Enemigo girando alrededor</button><button id="lejos">Pasos de enemigo alejándose</button></div>
+    <h2>Enemigos</h2>
+    <div class="botones" id="enemigos"></div>
+    <h2>Música y ambiente de esta etapa</h2>
+    <div class="botones" id="musicas"></div>
+  </section>
+</main>
+<script type="importmap">
+{ "imports": { "three": "../lib/three/build/three.module.js", "three/addons/": "../lib/three/examples/jsm/" } }
+</script>
+<script type="module" src="./prueba.js"></script>
+</body>
+</html>

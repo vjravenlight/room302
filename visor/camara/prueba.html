@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>SH4 · cámara original</title>
+<style>
+html,body{margin:0;height:100%;background:#000;color:#c9c2b6;font:14px/1.4 Georgia,serif;overflow:hidden}canvas{display:block}#panel{position:fixed;top:10px;left:10px;background:#000000a6;padding:8px 10px;border:1px solid #3a302a;max-width:560px}#panel select,#panel button{font:inherit;background:#1a1412;color:#c9c2b6;border:1px solid #4a3c34;padding:2px 6px}#hud{margin-top:6px;font:12px/1.35 Consolas,monospace;color:#b8ad9f;white-space:pre-line}#ayuda{position:fixed;bottom:10px;left:10px;font-size:12px;color:#7d746a}#mapa{position:fixed;right:10px;top:10px;border:1px solid #3a302a;background:#0009}
+</style>
+</head>
+<body>
+<div id="panel">
+  <select id="sala"></select>
+  <button id="modo">Cámara: original</button>
+  <button id="areas">Áreas</button>
+  <div id="hud">cargando…</div>
+</div>
+<canvas id="mapa" width="260" height="260"></canvas>
+<div id="ayuda">WASD / flechas mueven a Henry (relativo a la cámara, como el juego) · Shift corre · X centra la cámara · C alterna original / libre · M mapa · FeniXVOID · Project Ravenlight</div>
+<script type="importmap">
+{ "imports": { "three": "../lib/three/build/three.module.js", "three/addons/": "../lib/three/examples/jsm/" } }
+</script>
+<script type="module" src="./prueba.js"></script>
+</body>
+</html>

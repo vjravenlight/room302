@@ -1,0 +1,2109 @@
+{
+ "mundos": {
+  "rl": {
+   "nombre": "Cuarto 302",
+   "descripcion": "El departamento de Henry en South Ashfield Heights (Room 302). Etapa interna 3LDK. Cada sala tiene variantes por letra (a, b, c…) según el momento del juego."
+  },
+  "sb": {
+   "nombre": "Mundo del Subte (Subway World)",
+   "descripcion": "Estación de subte retorcida: vestíbulo con molinetes, baños, líneas Lynch St. y King St., vagones y escaleras mecánicas. Del 20 en adelante parecen las versiones de la segunda visita."
+  },
+  "fr": {
+   "nombre": "Mundo del Bosque (Forest World)",
+   "descripcion": "Bosque de Silent Hill: senderos industriales, Lago Toluca, el orfanato Wish House y su cementerio. fr23 es el patio quemado de la segunda visita."
+  },
+  "mz": {
+   "nombre": "Prisión de Agua (Water Prison World)",
+   "descripcion": "Torre circular de tres pisos con celdas, sala central con escalera, sótano con turbina y generadores, comedor, duchas, cocina y la sala donde muere Andrew."
+  },
+  "bd": {
+   "nombre": "Mundo del Edificio (Building World)",
+   "descripcion": "Centro de Ashfield retorcido: azotea del hotel, calles, tienda de deportes, bar, tienda de mascotas, escaleras y el cuarto donde muere Richard."
+  },
+  "ie": {
+   "nombre": "Mundo de los Departamentos (Apartment World, HOME)",
+   "descripcion": "South Ashfield Heights del otro mundo (etapa interna HOME). Misma geometría que cm en casi todas las salas; en ie01 el hall tiene el agujero. Qué visita es cada uno no está confirmado."
+  },
+  "cm": {
+   "nombre": "Departamentos del pasado (Apartment World, PAST_HOME)",
+   "descripcion": "Otra versión de South Ashfield Heights (etapa interna PAST_HOME), con los departamentos de los vecinos y el 302 del pasado en blanco y negro (cm21, cm25)."
+  },
+  "hs": {
+   "nombre": "Mundo del Hospital (Hospital World)",
+   "descripcion": "Hospital St. Jerome retorcido, donde aparece Eileen: planta baja (emergencias, depósito, oficina, recepción, baño, sala de médicos) y un pasillo largo de habitaciones en el 2.º piso."
+  },
+  "st": {
+   "nombre": "Escalera caracol entre mundos (Spiral Staircase)",
+   "descripcion": "La escalera que une los mundos en la segunda mitad. st03 lleva a la Prisión de Agua (mz43)."
+  },
+  "gt": {
+   "nombre": "Túneles (Tunnel)",
+   "descripcion": "Los tubos por los que gatea Henry al entrar por el agujero. Formato de mundo distinto: el visor solo dibuja gt05, gt08 y gt12."
+  },
+  "ls": {
+   "nombre": "Pelea final (Last)",
+   "descripcion": "La antesala y la arena del jefe final contra Walter."
+  },
+  "ed": {
+   "nombre": "Finales (Endings)",
+   "descripcion": "Decorados de los finales."
+  },
+  "tw": {
+   "nombre": "Ciudad desde la ventana (Town)",
+   "descripcion": "Los edificios de Ashfield que se ven por la ventana del 302. Sin colisión."
+  },
+  "tx": {
+   "nombre": "Ciudad desde la ventana, otra versión",
+   "descripcion": "Casi igual a tw00. Sin colisión."
+  },
+  "di": {
+   "nombre": "Utilería de escenas",
+   "descripcion": "Modelos sueltos que usan las cinemáticas (puertas, teléfono, objetos). No son salas: el visor los lista porque el nombre se parece."
+  },
+  "_pruebas": {
+   "nombre": "Pruebas y sobrantes",
+   "descripcion": "Archivos de prueba o sin usar que quedaron en el juego."
+  }
+ },
+ "salas": {
+  "bd01": {
+   "nombre": "Azotea del hotel South Ashfield",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 ev_building0_bd01_035"
+  },
+  "bd02": {
+   "nombre": "Calle con el cartel del restaurante Fuseli",
+   "confianza": "probable",
+   "fuente": "FileGuide"
+  },
+  "bd03": {
+   "nombre": "Lugar del encuentro con Richard",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Richard boss fight area\") + E3 demos bd034–039; texto building0 (Richard se presenta)"
+  },
+  "bd04": {
+   "nombre": "Callejón con vidriera",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Alleyway with storefront\")"
+  },
+  "bd05": {
+   "nombre": "Zona de la máquina expendedora",
+   "confianza": "probable",
+   "fuente": "FileGuide + texto building0 (\"máquina expendedora rota\")"
+  },
+  "bd06": {
+   "nombre": "Escaleras de varios pisos",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Multilevel stairs\")"
+  },
+  "bd07": {
+   "nombre": "Cuarto de Eric Walsh (vela)",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 ev_building0_bd07_candle"
+  },
+  "bd08": {
+   "nombre": "Tienda de deportes",
+   "confianza": "probable",
+   "fuente": "FileGuide + texto building0 (palos de golf, pelotas de vóley)"
+  },
+  "bd09": {
+   "nombre": "Depósito junto a la tienda de deportes",
+   "confianza": "probable",
+   "fuente": "FileGuide"
+  },
+  "bd10": {
+   "nombre": "Escaleras y salas grandes",
+   "confianza": "probable",
+   "fuente": "FileGuide"
+  },
+  "bd11": {
+   "nombre": "Duchas",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Shower room\") + E3 dropliquid"
+  },
+  "bd12": {
+   "nombre": "Fondo del hueco del ascensor",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 ev_building0_bd12_elv"
+  },
+  "bd12_eleA": {
+   "nombre": "Cabina del ascensor A (objeto)",
+   "confianza": "probable",
+   "fuente": "E3 bd12_eleA + ev_building0_bd12_elv"
+  },
+  "bd12_eleB": {
+   "nombre": "Cabina del ascensor B (objeto)",
+   "confianza": "probable",
+   "fuente": "E3 bd12_eleB + ev_building0_bd12_elv"
+  },
+  "bd12_eleC": {
+   "nombre": "Cabina del ascensor C (objeto)",
+   "confianza": "probable",
+   "fuente": "E3 bd12_eleC + ev_building0_bd12_elv"
+  },
+  "bd13": {
+   "nombre": "Pasillo donde está la pala",
+   "confianza": "probable",
+   "fuente": "FileGuide"
+  },
+  "bd14": {
+   "nombre": "Bar (mesa de billar)",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 bd14_ball + texto building0 (mesa de billar)"
+  },
+  "bd15": {
+   "nombre": "Cuarto donde muere Richard (silla eléctrica)",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 bd15_chir, SmokeRising_FromRichard"
+  },
+  "bd15_chir": {
+   "nombre": "Silla eléctrica de Richard (objeto)",
+   "confianza": "probable",
+   "fuente": "nombre (\"chair\") + E3 bd15_chir"
+  },
+  "bd16": {
+   "nombre": "Escalera cuadrada (Placa del Caos)",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 ev_building0_bd16_plate_of_chaos"
+  },
+  "bd17": {
+   "nombre": "Cuarto de la silla de ruedas de carne",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 bd17_fan"
+  },
+  "bd18": {
+   "nombre": "Pasillo / callejón largo",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 bd18_shadow"
+  },
+  "bd19": {
+   "nombre": "Escalera roja oxidada (1)",
+   "confianza": "probable",
+   "fuente": "FileGuide"
+  },
+  "bd20": {
+   "nombre": "Escalera roja oxidada (2)",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 bd20_kami (papeles)"
+  },
+  "bd21": {
+   "nombre": "Sala de muchas puertas en varios niveles",
+   "confianza": "probable",
+   "fuente": "FileGuide"
+  },
+  "bd22": {
+   "nombre": "Escalera de ladrillo gris",
+   "confianza": "probable",
+   "fuente": "FileGuide"
+  },
+  "bd23": {
+   "nombre": "Tienda de mascotas",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 bd23_cat + texto building0 (gato disecado)"
+  },
+  "bd24": {
+   "nombre": "Sala del reloj al revés",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 bd24_furi/mhari (péndulo, agujas) + texto building0 (\"Un reloj boca abajo\")"
+  },
+  "bd25": {
+   "nombre": "Escalera caracol con rejas",
+   "confianza": "probable",
+   "fuente": "FileGuide"
+  },
+  "bd26": {
+   "nombre": "Pasillo corto",
+   "confianza": "probable",
+   "fuente": "FileGuide"
+  },
+  "bd27": {
+   "nombre": "Escalera cuadrada (otra)",
+   "confianza": "probable",
+   "fuente": "FileGuide"
+  },
+  "bd28": {
+   "nombre": "Tienda de mascotas destrozada",
+   "confianza": "probable",
+   "fuente": "FileGuide + texto building0 (\"Esta tienda es una leonera\")"
+  },
+  "cm01": {
+   "nombre": "Hall y escalera principal (1F–3F)",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"main stairway\") + foto + E3 Cm01Wall (Wall Man en las paredes)"
+  },
+  "cm02": {
+   "nombre": "Pasillos 1F y 2F (lado 1 a 4)",
+   "confianza": "probable",
+   "fuente": "FileGuide"
+  },
+  "cm03": {
+   "nombre": "Pasillos 1F y 2F (lado 5 a 7), cadenas",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 ev_pasthome_cm03_chain"
+  },
+  "cm04": {
+   "nombre": "Departamento vacío",
+   "confianza": "probable",
+   "fuente": "FileGuide + foto de ie04 (misma geometría)"
+  },
+  "cm05": {
+   "nombre": "Departamento de paredes rojas",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 cm05_submachinegun"
+  },
+  "cm06": {
+   "nombre": "Departamento del fanático de las armas",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"gun nut\") + ie06 (blanco de papel, libros de armas)"
+  },
+  "cm07": {
+   "nombre": "106 · Departamento de Rachel (enfermera)",
+   "confianza": "probable",
+   "fuente": "FileGuide + ie07 (uniforme de enfermera)"
+  },
+  "cm08": {
+   "nombre": "Departamento del melómano (tocadiscos)",
+   "confianza": "dudoso",
+   "fuente": "misma geometría que ie08 (E3 ie08_turntable/speeker/rack)"
+  },
+  "cm09": {
+   "nombre": "105 · Departamento de Frank (encargado)",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 cm09_bdoor; ie09 tiene la llave"
+  },
+  "cm09_door": {
+   "nombre": "Puerta del 105 (objeto)",
+   "confianza": "probable",
+   "fuente": "nombre del archivo; sin piezas en el visor"
+  },
+  "cm10": {
+   "nombre": "Departamento sin identificar",
+   "confianza": "dudoso",
+   "fuente": "FileGuide (\"apartment?\"); la foto no ayuda"
+  },
+  "cm11": {
+   "nombre": "Pasillo (Wall Man en la pared)",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"hallway\") + E3 ev_pasthome_cm11_wm"
+  },
+  "cm12": {
+   "nombre": "Pasillo con escalera",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 cm12_stairs"
+  },
+  "cm13": {
+   "nombre": "Departamento del alcohólico",
+   "confianza": "probable",
+   "fuente": "FileGuide + ie13 (botellas)"
+  },
+  "cm14": {
+   "nombre": "Departamento del pintor",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"artist\") + texto home0 (cuadros)"
+  },
+  "cm15": {
+   "nombre": "Escalera chica (tablilla)",
+   "confianza": "dudoso",
+   "fuente": "FileGuide (\"small stairs\") + E3 ev_pasthome_cm15_hiseki"
+  },
+  "cm16": {
+   "nombre": "206 · Familia numerosa (cuarto de chicos)",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 ch00 + ie16 (juguetes, cuna)"
+  },
+  "cm17": {
+   "nombre": "207 · Departamento de Richard",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 cm17_revolver"
+  },
+  "cm18": {
+   "nombre": "Departamento del gamer (¿107?)",
+   "confianza": "dudoso",
+   "fuente": "FileGuide (\"room 107?\") + ie18 (consolas, pesas)"
+  },
+  "cm19": {
+   "nombre": "Depto. donde Walter dispara desde el pasillo",
+   "confianza": "dudoso",
+   "fuente": "E3 cm19_WalterFireFromTsuro; ie19 tiene cocina con botellas"
+  },
+  "cm20": {
+   "nombre": "Departamento con sangre (¿el de Mike?)",
+   "confianza": "dudoso",
+   "fuente": "FileGuide (\"Mike's apartment?\") + foto de ie20 (sangre en el piso)"
+  },
+  "cm21": {
+   "nombre": "302 del pasado · living y pasillo",
+   "confianza": "probable",
+   "fuente": "FileGuide + foto (302 en blanco y negro con velas) + E3 cm21_TsuroFront/ToiletFR"
+  },
+  "cm21_door": {
+   "nombre": "Puerta del 302 del pasado (objeto)",
+   "confianza": "probable",
+   "fuente": "nombre del archivo; sin piezas en el visor"
+  },
+  "cm23": {
+   "nombre": "Departamento de las estatuas de dálmatas",
+   "confianza": "probable",
+   "fuente": "FileGuide + foto de ie23 (perros de loza)"
+  },
+  "cm24": {
+   "nombre": "Pasillos (vuelta al 302)",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"halls\") + E3 ev_pasthome_cm24_to_3ldk"
+  },
+  "cm24_door": {
+   "nombre": "Puerta de cm24 (objeto)",
+   "confianza": "probable",
+   "fuente": "nombre del archivo; sin piezas en el visor"
+  },
+  "cm25": {
+   "nombre": "302 del pasado · dormitorio",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 cm25_base"
+  },
+  "di025a": {
+   "nombre": "Puerta del 302 abierta",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Room 302 open door\")"
+  },
+  "di025b": {
+   "nombre": "Puerta del 302, variante b",
+   "confianza": "dudoso",
+   "fuente": "mismo número que di025a; textura parecida"
+  },
+  "di025c": {
+   "nombre": "Puerta del 302, variante c",
+   "confianza": "dudoso",
+   "fuente": "mismo número que di025a; textura parecida"
+  },
+  "di025d": {
+   "nombre": "Puerta del 302, variante d",
+   "confianza": "dudoso",
+   "fuente": "mismo número que di025a; textura parecida"
+  },
+  "di025e": {
+   "nombre": "Puerta del 302, variante e",
+   "confianza": "dudoso",
+   "fuente": "mismo número que di025a; textura parecida"
+  },
+  "di14": {
+   "nombre": "Utilería de escena 14",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di17": {
+   "nombre": "Rosquillas (utilería)",
+   "confianza": "dudoso",
+   "fuente": "hoja de texturas"
+  },
+  "di19": {
+   "nombre": "Utilería de escena 19",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di20": {
+   "nombre": "Utilería de escena 20",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di22": {
+   "nombre": "Utilería de escena 22",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di26": {
+   "nombre": "Utilería de escena 26",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di35": {
+   "nombre": "Utilería de escena 35",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di351": {
+   "nombre": "Utilería de escena 351",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di38": {
+   "nombre": "Utilería de escena 38",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di41": {
+   "nombre": "Utilería de escena 41",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di49": {
+   "nombre": "Teléfono con el cable cortado",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Phone and rigged cord\") + texto room0 (\"Han cortado el cable\")"
+  },
+  "di50": {
+   "nombre": "Utilería de escena 50",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di500k": {
+   "nombre": "Utilería de escena 500k",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di501": {
+   "nombre": "Utilería de escena 501",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di506": {
+   "nombre": "Medallón con el Halo del Sol",
+   "confianza": "dudoso",
+   "fuente": "hoja de texturas"
+  },
+  "di56": {
+   "nombre": "Celular (utilería)",
+   "confianza": "dudoso",
+   "fuente": "hoja de texturas"
+  },
+  "di59": {
+   "nombre": "Utilería de escena 59",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di61": {
+   "nombre": "Utilería de escena 61",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di66": {
+   "nombre": "Utilería de escena 66",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di73": {
+   "nombre": "Utilería de escena 73",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di901": {
+   "nombre": "Utilería de escena 901",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di902": {
+   "nombre": "Utilería de escena 902",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di903": {
+   "nombre": "Utilería de escena 903",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di904": {
+   "nombre": "Utilería de escena 904",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di905": {
+   "nombre": "Utilería de escena 905",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "di907": {
+   "nombre": "Utilería de escena 907",
+   "confianza": "dudoso",
+   "fuente": "modelo suelto de cinemática; sin identificar"
+  },
+  "ed00": {
+   "nombre": "Final: cuarto de hospital de Eileen",
+   "confianza": "probable",
+   "fuente": "FileGuide + foto (cuarto blanco); sin colisión"
+  },
+  "ed01": {
+   "nombre": "Final: exterior de South Ashfield Heights",
+   "confianza": "probable",
+   "fuente": "FileGuide + foto (edificios); sin colisión"
+  },
+  "em_test": {
+   "nombre": "Escena de prueba con anime (sin usar)",
+   "confianza": "seguro",
+   "fuente": "nombre + TCRF (texturas de Moekan)"
+  },
+  "fr01": {
+   "nombre": "Sendero de llegada con portón de alambre",
+   "confianza": "probable",
+   "fuente": "foto + E3 demos fr012/017/018 y ev_forest0_fr01_090"
+  },
+  "fr02": {
+   "nombre": "Claro del bosque con galpón",
+   "confianza": "dudoso",
+   "fuente": "foto"
+  },
+  "fr03": {
+   "nombre": "Patio industrial con tambores",
+   "confianza": "probable",
+   "fuente": "foto (tambores, caño) + texto forest0 (\"bidón con líquido negro\") + E3 enemy_mm_fr03"
+  },
+  "fr04": {
+   "nombre": "Patio industrial con tanques",
+   "confianza": "probable",
+   "fuente": "foto (tanques y tambores) + E3 fr04_LowerSide/UpperSide"
+  },
+  "fr05": {
+   "nombre": "Bosque con el auto abandonado",
+   "confianza": "probable",
+   "fuente": "foto (auto) + texto forest0 (\"el motor sigue funcionando\", \"el faro está encendido\")"
+  },
+  "fr06": {
+   "nombre": "Muro de piedra con la roca (Jasper)",
+   "confianza": "probable",
+   "fuente": "foto (roca, reja) + E3 ev_forest0_fr06_jasper + texto forest0 (la piedra \"Nahkeehona\")"
+  },
+  "fr07": {
+   "nombre": "Bosque (sendero con algo que cae)",
+   "confianza": "dudoso",
+   "fuente": "foto + E3 ev_forest0_fr07_thing_fall"
+  },
+  "fr08": {
+   "nombre": "Bosque con cerco de madera",
+   "confianza": "dudoso",
+   "fuente": "foto"
+  },
+  "fr09": {
+   "nombre": "Patio de la Wish House (Wish House Compound)",
+   "confianza": "probable",
+   "fuente": "foto (muro con dibujos de chicos) + E3 fr09_frnt_door/door_left/door_right + ev GetShovel (pala con inscripción)"
+  },
+  "fr10": {
+   "nombre": "Bosque junto al cerco del orfanato",
+   "confianza": "dudoso",
+   "fuente": "foto (cerco de madera con puerta)"
+  },
+  "fr11": {
+   "nombre": "Túnel de roca con vigas",
+   "confianza": "dudoso",
+   "fuente": "foto (cueva con rieles y tambores)"
+  },
+  "fr12": {
+   "nombre": "Bosque junto al cerco con grafitis",
+   "confianza": "dudoso",
+   "fuente": "foto"
+  },
+  "fr13": {
+   "nombre": "Bosque con roca grande",
+   "confianza": "dudoso",
+   "fuente": "foto + E3 ev_forest0_fr13_095b"
+  },
+  "fr14": {
+   "nombre": "Sendero con farol y portón",
+   "confianza": "dudoso",
+   "fuente": "foto"
+  },
+  "fr15": {
+   "nombre": "Sendero con portón (otro)",
+   "confianza": "dudoso",
+   "fuente": "foto"
+  },
+  "fr16": {
+   "nombre": "Orilla del Lago Toluca (Toluca Lake)",
+   "confianza": "probable",
+   "fuente": "foto (lago, cueva, farol) + texto forest0 (\"Lago Toluca\")"
+  },
+  "fr17": {
+   "nombre": "Pasillo entre alambrados",
+   "confianza": "dudoso",
+   "fuente": "foto + E3 ev_forest0_fr17_095"
+  },
+  "fr18": {
+   "nombre": "Pasillo entre alambrados con tumba",
+   "confianza": "dudoso",
+   "fuente": "foto (pozo cavado) + texto forest0 (\"Aquí han cavado una tumba\")"
+  },
+  "fr19": {
+   "nombre": "Cementerio junto a la Wish House",
+   "confianza": "probable",
+   "fuente": "foto (lápidas junto a un muro) + E3 fr19_start_pos + texto forest0 (lápidas)"
+  },
+  "fr20": {
+   "nombre": "Interior de la Wish House (sala principal)",
+   "confianza": "probable",
+   "fuente": "foto + E3 fr20_MainSpace/BookSpace/staire y ev walk_jasper"
+  },
+  "fr21": {
+   "nombre": "Cuarto chico con cama (Wish House)",
+   "confianza": "dudoso",
+   "fuente": "foto + E3 ev_forest0_fr21_028"
+  },
+  "fr21_door": {
+   "nombre": "Puerta de fr21 (objeto)",
+   "confianza": "probable",
+   "fuente": "nombre del archivo; sin piezas en el visor"
+  },
+  "fr22": {
+   "nombre": "Capilla con altar (Medallón)",
+   "confianza": "probable",
+   "fuente": "foto (altar, símbolo, escalera) + E3 ev_forest0_fr22_medal + texto forest0 (Medallón blasonado)"
+  },
+  "fr23": {
+   "nombre": "Patio de la Wish House quemada",
+   "confianza": "probable",
+   "fuente": "foto (mismo muro que fr09) + E3 SmokeRising_FromBurntHouse_fr23"
+  },
+  "fr50": {
+   "nombre": "Fondo lejano (decorado sin colisión) 1",
+   "confianza": "probable",
+   "fuente": "foto: una sola pieza, sin colisión"
+  },
+  "fr51": {
+   "nombre": "Fondo lejano (decorado sin colisión) 2",
+   "confianza": "probable",
+   "fuente": "foto: una sola pieza, sin colisión"
+  },
+  "fr52": {
+   "nombre": "Fondo lejano (decorado sin colisión) 3",
+   "confianza": "probable",
+   "fuente": "foto: una sola pieza, sin colisión"
+  },
+  "gt01": {
+   "nombre": "Túnel 1 (gateo por el agujero)",
+   "confianza": "dudoso",
+   "fuente": "el visor no dibuja este formato; E3 ev_tunnel0_gt01_camera_demo"
+  },
+  "gt02": {
+   "nombre": "Túnel 2 (gateo por el agujero)",
+   "confianza": "dudoso",
+   "fuente": "el visor no dibuja este formato; E3 ev_tunnel0_gt02_camera_demo"
+  },
+  "gt03": {
+   "nombre": "Túnel 3 (gateo por el agujero)",
+   "confianza": "dudoso",
+   "fuente": "el visor no dibuja este formato; E3 ev_tunnel0_gt03_camera_demo"
+  },
+  "gt04": {
+   "nombre": "Túnel 4 (gateo por el agujero)",
+   "confianza": "dudoso",
+   "fuente": "el visor no dibuja este formato; E3 ev_tunnel0_gt04_camera_demo"
+  },
+  "gt05": {
+   "nombre": "Túnel 5 (gateo por el agujero)",
+   "confianza": "probable",
+   "fuente": "foto (tubo de carne) + E3 ev_tunnel0_gt05_camera_demo"
+  },
+  "gt06": {
+   "nombre": "Túnel 6 (gateo por el agujero)",
+   "confianza": "dudoso",
+   "fuente": "el visor no dibuja este formato; E3 ev_tunnel0_gt06_camera_demo"
+  },
+  "gt07": {
+   "nombre": "Túnel 7 (gateo por el agujero)",
+   "confianza": "dudoso",
+   "fuente": "el visor no dibuja este formato; E3 ev_tunnel0_gt07_camera_demo"
+  },
+  "gt08": {
+   "nombre": "Túnel 8 (gateo por el agujero)",
+   "confianza": "probable",
+   "fuente": "foto (tubo de carne) + E3 ev_tunnel0_gt08_camera_demo"
+  },
+  "gt09": {
+   "nombre": "Túnel 9 (gateo por el agujero)",
+   "confianza": "dudoso",
+   "fuente": "el visor no dibuja este formato; E3 ev_tunnel0_gt09_camera_demo"
+  },
+  "gt10": {
+   "nombre": "Túnel 10 (gateo por el agujero)",
+   "confianza": "dudoso",
+   "fuente": "el visor no dibuja este formato; E3 ev_tunnel0_gt10_camera_demo"
+  },
+  "gt11": {
+   "nombre": "Túnel 11 (gateo por el agujero)",
+   "confianza": "dudoso",
+   "fuente": "el visor no dibuja este formato; E3 ev_tunnel0_gt11_camera_demo"
+  },
+  "gt12": {
+   "nombre": "Túnel 12 (gateo por el agujero)",
+   "confianza": "probable",
+   "fuente": "foto (tubo de carne) + E3 ev_tunnel0_gt12"
+  },
+  "hs01": {
+   "nombre": "Sala de emergencias 1 (llegada)",
+   "confianza": "probable",
+   "fuente": "mapa map_hs (\"Emergency room\") + foto (camillas, sangre) + E3 hs01_DeadMeat"
+  },
+  "hs02": {
+   "nombre": "Sala de emergencias 2",
+   "confianza": "probable",
+   "fuente": "mapa (\"Emergency room\") + foto (camilla, puerta doble)"
+  },
+  "hs03": {
+   "nombre": "Depósito de insumos (Supply Room)",
+   "confianza": "probable",
+   "fuente": "mapa (\"Supply Room\") + foto (estantes con cajas)"
+  },
+  "hs04": {
+   "nombre": "Recepción y hall con ascensor (Reception)",
+   "confianza": "probable",
+   "fuente": "mapa (\"Reception\") + foto (mostrador, ascensores) + FileGuide + E3 hs04_elvdoor"
+  },
+  "hs05": {
+   "nombre": "Oficina (Office)",
+   "confianza": "probable",
+   "fuente": "mapa (\"Office\") + foto (escritorios, archivos)"
+  },
+  "hs06": {
+   "nombre": "Baño con el agujero (Washroom)",
+   "confianza": "seguro",
+   "fuente": "mapa (\"Washroom\") + foto (agujero con aro rojo) + E3 ev_hole_hospital0_hs06"
+  },
+  "hs07": {
+   "nombre": "Sala de médicos (Doctor's Lounge)",
+   "confianza": "probable",
+   "fuente": "mapa (\"Doctor's Lounge\") + foto (sillones, lockers, pileta)"
+  },
+  "hs08": {
+   "nombre": "Escalera 1F–2F",
+   "confianza": "seguro",
+   "fuente": "E3 hs08_1F/hs08_2F + FileGuide (\"stairs\") + foto"
+  },
+  "hs09": {
+   "nombre": "Consultorio con radiografías y fotos",
+   "confianza": "probable",
+   "fuente": "foto (tablero con fotos y placas) + E3 hs09_photo + texto hospital0 (\"fotos enganchadas al tablero\")"
+  },
+  "hs10": {
+   "nombre": "Habitación con suero y bandeja",
+   "confianza": "dudoso",
+   "fuente": "foto + E3 ev_hs10_bullet"
+  },
+  "hs11": {
+   "nombre": "Habitación donde llueve",
+   "confianza": "probable",
+   "fuente": "E3 ev_hospital0_hs11_rain + texto hospital0 (\"¿Es agua de lluvia?\")"
+  },
+  "hs12": {
+   "nombre": "Habitación vacía con pileta",
+   "confianza": "dudoso",
+   "fuente": "foto"
+  },
+  "hs13": {
+   "nombre": "Habitación del techo que se cae",
+   "confianza": "probable",
+   "fuente": "E3 ev_hospital0_hs13_ceiling_fall + foto (vigas)"
+  },
+  "hs14": {
+   "nombre": "Habitación de la jaula y los cables",
+   "confianza": "probable",
+   "fuente": "E3 hs14_cage_fall/cage_door + foto (cables)"
+  },
+  "hs15": {
+   "nombre": "Habitación vacía",
+   "confianza": "dudoso",
+   "fuente": "foto"
+  },
+  "hs16": {
+   "nombre": "Habitación con bañeras y cordones",
+   "confianza": "dudoso",
+   "fuente": "foto (bañeras, tubos colgando)"
+  },
+  "hs17": {
+   "nombre": "Habitación con ventana",
+   "confianza": "dudoso",
+   "fuente": "foto (ventana con reja, vidrio roto)"
+  },
+  "hs18": {
+   "nombre": "Habitación con rejilla en el piso",
+   "confianza": "dudoso",
+   "fuente": "foto + E3 hs18_OverView/UnderView"
+  },
+  "hs19": {
+   "nombre": "Habitación con un cadáver",
+   "confianza": "dudoso",
+   "fuente": "foto (cuerpo en el piso)"
+  },
+  "hs20": {
+   "nombre": "Habitación de la cabeza de Eileen",
+   "confianza": "seguro",
+   "fuente": "EXE: ev_hospital0_eil_eye y eil_wig (los ojos y el pelo de la cabeza gigante) + E3 hs20_Face"
+  },
+  "hs21": {
+   "nombre": "Habitación de la cadena y el cadáver",
+   "confianza": "probable",
+   "fuente": "E3 _hs21_chainWork/_hs21_corpseWork"
+  },
+  "hs22": {
+   "nombre": "Habitación con manguera y caja",
+   "confianza": "dudoso",
+   "fuente": "foto"
+  },
+  "hs23": {
+   "nombre": "Habitación con espejo redondo",
+   "confianza": "dudoso",
+   "fuente": "foto"
+  },
+  "hs24": {
+   "nombre": "Habitación con cama rota",
+   "confianza": "dudoso",
+   "fuente": "foto + E3 hs24_Bed + texto hospital0 (\"alguien ha roto esta cama\")"
+  },
+  "hs25": {
+   "nombre": "Habitación de las radiografías",
+   "confianza": "dudoso",
+   "fuente": "foto (negatoscopio y placas) + texto hospital0 (radiografías)"
+  },
+  "hs26": {
+   "nombre": "Habitación con ganchos y tela manchada",
+   "confianza": "dudoso",
+   "fuente": "foto + E3 hs26_ToWall"
+  },
+  "hs27": {
+   "nombre": "Habitación con barandas",
+   "confianza": "dudoso",
+   "fuente": "foto"
+  },
+  "hs28": {
+   "nombre": "Habitación del cadáver tapado",
+   "confianza": "probable",
+   "fuente": "E3 ev_hospital0_hs28_corpse + foto (andamio)"
+  },
+  "hs29": {
+   "nombre": "Habitación con cama y ventana enrejada",
+   "confianza": "dudoso",
+   "fuente": "foto"
+  },
+  "hs30": {
+   "nombre": "Habitación con piel colgada y rejas",
+   "confianza": "dudoso",
+   "fuente": "foto + texto hospital0 (\"una especie de piel\")"
+  },
+  "hs31": {
+   "nombre": "Habitación con cama y cortina",
+   "confianza": "dudoso",
+   "fuente": "foto + E3 hs31_Bed"
+  },
+  "hs32": {
+   "nombre": "Pasillo largo del 2.º piso con ascensor",
+   "confianza": "probable",
+   "fuente": "foto (pasillo largo, ascensor) + E3 hs32_door/roomdata + mapa (columna de cuartos)"
+  },
+  "hs33": {
+   "nombre": "Cabina del ascensor",
+   "confianza": "dudoso",
+   "fuente": "foto (cubículo con puerta de ascensor) + texto hospital0 (ascensor)"
+  },
+  "hs34": {
+   "nombre": "Escalera \"Por siempre descendente\"",
+   "confianza": "dudoso",
+   "fuente": "foto (escalera, placa, letras rojas) + texto hospital0 (\"Por siempre descendente\")"
+  },
+  "ie01": {
+   "nombre": "Hall y escalera principal, con agujero",
+   "confianza": "probable",
+   "fuente": "foto (agujero en la pared del hall) + E3 ie01_1F2FStairs/HallMain + muñeca y Walter (ev_home0_ie01_041_getdoll, killer)"
+  },
+  "ie02": {
+   "nombre": "Pasillo de carne (1)",
+   "confianza": "probable",
+   "fuente": "foto + misma geometría que cm02"
+  },
+  "ie03": {
+   "nombre": "Fondo de pasillo con puerta doble",
+   "confianza": "probable",
+   "fuente": "foto + E3 ie03_end_of_the_holl/doorplate"
+  },
+  "ie04": {
+   "nombre": "Departamento vacío",
+   "confianza": "probable",
+   "fuente": "foto (cajones, cocina vacía) + E3 ie04_light"
+  },
+  "ie05": {
+   "nombre": "Departamento de paredes rojas (heladera)",
+   "confianza": "probable",
+   "fuente": "foto (paredes rojas) + E3 ie05_refrigerator/submachinegun"
+  },
+  "ie06": {
+   "nombre": "Departamento del fanático de las armas",
+   "confianza": "probable",
+   "fuente": "E3 ie06_gun/target/bookrack + texto home0 (pistolas de imitación, diana)"
+  },
+  "ie07": {
+   "nombre": "106 · Departamento de Rachel (enfermera)",
+   "confianza": "probable",
+   "fuente": "E3 ie07_uniform + texto home0 (\"uniforme de una enfermera\") + misma geometría que cm07"
+  },
+  "ie08": {
+   "nombre": "Departamento del melómano (tocadiscos)",
+   "confianza": "probable",
+   "fuente": "E3 ie08_turntable/speeker/rack + texto home0 (altavoz, tocadiscos, discos)"
+  },
+  "ie09": {
+   "nombre": "105 · Departamento de Frank (encargado)",
+   "confianza": "probable",
+   "fuente": "misma geometría que cm09 + E3 ev_home0_ie09_key"
+  },
+  "ie10": {
+   "nombre": "Departamento sin identificar",
+   "confianza": "dudoso",
+   "fuente": "misma geometría que cm10; la foto no ayuda"
+  },
+  "ie11": {
+   "nombre": "Fondo de pasillo",
+   "confianza": "probable",
+   "fuente": "E3 ie11_end_of_the_holl"
+  },
+  "ie12": {
+   "nombre": "Pasillo del 2.º piso (puerta 207)",
+   "confianza": "probable",
+   "fuente": "foto (puerta 207)"
+  },
+  "ie13": {
+   "nombre": "Departamento del alcohólico",
+   "confianza": "probable",
+   "fuente": "E3 ev_home0_ie13_bottle + texto home0 (botellas, alcohol rancio)"
+  },
+  "ie14": {
+   "nombre": "Depto. del teléfono (\"mi amada\")",
+   "confianza": "dudoso",
+   "fuente": "E3 ie14_tel + 14 mensajes; misma geometría que cm14 (pintor)"
+  },
+  "ie14_lite": {
+   "nombre": "Depto. del teléfono, versión liviana",
+   "confianza": "dudoso",
+   "fuente": "nombre (\"lite\"); sin colisión"
+  },
+  "ie15": {
+   "nombre": "Sótano con jaulas y máquinas",
+   "confianza": "dudoso",
+   "fuente": "foto (jaulas de alambre, caños)"
+  },
+  "ie16": {
+   "nombre": "206 · Familia numerosa (cuarto de chicos)",
+   "confianza": "probable",
+   "fuente": "E3 ie16_bed/toys/wall + texto home0 (juguetes, cuna)"
+  },
+  "ie17": {
+   "nombre": "207 · Departamento de Richard",
+   "confianza": "probable",
+   "fuente": "E3 ev_home0_ie17_revolver"
+  },
+  "ie18": {
+   "nombre": "Departamento del gamer (pesas y consolas)",
+   "confianza": "probable",
+   "fuente": "E3 ie18_barbell/console/tv + texto home0 (videojuegos, pesas)"
+  },
+  "ie19": {
+   "nombre": "Departamento con cocina llena de botellas",
+   "confianza": "dudoso",
+   "fuente": "E3 ie19_kitchen/bottle"
+  },
+  "ie20": {
+   "nombre": "Departamento con sangre (¿el de Mike?)",
+   "confianza": "dudoso",
+   "fuente": "foto (sangre en el piso) + E3 ev_home0_ie20_042"
+  },
+  "ie21": {
+   "nombre": "Sala blanca sin texturas (prototipo)",
+   "confianza": "probable",
+   "fuente": "foto: 9 piezas sin textura, sin colisión"
+  },
+  "ie22": {
+   "nombre": "Depto. de las revistas porno",
+   "confianza": "probable",
+   "fuente": "E3 ie22_porno/desk/report + texto home0 (revistas porno)"
+  },
+  "ie23": {
+   "nombre": "Departamento de las estatuas de dálmatas",
+   "confianza": "probable",
+   "fuente": "foto (perros de loza) + misma geometría que cm23"
+  },
+  "ie24": {
+   "nombre": "Pasillo frente al 302 (papeles rojos)",
+   "confianza": "probable",
+   "fuente": "foto + E3 ie24_redpaper + texto home0 (\"Pones el Papel rojo en la grieta de la puerta\")"
+  },
+  "iwa_teststage": {
+   "nombre": "Escenario de prueba \"iwa\" (sin usar)",
+   "confianza": "seguro",
+   "fuente": "nombre + TCRF (no se sabe si se puede entrar)"
+  },
+  "ls01": {
+   "nombre": "Antesala del jefe final (nichos con cuerpos)",
+   "confianza": "probable",
+   "fuente": "foto (nichos con cuerpos, pozo) + E3 ev_last0_ls01_goto_ls02"
+  },
+  "ls02": {
+   "nombre": "Arena del jefe final (Walter)",
+   "confianza": "seguro",
+   "fuente": "foto + E3 ls02_Eileen1–4, ls02_toge (lanzas) + texto last0 (\"Las lanzas están clavadas\")"
+  },
+  "mz01": {
+   "nombre": "Piso 1 · pasillo circular",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Floor\") + E3 mz01_circle"
+  },
+  "mz01_door": {
+   "nombre": "Puerta de mz01 (objeto)",
+   "confianza": "probable",
+   "fuente": "E3 mz01_door; sin piezas en el visor"
+  },
+  "mz02": {
+   "nombre": "Piso 1 · celda 1",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz03": {
+   "nombre": "Piso 1 · sala central (escalera)",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Center room\") + E3 ev_mz03_ladder"
+  },
+  "mz04": {
+   "nombre": "Piso 1 · celda 2",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz05": {
+   "nombre": "Piso 1 · celda 3",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz06": {
+   "nombre": "Piso 1 · celda 4",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz07": {
+   "nombre": "Piso 1 · celda 5",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz08": {
+   "nombre": "Piso 1 · celda 6",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz09": {
+   "nombre": "Piso 1 · celda 7",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz10": {
+   "nombre": "Piso 1 · celda 8",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz11": {
+   "nombre": "Piso 2 · pasillo circular",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Floor\") + E3 mz11_circle"
+  },
+  "mz12": {
+   "nombre": "Piso 2 · celda 1",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz13": {
+   "nombre": "Piso 2 · sala central (armas en el piso)",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 ev_water0_mz13_chainsaw/metal_bat"
+  },
+  "mz14": {
+   "nombre": "Piso 2 · celda 2",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz15": {
+   "nombre": "Piso 2 · celda 3",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz16": {
+   "nombre": "Piso 2 · celda 4 (botella de pólvora)",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view + ev_water0_mz16_bottle"
+  },
+  "mz17": {
+   "nombre": "Piso 2 · celda 5",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz18": {
+   "nombre": "Piso 2 · celda 6",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz19": {
+   "nombre": "Piso 2 · celda 7",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz20": {
+   "nombre": "Piso 2 · celda 8",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz21": {
+   "nombre": "Piso 3 · pasillo circular",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Floor\") + E3 mz21_circle"
+  },
+  "mz22": {
+   "nombre": "Piso 3 · celda 1 (ropa colgada)",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view + ev_water0_mz22_shirt"
+  },
+  "mz23": {
+   "nombre": "Piso 3 · sala central",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 mz23_center"
+  },
+  "mz24": {
+   "nombre": "Piso 3 · celda 2",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz25": {
+   "nombre": "Piso 3 · celda 3",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz26": {
+   "nombre": "Piso 3 · celda 4",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz27": {
+   "nombre": "Piso 3 · celda 5",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz28": {
+   "nombre": "Piso 3 · celda 6",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz29": {
+   "nombre": "Piso 3 · celda 7",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz30": {
+   "nombre": "Piso 3 · celda 8",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cell\") + E3 top_view"
+  },
+  "mz31": {
+   "nombre": "Exterior de la torre (escalera al agua)",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Exterior\") + E3 mz31_ladder_up/down, WaterRipple"
+  },
+  "mz32": {
+   "nombre": "Sótano con turbina de agua",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Basement\") + E3 ev_mz32_water_turbine/key"
+  },
+  "mz33": {
+   "nombre": "Azotea (válvula y ascensor)",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Roof\") + E3 ev_mz33_valve/mz33_elevater"
+  },
+  "mz33_elevater": {
+   "nombre": "Ascensor de mz33 (objeto)",
+   "confianza": "probable",
+   "fuente": "nombre del archivo; sin piezas en el visor"
+  },
+  "mz34": {
+   "nombre": "Sala del agujero (portal)",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Portal room\") + E3 mz34_FrontHole"
+  },
+  "mz35": {
+   "nombre": "Sala central del sótano",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 mz35_B1center"
+  },
+  "mz36": {
+   "nombre": "Comedor",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Cafeteria\")"
+  },
+  "mz37": {
+   "nombre": "Duchas",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Shower room\")"
+  },
+  "mz38": {
+   "nombre": "Cocina (puerta con número secreto)",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Kitchen\") + E3 ev_water0_mz38_password"
+  },
+  "mz39": {
+   "nombre": "Sala de tortura (muerte de Andrew)",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Torture room\") + E3 ev_water0_mz39_105 y piso de agua"
+  },
+  "mz39_water_floor": {
+   "nombre": "Piso de agua de mz39 (objeto)",
+   "confianza": "probable",
+   "fuente": "nombre del archivo; sin piezas en el visor"
+  },
+  "mz40": {
+   "nombre": "Escalera caracol interior",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 mz40_ladder_up/down"
+  },
+  "mz41": {
+   "nombre": "Salida del sótano (generador)",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Basement exit hall\") + E3 ev_water0_mz41_dynamo/transformer"
+  },
+  "mz42": {
+   "nombre": "Pasillo largo del sótano (generadores)",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 mz42_GenerSideL/R"
+  },
+  "mz43": {
+   "nombre": "Sala circular de la azotea",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Roof circular room\") + E3 St03GotoMz43 (llega la escalera caracol)"
+  },
+  "mzXX": {
+   "nombre": "Datos de prueba de SH3 (PS2), sobrante",
+   "confianza": "probable",
+   "fuente": "inventario: partes \"sh3_ps2_prueba\""
+  },
+  "padata": {
+   "nombre": "Datos de prueba con escenario (sin usar)",
+   "confianza": "dudoso",
+   "fuente": "inventario: escenario + colisión vieja + modelo; no aparece en el juego"
+  },
+  "rl00": {
+   "nombre": "Living, cocina y pasillo",
+   "confianza": "seguro",
+   "fuente": "fotos + FileGuide + texto room0"
+  },
+  "rl00a_text": {
+   "nombre": "Anexo de rl00a (objetos con texto)",
+   "confianza": "dudoso",
+   "fuente": "nombre del archivo; no tiene sala propia"
+  },
+  "rl01": {
+   "nombre": "Dormitorio",
+   "confianza": "seguro",
+   "fuente": "fotos + FileGuide"
+  },
+  "rl02": {
+   "nombre": "Baño (el del agujero)",
+   "confianza": "seguro",
+   "fuente": "fotos + FileGuide"
+  },
+  "rl03": {
+   "nombre": "Placard / depósito con estantes y escalera",
+   "confianza": "probable",
+   "fuente": "fotos + FileGuide (\"Closet\")"
+  },
+  "rl04": {
+   "nombre": "Cuarto secreto tras la pared",
+   "confianza": "probable",
+   "fuente": "fotos + FileGuide (\"Secret Room\"); la guía dice que se abre con el Zapapico de Esperanza entre dormitorio y baño"
+  },
+  "rl05": {
+   "nombre": "Depto. de Eileen visto por el agujero",
+   "confianza": "probable",
+   "fuente": "fotos (vestidos, cuarto a medias) + FileGuide (\"Eileen's Room\") + E3 ev_3ldk0_peeproom"
+  },
+  "rl06": {
+   "nombre": "Pasillo del edificio visto por la mirilla",
+   "confianza": "probable",
+   "fuente": "fotos (manos de sangre en el piso) + FileGuide (\"Hallway\") + E3 ev_3ldk0_peepdoor"
+  },
+  "sb01": {
+   "nombre": "Pasillo de entrada con escalera mecánica",
+   "confianza": "probable",
+   "fuente": "E3 ev_sb01_es/info/poster/pipe + texto subway0 (\"esta escalera mecánica sólo baja\", \"Información\")"
+  },
+  "sb02": {
+   "nombre": "Pasillo hacia los baños",
+   "confianza": "probable",
+   "fuente": "E3 SB02ToiletDoor + foto (pasillo largo)"
+  },
+  "sb03": {
+   "nombre": "Baños de hombres y de mujeres",
+   "confianza": "seguro",
+   "fuente": "E3 sb03_urinal/m_door/f_door/Manequin/Coin + texto subway0 (maniquí con la moneda)"
+  },
+  "sb04": {
+   "nombre": "Vestíbulo con boletería y molinetes",
+   "confianza": "probable",
+   "fuente": "E3 sb04_office/desk/phone + mapa map_sb (\"Turnstile\", \"office\") + foto"
+  },
+  "sb05": {
+   "nombre": "Pasillo en zigzag",
+   "confianza": "dudoso",
+   "fuente": "E3 sb05_RightTurnA/B, left_turn + foto"
+  },
+  "sb06": {
+   "nombre": "Vacía (sin geometría)",
+   "confianza": "probable",
+   "fuente": "el visor no encuentra piezas"
+  },
+  "sb07": {
+   "nombre": "Escaleras hacia la línea King St.",
+   "confianza": "probable",
+   "fuente": "foto (cartel \"King Street Line\") + E3 sb07_1stStaire/rubble/es"
+  },
+  "sb08": {
+   "nombre": "Vagón y andén de la línea Lynch St.",
+   "confianza": "dudoso",
+   "fuente": "foto (interior de vagón) + E3 sb08_TrainSide/WallSide + mapa (\"Lynch St. Line\")"
+  },
+  "sb09": {
+   "nombre": "Vagón y andén Lynch St. (otra versión)",
+   "confianza": "dudoso",
+   "fuente": "misma geometría que sb08 + E3 ev_subway0_sb09_015"
+  },
+  "sb10": {
+   "nombre": "Pasaje de carne con escalera que baja (1)",
+   "confianza": "dudoso",
+   "fuente": "foto (carne, aro rojo, escalera) + E3 ladder_sb10door31_down"
+  },
+  "sb11": {
+   "nombre": "Pasaje de carne con escalera que baja (2)",
+   "confianza": "dudoso",
+   "fuente": "foto + E3 ladder_sb11door33_down"
+  },
+  "sb12": {
+   "nombre": "Escalera con paredes de carne",
+   "confianza": "probable",
+   "fuente": "foto + E3 Sb12Wall"
+  },
+  "sb13": {
+   "nombre": "Escalera mecánica larga",
+   "confianza": "seguro",
+   "fuente": "E3 Sb13LongEscalator + es_up/es_down"
+  },
+  "sb14": {
+   "nombre": "Andén de la línea King St. con tren",
+   "confianza": "probable",
+   "fuente": "foto (andén con columnas y bancos) + E3 sb14_train/Escalator/vending_machine"
+  },
+  "sb15": {
+   "nombre": "Cabina del conductor (botón)",
+   "confianza": "probable",
+   "fuente": "foto (tablero con relojes) + E3 sb15_button"
+  },
+  "sb16": {
+   "nombre": "Entre el tren y la pared (1)",
+   "confianza": "probable",
+   "fuente": "foto + E3 sb16_TrBitween"
+  },
+  "sb17": {
+   "nombre": "Entre el tren y la pared (2): cosas raras",
+   "confianza": "probable",
+   "fuente": "E3 sb17_TrBitween + ev_sb17_geeky_things (\"Está lleno de cosas raras\")"
+  },
+  "sb18": {
+   "nombre": "Entre el tren y la pared (3): juguetes",
+   "confianza": "probable",
+   "fuente": "E3 sb18_TrBitween + ev_sb18_toybox (\"caja de juguetes\")"
+  },
+  "sb19": {
+   "nombre": "Sala de máquinas con pasarelas",
+   "confianza": "probable",
+   "fuente": "foto (pasarelas, caños) + E3 sb19_hashi/odoriba (puente/descanso)"
+  },
+  "sb20": {
+   "nombre": "Vestíbulo de molinetes (otra versión)",
+   "confianza": "probable",
+   "fuente": "misma geometría que sb04 + E3 ev_sb20_173_no_coin (molinete sin moneda)"
+  },
+  "sb21": {
+   "nombre": "Vagón embrujado (cosas colgando)",
+   "confianza": "probable",
+   "fuente": "foto (vagón con rejas colgadas) ; segunda visita probable"
+  },
+  "sb22": {
+   "nombre": "Andén King St. (otra versión, cadena)",
+   "confianza": "probable",
+   "fuente": "misma geometría que sb14 + E3 Sb22Chain/kings_driveroom"
+  },
+  "sb23": {
+   "nombre": "Pasillo de carne con puerta",
+   "confianza": "dudoso",
+   "fuente": "foto + E3 ev_subway0_sb23_2701"
+  },
+  "sb24": {
+   "nombre": "Oficina de la estación con sangre",
+   "confianza": "probable",
+   "fuente": "foto (escritorios, caja registradora, sangre) + E3 ev_subway0_sb24_key/handle"
+  },
+  "sb25": {
+   "nombre": "Vestíbulo de molinetes (3.ª versión)",
+   "confianza": "dudoso",
+   "fuente": "misma geometría que sb04 + E3 ev_subway0_sb25_plate"
+  },
+  "st01": {
+   "nombre": "Escalera caracol: Hospital → Subte",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 st01_To3LDK + foto"
+  },
+  "st02": {
+   "nombre": "Escalera caracol: Subte → Bosque",
+   "confianza": "probable",
+   "fuente": "FileGuide + E3 ev_spiral0_st02_under_door + foto"
+  },
+  "st03": {
+   "nombre": "Escalera con ovejas: → Prisión de Agua",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"stairs with sheep\") + E3 St03GotoMz43"
+  },
+  "st04": {
+   "nombre": "Escalera caracol (4.º tramo)",
+   "confianza": "dudoso",
+   "fuente": "FileGuide (\"Stairs\"); misma estructura que st01–03"
+  },
+  "st05": {
+   "nombre": "Pie de la escalera, a cielo abierto",
+   "confianza": "probable",
+   "fuente": "foto (cielo rojo, rejas) + E3 st05_Bottom/To3LDK"
+  },
+  "st06": {
+   "nombre": "Cuarto oxidado con sangre",
+   "confianza": "dudoso",
+   "fuente": "foto"
+  },
+  "st07": {
+   "nombre": "Sala de la puerta sellada (cortinas)",
+   "confianza": "probable",
+   "fuente": "foto + E3 MsgSpiral0_st07_OpenKey/SealDoor"
+  },
+  "tw00": {
+   "nombre": "Ciudad vista desde la ventana del 302",
+   "confianza": "probable",
+   "fuente": "FileGuide + foto; sin colisión"
+  },
+  "tw01": {
+   "nombre": "Ciudad vista desde la ventana (otra)",
+   "confianza": "probable",
+   "fuente": "FileGuide (\"Same\") + foto"
+  },
+  "tx00": {
+   "nombre": "Ciudad vista desde la ventana (copia)",
+   "confianza": "dudoso",
+   "fuente": "foto: casi igual a tw00"
+  }
+ },
+ "variantes": {
+  "rl00a": {
+   "nombre": "Normal, de día con niebla",
+   "confianza": "probable",
+   "nota": "FileGuide: \"Foggy daytime outside\". Foto: el living de siempre."
+  },
+  "rl00b": {
+   "nombre": "Normal, lámpara prendida",
+   "confianza": "probable",
+   "nota": "Foto: igual a la a con la lámpara encendida. FileGuide: mesita corrida que deja ver el agujero."
+  },
+  "rl00c": {
+   "nombre": "Normal, al atardecer",
+   "confianza": "probable",
+   "nota": "FileGuide: \"Sunset outside\". Foto casi igual a la a."
+  },
+  "rl00d": {
+   "nombre": "Normal, de noche",
+   "confianza": "probable",
+   "nota": "FileGuide: \"Nighttime outside\". Foto casi igual a la a."
+  },
+  "rl00e": {
+   "nombre": "Pared del pasillo rota",
+   "confianza": "dudoso",
+   "nota": "Foto: pared del pasillo rota. FileGuide: le faltan texturas al importarla."
+  },
+  "rl00f": {
+   "nombre": "Embrujado: oxidado y con agujero",
+   "confianza": "probable",
+   "nota": "FileGuide: \"Rusty haunted apartment\" (2.ª mitad, el cuarto embrujado)."
+  },
+  "rl00g": {
+   "nombre": "Pesadilla: oxidado y con sangre",
+   "confianza": "probable",
+   "nota": "Sin agujero. FileGuide la llama \"Joseph's nightmare\"; puede ser la pesadilla del prólogo. No confirmado cuál."
+  },
+  "rl00h": {
+   "nombre": "Puerta destrabada y agujero en el pasillo",
+   "confianza": "probable",
+   "nota": "FileGuide: \"Unlocked door and hole in wall\". Foto: sin lámpara de techo (¿final?)."
+  },
+  "rl01a": {
+   "nombre": "Sin teléfono ni mesita",
+   "confianza": "probable",
+   "nota": "FileGuide: \"missing phone and side table\"."
+  },
+  "rl01b": {
+   "nombre": "Normal",
+   "confianza": "probable",
+   "nota": "FileGuide: \"Bedroom\"."
+  },
+  "rl01c": {
+   "nombre": "De noche",
+   "confianza": "probable",
+   "nota": "FileGuide: \"Nighttime\"."
+  },
+  "rl01d": {
+   "nombre": "Embrujado (oxidado)",
+   "confianza": "probable",
+   "nota": "FileGuide: \"Haunted bedroom\". Foto: todo rojizo."
+  },
+  "rl02a": {
+   "nombre": "Intacto, sin agujero",
+   "confianza": "seguro",
+   "nota": "Foto + FileGuide."
+  },
+  "rl02b": {
+   "nombre": "Agujero recién abierto",
+   "confianza": "seguro",
+   "nota": "Foto + FileGuide (\"Initial hole\")."
+  },
+  "rl02c": {
+   "nombre": "Agujero, fase 2",
+   "confianza": "seguro",
+   "nota": "Foto + FileGuide."
+  },
+  "rl02d": {
+   "nombre": "Agujero, fase 3",
+   "confianza": "seguro",
+   "nota": "Foto + FileGuide."
+  },
+  "rl02e": {
+   "nombre": "Bañera con sangre y agujero grande",
+   "confianza": "seguro",
+   "nota": "Foto + FileGuide (\"Bloody bathtub\")."
+  },
+  "rl02f": {
+   "nombre": "Agujero con aureola (Halo)",
+   "confianza": "seguro",
+   "nota": "Foto (círculo grabado alrededor) + FileGuide (\"Halo hole\")."
+  },
+  "rl02g": {
+   "nombre": "Agujero sellado",
+   "confianza": "seguro",
+   "nota": "Foto (tapado) + FileGuide (\"Sealed hole\")."
+  },
+  "rl02h": {
+   "nombre": "Bañera con sangre, agujero más chico",
+   "confianza": "probable",
+   "nota": "FileGuide. Foto parecida a la e."
+  },
+  "rl03a": {
+   "nombre": "Normal (versión a)",
+   "confianza": "dudoso",
+   "nota": "FileGuide: \"No walls\"; en la foto se ve normal."
+  },
+  "rl03b": {
+   "nombre": "Con el agujero",
+   "confianza": "seguro",
+   "nota": "Foto (agujero redondo con inscripción) + FileGuide."
+  },
+  "rl03c": {
+   "nombre": "Normal",
+   "confianza": "probable",
+   "nota": "FileGuide: \"Regular closet\"."
+  },
+  "rl04a": {
+   "nombre": "Cuarto secreto (a)",
+   "confianza": "probable",
+   "nota": "Sin diferencias a la vista con la b (FileGuide tampoco las encontró)."
+  },
+  "rl04b": {
+   "nombre": "Cuarto secreto (b)",
+   "confianza": "probable",
+   "nota": "Sin diferencias a la vista con la a."
+  },
+  "rl05a": {
+   "nombre": "Robbie mirando para otro lado",
+   "confianza": "dudoso",
+   "nota": "FileGuide: \"Robbie looking away\". Las tres versiones se ven iguales."
+  },
+  "rl05b": {
+   "nombre": "Depto. de Eileen (b)",
+   "confianza": "dudoso",
+   "nota": "Igual a la a en la foto."
+  },
+  "rl05c": {
+   "nombre": "Depto. de Eileen (c)",
+   "confianza": "dudoso",
+   "nota": "Igual a la a en la foto."
+  },
+  "rl06a": {
+   "nombre": "Pasillo con manos de sangre (a)",
+   "confianza": "probable",
+   "nota": "Foto: manos ensangrentadas en el piso."
+  },
+  "rl06b": {
+   "nombre": "Pasillo con manos de sangre (b)",
+   "confianza": "probable",
+   "nota": "Igual a la a en la foto."
+  }
+ },
+ "personajes": {
+  "henhk": {
+   "nombre": "Henry Townshend",
+   "confianza": "seguro"
+  },
+  "henry01": {
+   "nombre": "Henry Townshend (calidad baja)",
+   "confianza": "probable"
+  },
+  "kmnk": {
+   "nombre": "Henry fantasma",
+   "confianza": "probable"
+  },
+  "henry": {
+   "nombre": "Henry Townshend (animaciones)",
+   "confianza": "seguro"
+  },
+  "eink": {
+   "nombre": "Eileen Galvin (1.ª mitad)",
+   "confianza": "probable"
+  },
+  "eihk": {
+   "nombre": "Eileen herida, vestido de fiesta",
+   "confianza": "probable"
+  },
+  "eil": {
+   "nombre": "Eileen herida (texturas chicas)",
+   "confianza": "probable"
+  },
+  "eil_anm": {
+   "nombre": "Eileen (animaciones)",
+   "confianza": "seguro"
+  },
+  "eil_arms": {
+   "nombre": "Eileen (armas)",
+   "confianza": "probable"
+  },
+  "eisk": {
+   "nombre": "Eileen con vestido de fiesta",
+   "confianza": "probable"
+  },
+  "eis_zk": {
+   "nombre": "Eileen ensangrentada tras el ataque",
+   "confianza": "probable"
+  },
+  "eosk": {
+   "nombre": "Eileen de enfermera",
+   "confianza": "probable"
+  },
+  "eohk": {
+   "nombre": "Eileen de enfermera, herida",
+   "confianza": "probable"
+  },
+  "eol": {
+   "nombre": "Eileen de enfermera (texturas chicas)",
+   "confianza": "probable"
+  },
+  "eos_zk": {
+   "nombre": "Eileen de enfermera, ensangrentada",
+   "confianza": "probable"
+  },
+  "kl1hk": {
+   "nombre": "Walter Sullivan",
+   "confianza": "probable"
+  },
+  "kl1lk": {
+   "nombre": "Walter Sullivan (sin huesos de dedos)",
+   "confianza": "probable"
+  },
+  "kl2hk": {
+   "nombre": "Walter ensangrentado",
+   "confianza": "probable"
+  },
+  "kl3l": {
+   "nombre": "Walter muerto",
+   "confianza": "probable"
+  },
+  "klsp": {
+   "nombre": "Walter, forma de jefe final",
+   "confianza": "probable"
+  },
+  "chik": {
+   "nombre": "Walter de chico",
+   "confianza": "probable"
+  },
+  "ev_killer": {
+   "nombre": "Walter (para escenas)",
+   "confianza": "probable"
+  },
+  "twdm_ki00": {
+   "nombre": "Walter de pocos polígonos (en el 207)",
+   "confianza": "probable"
+  },
+  "event_rl04_l": {
+   "nombre": "Walter muerto, mesa y piedra (¿UFO?)",
+   "confianza": "probable"
+  },
+  "enemy_killer": {
+   "nombre": "Walter enemigo (Killer)",
+   "confianza": "seguro"
+  },
+  "enemy_killer_last": {
+   "nombre": "Walter jefe final (Killer)",
+   "confianza": "seguro"
+  },
+  "cybhk": {
+   "nombre": "Cynthia Velasquez (variante b)",
+   "confianza": "probable"
+  },
+  "cybh_zk": {
+   "nombre": "Cynthia (variante b) ensangrentada",
+   "confianza": "probable"
+  },
+  "cybl": {
+   "nombre": "Cynthia (variante b, texturas chicas)",
+   "confianza": "probable"
+  },
+  "cynhk": {
+   "nombre": "Cynthia Velasquez",
+   "confianza": "probable"
+  },
+  "cynh_zk": {
+   "nombre": "Cynthia ensangrentada",
+   "confianza": "probable"
+  },
+  "cynl": {
+   "nombre": "Cynthia (texturas chicas)",
+   "confianza": "probable"
+  },
+  "cynl_anm": {
+   "nombre": "Cynthia (animaciones)",
+   "confianza": "probable"
+  },
+  "twdm_cyn00": {
+   "nombre": "Cynthia de pocos polígonos",
+   "confianza": "probable"
+  },
+  "gei": {
+   "nombre": "Jasper Gein",
+   "confianza": "probable"
+  },
+  "geik": {
+   "nombre": "Jasper Gein (calidad alta)",
+   "confianza": "probable"
+  },
+  "gei_zk": {
+   "nombre": "Jasper Gein quemado/ensangrentado",
+   "confianza": "probable"
+  },
+  "jsp_fire": {
+   "nombre": "Fuego de Jasper (efecto)",
+   "confianza": "probable"
+  },
+  "jank": {
+   "nombre": "Frank Sunderland (encargado)",
+   "confianza": "probable"
+  },
+  "jos": {
+   "nombre": "Joseph Schreiber (cabeza y torso)",
+   "confianza": "probable"
+  },
+  "and": {
+   "nombre": "Andrew DeSalvo",
+   "confianza": "probable"
+  },
+  "and_z": {
+   "nombre": "Andrew DeSalvo ensangrentado",
+   "confianza": "probable"
+  },
+  "richk": {
+   "nombre": "Richard Braintree",
+   "confianza": "probable"
+  },
+  "rich_zk": {
+   "nombre": "Richard Braintree ensangrentado",
+   "confianza": "probable"
+  },
+  "twdm_106ma00": {
+   "nombre": "Vecina del 106 (Rachel), pocos polígonos",
+   "confianza": "dudoso"
+  },
+  "twdm_106re00": {
+   "nombre": "Vecino del 106, pocos polígonos",
+   "confianza": "dudoso"
+  },
+  "twdm_107ma00": {
+   "nombre": "Vecino del 107, pocos polígonos",
+   "confianza": "dudoso"
+  },
+  "twdm_206ch00": {
+   "nombre": "Chico del 206, pocos polígonos",
+   "confianza": "dudoso"
+  },
+  "twdm_206ch01": {
+   "nombre": "Chico del 206 (otro)",
+   "confianza": "dudoso"
+  },
+  "twdm_206fe00": {
+   "nombre": "Mujer del 206, pocos polígonos",
+   "confianza": "dudoso"
+  },
+  "twdm_206ma00": {
+   "nombre": "Hombre del 206, pocos polígonos",
+   "confianza": "dudoso"
+  },
+  "twdm_207ri00": {
+   "nombre": "Richard (207), pocos polígonos",
+   "confianza": "probable"
+  },
+  "twdm_detective00": {
+   "nombre": "Detective, pocos polígonos",
+   "confianza": "probable"
+  },
+  "twdm_police00": {
+   "nombre": "Policía, pocos polígonos",
+   "confianza": "probable"
+  },
+  "tw_mob": {
+   "nombre": "Gente de la calle (extras)",
+   "confianza": "dudoso"
+  },
+  "tw_cars": {
+   "nombre": "Autos de la calle",
+   "confianza": "probable"
+  },
+  "car_ambul01": {
+   "nombre": "Ambulancia",
+   "confianza": "probable"
+  },
+  "usaball": {
+   "nombre": "Robbie el Conejo",
+   "confianza": "probable"
+  },
+  "mltk": {
+   "nombre": "Fantasma (caras derretidas), sin identificar",
+   "confianza": "dudoso"
+  },
+  "prik": {
+   "nombre": "Sin identificar (textura oxidada)",
+   "confianza": "dudoso"
+  },
+  "dea": {
+   "nombre": "Sin identificar (caras, ojo, dientes)",
+   "confianza": "dudoso"
+  },
+  "ita": {
+   "nombre": "Tablero con fotos y radiografías",
+   "confianza": "dudoso"
+  },
+  "jin": {
+   "nombre": "Sin identificar (caras grises)",
+   "confianza": "dudoso"
+  },
+  "flr": {
+   "nombre": "Piso de concreto rajado (objeto)",
+   "confianza": "dudoso"
+  },
+  "anj002": {
+   "nombre": "Modelo de prueba con texturas provisorias",
+   "confianza": "dudoso"
+  },
+  "whpk": {
+   "nombre": "Silla de ruedas (objeto)",
+   "confianza": "dudoso"
+  },
+  "anm_test": {
+   "nombre": "Henry de prueba, versión vieja (sin usar)",
+   "confianza": "seguro"
+  },
+  "anmmix_test": {
+   "nombre": "Prueba de animaciones mezcladas (sin usar)",
+   "confianza": "probable"
+  },
+  "kage_test": {
+   "nombre": "Prueba de sombras (sin usar)",
+   "confianza": "probable"
+  },
+  "sample": {
+   "nombre": "Archivo de prueba del formato (sin usar)",
+   "confianza": "seguro"
+  },
+  "hit1": {
+   "nombre": "Prueba de colisión (sin usar)",
+   "confianza": "dudoso"
+  },
+  "enemy_buzz": {
+   "nombre": "Hummer (murciélago-colibrí)",
+   "confianza": "seguro"
+  },
+  "enemy_kabe": {
+   "nombre": "Wall Man (hombre de la pared)",
+   "confianza": "seguro"
+  },
+  "enemy_kabe_boss": {
+   "nombre": "Wall Man (versión jefe)",
+   "confianza": "probable"
+  },
+  "enemy_kabe_dek": {
+   "nombre": "Wall Man (versión grande)",
+   "confianza": "dudoso"
+  },
+  "enemy_wheel": {
+   "nombre": "Silla de ruedas (Wheelchair)",
+   "confianza": "seguro"
+  },
+  "enemy_twins": {
+   "nombre": "Gemelos (Twin Victim)",
+   "confianza": "seguro"
+  },
+  "enemy_hyena": {
+   "nombre": "Perro (Sniffer Dog)",
+   "confianza": "seguro"
+  },
+  "enemy_flames": {
+   "nombre": "Víctima 17 en llamas (Jasper)",
+   "confianza": "probable"
+  },
+  "enemy_mush": {
+   "nombre": "Hongo (Toadstool)",
+   "confianza": "probable"
+  },
+  "enemy_mush2": {
+   "nombre": "Hongo blanco (Whitestool)",
+   "confianza": "probable"
+  },
+  "enemy_hil": {
+   "nombre": "Sanguijuela (Tremer)",
+   "confianza": "probable"
+  },
+  "enemy_jinmen": {
+   "nombre": "Cara de goma (Gum Head)",
+   "confianza": "probable"
+  },
+  "enemy_jinmen_event": {
+   "nombre": "Gum Head (para escena)",
+   "confianza": "probable"
+  },
+  "enemy_fat": {
+   "nombre": "Víctima 18 (Andrew, fantasma gordo)",
+   "confianza": "dudoso"
+  },
+  "enemy_pickgirl": {
+   "nombre": "Víctima 16 (Cynthia, el pelo que agarra)",
+   "confianza": "probable"
+  },
+  "enemy_scratch": {
+   "nombre": "Sin identificar (Scratch)",
+   "confianza": "dudoso"
+  },
+  "enemy_scratch_event_bd03": {
+   "nombre": "Scratch (escena de bd03)",
+   "confianza": "dudoso"
+  },
+  "enemy_multi": {
+   "nombre": "Sin identificar (Multi)",
+   "confianza": "dudoso"
+  },
+  "enemy_multi_event_bd07": {
+   "nombre": "Multi (escena de bd07)",
+   "confianza": "dudoso"
+  },
+  "enemy_cell": {
+   "nombre": "Sin identificar (¿Patient o Bottom?)",
+   "confianza": "dudoso"
+  },
+  "enemy_mm": {
+   "nombre": "Sin identificar (MM)",
+   "confianza": "dudoso"
+  },
+  "enemy_wall_ghost": {
+   "nombre": "Fantasma de pared (Wall Ghost)",
+   "confianza": "probable"
+  },
+  "enemy_tex": {
+   "nombre": "Texturas compartidas de enemigos",
+   "confianza": "probable"
+  },
+  "flame_tex": {
+   "nombre": "Texturas de fuego",
+   "confianza": "probable"
+  },
+  "enemy_mm_bd11": {
+   "nombre": "MM (escena de bd11)",
+   "confianza": "dudoso"
+  },
+  "enemy_mm_fr03": {
+   "nombre": "MM (escena de fr03)",
+   "confianza": "dudoso"
+  },
+  "enemy_mm_mz32": {
+   "nombre": "MM (escena de mz32)",
+   "confianza": "dudoso"
+  },
+  "enemy_mm_sb05": {
+   "nombre": "MM (escena de sb05)",
+   "confianza": "dudoso"
+  },
+  "enemy_mm_sb14": {
+   "nombre": "MM (escena de sb14)",
+   "confianza": "dudoso"
+  },
+  "enemy_model_bab": {
+   "nombre": "Fantasma de víctima: bebé",
+   "confianza": "dudoso"
+  },
+  "enemy_model_cyo": {
+   "nombre": "Fantasma de víctima: Cynthia (Víctima 16)",
+   "confianza": "probable"
+  },
+  "enemy_model_det": {
+   "nombre": "Fantasma de víctima: detective",
+   "confianza": "dudoso"
+  },
+  "enemy_model_fla": {
+   "nombre": "Fantasma de víctima: en llamas",
+   "confianza": "dudoso"
+  },
+  "enemy_model_mlb": {
+   "nombre": "Fantasma de víctima: víctima b",
+   "confianza": "dudoso"
+  },
+  "enemy_model_mln": {
+   "nombre": "Fantasma de víctima: víctima n",
+   "confianza": "dudoso"
+  },
+  "enemy_model_mlt": {
+   "nombre": "Fantasma de víctima: víctima t",
+   "confianza": "dudoso"
+  },
+  "enemy_model_mlu": {
+   "nombre": "Fantasma de víctima: víctima u",
+   "confianza": "dudoso"
+  },
+  "enemy_model_oji": {
+   "nombre": "Fantasma de víctima: viejo",
+   "confianza": "dudoso"
+  },
+  "enemy_model_scr": {
+   "nombre": "Fantasma de víctima: Scratch",
+   "confianza": "dudoso"
+  },
+  "enemy_model_kbo_cm": {
+   "nombre": "Fantasma de víctima (kbo, cm)",
+   "confianza": "dudoso"
+  },
+  "enemy_model_kbo_cm2": {
+   "nombre": "Fantasma de víctima (kbo, cm2)",
+   "confianza": "dudoso"
+  },
+  "enemy_model_kbo_lr": {
+   "nombre": "Fantasma de víctima (kbo, lr)",
+   "confianza": "dudoso"
+  },
+  "enemy_model_kbo_mz": {
+   "nombre": "Fantasma de víctima (kbo, mz)",
+   "confianza": "dudoso"
+  },
+  "enemy_model_kbo_mz2": {
+   "nombre": "Fantasma de víctima (kbo, mz2)",
+   "confianza": "dudoso"
+  }
+ }
+}

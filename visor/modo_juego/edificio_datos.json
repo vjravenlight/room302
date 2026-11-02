@@ -1,0 +1,2555 @@
+{
+ "fuente": "SILENT HILL 4.exe (GOG) solo lectura + datos/escenas.json. tools/edificio/edificio_datos.py",
+ "como_se_lee": {
+  "fin": "evnum -> banderas que prende (+n) o apaga (-n) al terminar (tablas 0x620B50[5] y 0x620B80)",
+  "cerraduras": "tabla 0x632468 (0x634188[5]): tipo 0/1/2 bandera + escena del lado que abre + guiones + ítem; 3/4 siempre cerrada; 5 la puerta existe solo si las banderas valen lo pedido; 6 por bandera",
+  "zonas": "escena/mitad -> objetos atados a una puerta (dmy1 6, dmy2 = puerta), de escena (dmy1 5) o de ítem (dmy13)",
+  "ascensor": "ev_building0_bd12_elv_* (E3) = FUN_004dd040 / 0x4dd550 / 0x4ddc00 del PC",
+  "clave": "panel del bar (bd14): respuesta primera mitad / segunda mitad y botones {x, y, ancho, alto} en bd14.bin #5"
+ },
+ "fin": {
+  "comun": {
+   "3017": [
+    1801
+   ],
+   "3018": [
+    0
+   ],
+   "3019": [
+    0
+   ],
+   "3106": [
+    1851
+   ],
+   "3107": [
+    -1851
+   ],
+   "3120": [
+    1852
+   ],
+   "3121": [
+    1853
+   ],
+   "2705": [
+    1858
+   ],
+   "3135": [
+    3
+   ],
+   "3015": [
+    0
+   ],
+   "73": [
+    0
+   ],
+   "1400": [
+    1854
+   ],
+   "3167": [
+    1856
+   ]
+  },
+  "etapa5": {
+   "111": [
+    901
+   ],
+   "112": [
+    902
+   ],
+   "35": [
+    905
+   ],
+   "250": [
+    907
+   ],
+   "3041": [
+    908
+   ],
+   "36": [
+    909
+   ],
+   "37": [
+    911,
+    1611
+   ],
+   "190": [
+    912
+   ],
+   "3092": [
+    918
+   ],
+   "3093": [
+    913
+   ],
+   "253": [
+    2124
+   ],
+   "48": [
+    915
+   ],
+   "192": [
+    917
+   ],
+   "2230": [
+    928
+   ],
+   "2231": [
+    929
+   ],
+   "3150": [
+    955
+   ],
+   "3151": [
+    930
+   ],
+   "2232": [
+    931
+   ],
+   "2233": [
+    932
+   ],
+   "2234": [
+    933
+   ],
+   "2235": [
+    934
+   ],
+   "2251": [
+    935
+   ],
+   "2252": [
+    936
+   ],
+   "2250": [
+    937
+   ],
+   "2236": [
+    938
+   ],
+   "2237": [
+    939
+   ],
+   "2238": [
+    940
+   ],
+   "2239": [
+    941
+   ],
+   "2240": [
+    942
+   ],
+   "2241": [
+    943
+   ],
+   "2242": [
+    944
+   ],
+   "2243": [
+    945
+   ],
+   "2244": [
+    946
+   ],
+   "2245": [
+    947
+   ],
+   "2246": [
+    948
+   ],
+   "2247": [
+    949
+   ],
+   "2248": [
+    950
+   ],
+   "2249": [
+    951
+   ],
+   "3152": [
+    952
+   ],
+   "3153": [
+    953
+   ],
+   "3154": [
+    954
+   ],
+   "251": [
+    916
+   ],
+   "2253": [
+    956
+   ],
+   "2703": [
+    957
+   ],
+   "2564": [
+    958
+   ]
+  },
+  "etapa1": {
+   "63": [
+    1501
+   ],
+   "64": [
+    1502
+   ],
+   "65": [
+    1503
+   ],
+   "67": [
+    1504
+   ],
+   "68": [
+    1505
+   ],
+   "1": [
+    1506
+   ],
+   "2": [
+    1507
+   ],
+   "3": [
+    1508
+   ],
+   "69": [
+    1509
+   ],
+   "70": [
+    1510
+   ],
+   "71": [
+    1511
+   ],
+   "72": [
+    1512
+   ],
+   "4": [
+    1513
+   ],
+   "5": [
+    1514
+   ],
+   "6": [
+    1515
+   ],
+   "7": [
+    1516
+   ],
+   "73": [
+    1517
+   ],
+   "11": [
+    1518
+   ],
+   "12": [
+    1519
+   ],
+   "77": [
+    1520
+   ],
+   "78": [
+    1521
+   ],
+   "13": [
+    1522
+   ],
+   "3020": [
+    1529
+   ],
+   "79": [
+    1523
+   ],
+   "3013": [
+    1524
+   ],
+   "3014": [
+    1525
+   ],
+   "14": [
+    1526
+   ],
+   "80": [
+    1527
+   ],
+   "81": [
+    1528
+   ],
+   "18": [
+    1530
+   ],
+   "19": [
+    1531
+   ],
+   "87": [
+    1532
+   ],
+   "88": [
+    1533
+   ],
+   "89": [
+    1534
+   ],
+   "3025": [
+    1535
+   ],
+   "93": [
+    0
+   ],
+   "21": [
+    1537
+   ],
+   "3015": [
+    0
+   ],
+   "3016": [
+    0
+   ],
+   "29": [
+    1538
+   ],
+   "30": [
+    1539
+   ],
+   "3031": [
+    1540
+   ],
+   "99": [
+    1541
+   ],
+   "75": [
+    1542
+   ],
+   "106": [
+    1543
+   ],
+   "108": [
+    1545
+   ],
+   "3032": [
+    1546
+   ],
+   "3033": [
+    1547
+   ],
+   "109": [
+    1548
+   ],
+   "110": [
+    1549
+   ],
+   "115": [
+    1550
+   ],
+   "116": [
+    1551
+   ],
+   "38": [
+    1552
+   ],
+   "117": [
+    1553
+   ],
+   "39": [
+    1554
+   ],
+   "138": [
+    1555
+   ],
+   "142": [
+    1583
+   ],
+   "3069": [
+    1584
+   ],
+   "3070": [
+    1585
+   ],
+   "3071": [
+    1586
+   ],
+   "3072": [
+    1587
+   ],
+   "3073": [
+    1588
+   ],
+   "143": [
+    1556
+   ],
+   "189": [
+    1575
+   ],
+   "196": [
+    1576
+   ],
+   "3105": [
+    1606
+   ],
+   "197": [
+    1577
+   ],
+   "198": [
+    1578
+   ],
+   "3198": [
+    1680
+   ],
+   "199": [
+    1579
+   ],
+   "200": [
+    1580
+   ],
+   "145": [
+    1557
+   ],
+   "146": [
+    1558
+   ],
+   "43": [
+    1559
+   ],
+   "147": [
+    1560
+   ],
+   "3099": [
+    1561
+   ],
+   "148": [
+    1562
+   ],
+   "149": [
+    1563
+   ],
+   "150": [
+    1564
+   ],
+   "151": [
+    1565
+   ],
+   "152": [
+    1566
+   ],
+   "153": [
+    1567
+   ],
+   "3100": [
+    1601
+   ],
+   "3101": [
+    1602
+   ],
+   "3102": [
+    1603
+   ],
+   "3103": [
+    1604
+   ],
+   "3104": [
+    1605
+   ],
+   "154": [
+    1568
+   ],
+   "164": [
+    1569
+   ],
+   "165": [
+    1570
+   ],
+   "1334": [
+    1686
+   ],
+   "166": [
+    1572
+   ],
+   "167": [
+    1573
+   ],
+   "3088": [
+    1589
+   ],
+   "3089": [
+    1590
+   ],
+   "168": [
+    1574
+   ],
+   "169": [
+    1591
+   ],
+   "216": [
+    1581
+   ],
+   "217": [
+    1582
+   ],
+   "3134": [
+    2057
+   ],
+   "221": [
+    2058
+   ],
+   "53": [
+    2059
+   ],
+   "54": [
+    2061
+   ],
+   "3136": [
+    1608
+   ],
+   "3137": [
+    1609
+   ],
+   "3138": [
+    1610
+   ],
+   "3139": [
+    1611
+   ],
+   "3140": [
+    1612
+   ],
+   "2200": [
+    1613
+   ],
+   "2201": [
+    1615
+   ],
+   "3142": [
+    1616
+   ],
+   "2202": [
+    1617
+   ],
+   "3143": [
+    1618
+   ],
+   "3144": [
+    1619
+   ],
+   "2203": [
+    1620
+   ],
+   "2204": [
+    1622
+   ],
+   "2205": [
+    1623
+   ],
+   "2206": [
+    1624
+   ],
+   "2207": [
+    1625
+   ],
+   "2208": [
+    1627
+   ],
+   "2209": [
+    1628
+   ],
+   "3147": [
+    1629
+   ],
+   "3148": [
+    1631
+   ],
+   "2210": [
+    1632
+   ],
+   "2211": [
+    1633
+   ],
+   "2212": [
+    1634
+   ],
+   "2216": [
+    1635
+   ],
+   "2217": [
+    1637
+   ],
+   "2213": [
+    1638
+   ],
+   "2214": [
+    1639
+   ],
+   "2215": [
+    1640
+   ],
+   "2310": [
+    1641
+   ],
+   "2219": [
+    1642
+   ],
+   "1335": [
+    1683
+   ],
+   "1336": [
+    1684
+   ],
+   "1333": [
+    1685
+   ],
+   "3156": [
+    1567
+   ],
+   "3157": [
+    1643
+   ],
+   "3158": [
+    1644
+   ],
+   "3159": [
+    1645
+   ],
+   "3160": [
+    1646
+   ],
+   "3193": [
+    1675
+   ],
+   "3194": [
+    1676
+   ],
+   "3195": [
+    1677
+   ],
+   "3196": [
+    1678
+   ],
+   "2320": [
+    1666
+   ],
+   "2322": [
+    1667
+   ],
+   "3187": [
+    1669
+   ],
+   "3188": [
+    1670
+   ],
+   "3189": [
+    1671
+   ],
+   "3190": [
+    1672
+   ],
+   "3191": [
+    1673
+   ],
+   "3192": [
+    1674
+   ],
+   "1331": [
+    1679
+   ]
+  }
+ },
+ "llegada": {
+  "escena": 18,
+  "pos": [
+   -5800,
+   0,
+   0
+  ],
+  "rot": 1.518,
+  "nota": "FUN_004e79c0 (fin del túnel 4): sin 901 Henry en bd18 (−5800, 0, 0) mirando a 1,518 (0x3fc24dd3); con 901 el checkpoint (FUN_004d1550)"
+ },
+ "agujeros": [
+  {
+   "fila": 13,
+   "etapa": 5,
+   "escena": 14,
+   "bandera": 15,
+   "bandera2": 44,
+   "pos": [
+    658.0,
+    0.0,
+    -264.0
+   ],
+   "rot": -1.57
+  },
+  {
+   "fila": 14,
+   "etapa": 5,
+   "escena": 18,
+   "bandera": 16,
+   "bandera2": 45,
+   "pos": [
+    -6985.0,
+    0.0,
+    60.0
+   ],
+   "rot": 0.0
+  },
+  {
+   "fila": 15,
+   "etapa": 5,
+   "escena": 8,
+   "bandera": 17,
+   "bandera2": 46,
+   "pos": [
+    137.0,
+    0.0,
+    340.0
+   ],
+   "rot": 3.1416
+  },
+  {
+   "fila": 16,
+   "etapa": 5,
+   "escena": 3,
+   "bandera": 29,
+   "bandera2": 58,
+   "pos": [
+    -2257.0,
+    1600.0,
+    1046.0
+   ],
+   "rot": 1.57
+  }
+ ],
+ "cerraduras": [
+  {
+   "door": 4,
+   "tipo": 5,
+   "condiciones": [
+    [
+     956,
+     1
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ]
+  },
+  {
+   "door": 3,
+   "tipo": 1,
+   "bandera": 930,
+   "escena": 7,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x620a88"
+   ],
+   "item": 107
+  },
+  {
+   "door": 6,
+   "tipo": 1,
+   "bandera": 932,
+   "escena": 8,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x620a70"
+   ],
+   "item": 122
+  },
+  {
+   "door": 10,
+   "tipo": 5,
+   "condiciones": [
+    [
+     953,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ]
+  },
+  {
+   "door": 11,
+   "tipo": 5,
+   "condiciones": [
+    [
+     953,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ]
+  },
+  {
+   "door": 35,
+   "tipo": 5,
+   "condiciones": [
+    [
+     953,
+     1
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ]
+  },
+  {
+   "door": 36,
+   "tipo": 5,
+   "condiciones": [
+    [
+     953,
+     1
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ]
+  },
+  {
+   "door": 12,
+   "tipo": 5,
+   "condiciones": [
+    [
+     948,
+     1
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ]
+  },
+  {
+   "door": 21,
+   "tipo": 0,
+   "bandera": 2125,
+   "escena": 22,
+   "guiones": [
+    "0x618b10",
+    "0x618b58",
+    null
+   ],
+   "item": 0
+  },
+  {
+   "door": 30,
+   "tipo": 5,
+   "condiciones": [
+    [
+     1130,
+     0
+    ],
+    [
+     934,
+     1
+    ],
+    [
+     0,
+     0
+    ]
+   ]
+  },
+  {
+   "door": 32,
+   "tipo": 5,
+   "condiciones": [
+    [
+     1130,
+     1
+    ],
+    [
+     950,
+     1
+    ],
+    [
+     0,
+     0
+    ]
+   ]
+  },
+  {
+   "door": 37,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 38,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 39,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 40,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 41,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 42,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 43,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 43,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 44,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 45,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 46,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 47,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 48,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 33,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 34,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 48,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 49,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 50,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 51,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 52,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 53,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 54,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 55,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 56,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 57,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 58,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 59,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 60,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 61,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 62,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 63,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 64,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  }
+ ],
+ "zonas": {
+  "7/1": [
+   {
+    "i": 4,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 3,
+    "dmy6": 2,
+    "dmy13": 107,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3151,
+     "driver": "0x61f6bc",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd770",
+     "val": [
+      "0x620a88",
+      107,
+      930,
+      0
+     ]
+    }
+   }
+  ],
+  "8/1": [
+   {
+    "i": 1,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 6,
+    "dmy6": 2,
+    "dmy13": 122,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 2233,
+     "driver": "0x61f714",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd770",
+     "val": [
+      "0x620a70",
+      122,
+      932,
+      0
+     ]
+    }
+   }
+  ],
+  "12/1": [
+   {
+    "i": 19,
+    "tipo": "ItemEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 36,
+     "driver": "0x61f22c",
+     "trgchk": "0x44bdd0",
+     "init": "0x4cd170",
+     "exec": "0x4cd1b0",
+     "end": "0x4db400",
+     "val": [
+      36,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ],
+  "14/1": [
+   {
+    "i": 18,
+    "tipo": "EventCamera",
+    "dmy1": 2,
+    "dmy2": 200.0,
+    "dmy6": null,
+    "dmy13": -357.0,
+    "pos": [
+     -760.0,
+     -235.0,
+     455.0
+    ],
+    "grupo": null,
+    "ev": null
+   },
+   {
+    "i": 20,
+    "tipo": "ItemEvent",
+    "dmy1": 6,
+    "dmy2": 32,
+    "dmy6": 6,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 2235,
+     "driver": "0x61f600",
+     "init": "0x4dcdc0",
+     "exec": "0x4dcdf0",
+     "end": "0x4dcef0",
+     "val": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ],
+  "15/1": [
+   {
+    "i": 1,
+    "tipo": "ItemEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 37,
+     "driver": "0x61f26c",
+     "trgchk": "0x44bdd0",
+     "init": "0x4cd170",
+     "exec": "0x4cd1b0",
+     "end": "0x4db420",
+     "val": [
+      37,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ],
+  "16/1": [
+   {
+    "i": 6,
+    "tipo": "ItemEvent",
+    "dmy1": 6,
+    "dmy2": 4,
+    "dmy6": 4,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 2252,
+     "driver": "0x61fc74",
+     "trgchk": "0x4cd690",
+     "init": "0x4cd5d0",
+     "exec": "0x4cd680",
+     "val": [
+      "0x620540",
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ],
+  "18/1": [
+   {
+    "i": 6,
+    "tipo": "ItemEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 111,
+     "driver": "0x61f1a8",
+     "trgchk": "0x44bdd0",
+     "init": "0x4cd170",
+     "exec": "0x4cd1b0",
+     "end": "0x4db3d0",
+     "val": [
+      34,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ],
+  "23/1": [
+   {
+    "i": 9,
+    "tipo": "EventCamera",
+    "dmy1": 2,
+    "dmy2": 250.0,
+    "dmy6": null,
+    "dmy13": -562.0,
+    "pos": [
+     -1000.0,
+     0.0,
+     -1650.0
+    ],
+    "grupo": null,
+    "ev": null
+   }
+  ],
+  "24/1": [
+   {
+    "i": 5,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 12,
+    "dmy6": 6,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 2230,
+     "driver": "0x61fb40",
+     "trgchk": "0x4cd690",
+     "init": "0x4cd5d0",
+     "exec": "0x4cd680",
+     "end": "0x4dddb0",
+     "val": [
+      "0x620304",
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 6,
+    "tipo": "EventCamera",
+    "dmy1": 2,
+    "dmy2": 300.0,
+    "dmy6": null,
+    "dmy13": -797.0,
+    "pos": [
+     870.0,
+     0.0,
+     -1032.1
+    ],
+    "grupo": null,
+    "ev": null
+   }
+  ],
+  "3/2": [
+   {
+    "i": 4,
+    "tipo": "ItemEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 2703,
+     "driver": "0x61f2d0",
+     "init": "0x4cd420",
+     "exec": "0x4cd460",
+     "end": "0x4db4b0",
+     "val": [
+      13,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 6,
+    "tipo": "EventCamera",
+    "dmy1": 1,
+    "dmy2": 200.0,
+    "dmy6": null,
+    "dmy13": 996.0,
+    "pos": [
+     -1585.0,
+     1600.0,
+     1892.0
+    ],
+    "grupo": null,
+    "ev": null
+   }
+  ],
+  "5/2": [
+   {
+    "i": 2,
+    "tipo": "EventCamera",
+    "dmy1": 1,
+    "dmy2": 200.0,
+    "dmy6": null,
+    "dmy13": -1800.0,
+    "pos": [
+     -1281.0,
+     -6.0,
+     -429.0
+    ],
+    "grupo": null,
+    "ev": null
+   }
+  ],
+  "7/2": [
+   {
+    "i": 4,
+    "tipo": "TextEvent",
+    "dmy1": 1,
+    "dmy2": 200.0,
+    "dmy6": 1,
+    "dmy13": 105,
+    "pos": [
+     75.0,
+     -170.0,
+     -260.0
+    ],
+    "grupo": null,
+    "ev": {
+     "evnum": 2241,
+     "driver": "0x61fb6c",
+     "trgchk": "0x4cd690",
+     "init": "0x4cd5d0",
+     "exec": "0x4cdf80",
+     "val": [
+      "0x6204a4",
+      105,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 5,
+    "tipo": "EventCamera",
+    "dmy1": 1,
+    "dmy2": 200.0,
+    "dmy6": null,
+    "dmy13": -389.0,
+    "pos": [
+     75.0,
+     -170.0,
+     -260.0
+    ],
+    "grupo": null,
+    "ev": null
+   },
+   {
+    "i": 7,
+    "tipo": "TextEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 2564,
+     "driver": "0x61fc1c",
+     "trgchk": "0x4cd690",
+     "init": "0x4cd5d0",
+     "exec": "0x4cd680",
+     "val": [
+      "0x620504",
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 9,
+    "tipo": "EventCamera",
+    "dmy1": 1,
+    "dmy2": 200.0,
+    "dmy6": null,
+    "dmy13": -665.0,
+    "pos": [
+     -712.0,
+     -6.0,
+     -176.0
+    ],
+    "grupo": null,
+    "ev": null
+   }
+  ],
+  "8/2": [
+   {
+    "i": 3,
+    "tipo": "TextEvent",
+    "dmy1": 2,
+    "dmy2": 500.0,
+    "dmy6": 1,
+    "dmy13": 104,
+    "pos": [
+     -654.551,
+     0.0,
+     -394.198
+    ],
+    "grupo": null,
+    "ev": {
+     "evnum": 2242,
+     "driver": "0x61fb98",
+     "trgchk": "0x4cd690",
+     "init": "0x4cd5d0",
+     "exec": "0x4cdf80",
+     "val": [
+      "0x6204bc",
+      104,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 4,
+    "tipo": "EventCamera",
+    "dmy1": 2,
+    "dmy2": 500.0,
+    "dmy6": null,
+    "dmy13": -638.0,
+    "pos": [
+     -654.551,
+     0.0,
+     -394.198
+    ],
+    "grupo": null,
+    "ev": null
+   },
+   {
+    "i": 6,
+    "tipo": "TextEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 2564,
+     "driver": "0x61fc1c",
+     "trgchk": "0x4cd690",
+     "init": "0x4cd5d0",
+     "exec": "0x4cd680",
+     "val": [
+      "0x620504",
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 8,
+    "tipo": "EventCamera",
+    "dmy1": 1,
+    "dmy2": 200.0,
+    "dmy6": null,
+    "dmy13": -362.0,
+    "pos": [
+     625.0,
+     -204.0,
+     146.0
+    ],
+    "grupo": null,
+    "ev": null
+   }
+  ],
+  "11/2": [
+   {
+    "i": 17,
+    "tipo": "EventCamera",
+    "dmy1": 1,
+    "dmy2": 200.0,
+    "dmy6": null,
+    "dmy13": -584.0,
+    "pos": [
+     2807.0,
+     -6.0,
+     -1177.0
+    ],
+    "grupo": null,
+    "ev": null
+   }
+  ],
+  "12/2": [
+   {
+    "i": 19,
+    "tipo": "ItemEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 36,
+     "driver": "0x61f22c",
+     "trgchk": "0x44bdd0",
+     "init": "0x4cd170",
+     "exec": "0x4cd1b0",
+     "end": "0x4db400",
+     "val": [
+      36,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ],
+  "14/2": [
+   {
+    "i": 4,
+    "tipo": "EventCamera",
+    "dmy1": 2,
+    "dmy2": 200.0,
+    "dmy6": null,
+    "dmy13": -357.0,
+    "pos": [
+     -760.0,
+     -235.0,
+     455.0
+    ],
+    "grupo": null,
+    "ev": null
+   },
+   {
+    "i": 6,
+    "tipo": "TextEvent",
+    "dmy1": 2,
+    "dmy2": 800.0,
+    "dmy6": 1,
+    "dmy13": 102,
+    "pos": [
+     282.077,
+     -170.0,
+     -422.368
+    ],
+    "grupo": null,
+    "ev": {
+     "evnum": 2244,
+     "driver": "0x61fbf0",
+     "trgchk": "0x4cd690",
+     "init": "0x4cd5d0",
+     "exec": "0x4cdf80",
+     "val": [
+      "0x6204ec",
+      102,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 7,
+    "tipo": "EventCamera",
+    "dmy1": 2,
+    "dmy2": 800.0,
+    "dmy6": null,
+    "dmy13": -451.0,
+    "pos": [
+     282.077,
+     -170.0,
+     -422.368
+    ],
+    "grupo": null,
+    "ev": null
+   },
+   {
+    "i": 9,
+    "tipo": "TextEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 2564,
+     "driver": "0x61fc1c",
+     "trgchk": "0x4cd690",
+     "init": "0x4cd5d0",
+     "exec": "0x4cd680",
+     "val": [
+      "0x620504",
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 12,
+    "tipo": "ItemEvent",
+    "dmy1": 6,
+    "dmy2": 32,
+    "dmy6": 6,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 2248,
+     "driver": "0x61f62c",
+     "init": "0x4dcdc0",
+     "exec": "0x4dcdf0",
+     "end": "0x4dcef0",
+     "val": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ],
+  "15/2": [
+   {
+    "i": 1,
+    "tipo": "ItemEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 37,
+     "driver": "0x61f26c",
+     "trgchk": "0x44bdd0",
+     "init": "0x4cd170",
+     "exec": "0x4cd1b0",
+     "end": "0x4db420",
+     "val": [
+      37,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ],
+  "19/2": [
+   {
+    "i": 1,
+    "tipo": "ItemEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": 0,
+    "ev": {
+     "evnum": 2249,
+     "driver": "0x61f4a0",
+     "init": "0x4dc2e0",
+     "exec": "0x4dc140",
+     "end": "0x4dc310",
+     "val": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ],
+  "20/2": [
+   {
+    "i": 2,
+    "tipo": "ItemEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3153,
+     "driver": "0x61f474",
+     "exec": "0x4dc120",
+     "val": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 4,
+    "tipo": "ItemEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": 1,
+    "ev": {
+     "evnum": 2249,
+     "driver": "0x61f4a0",
+     "init": "0x4dc2e0",
+     "exec": "0x4dc140",
+     "end": "0x4dc310",
+     "val": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ],
+  "23/2": [
+   {
+    "i": 4,
+    "tipo": "TextEvent",
+    "dmy1": 1,
+    "dmy2": 200.0,
+    "dmy6": 1,
+    "dmy13": 103,
+    "pos": [
+     -269.517,
+     -160.134,
+     -1477.038
+    ],
+    "grupo": null,
+    "ev": {
+     "evnum": 2243,
+     "driver": "0x61fbc4",
+     "trgchk": "0x4cd690",
+     "init": "0x4cd5d0",
+     "exec": "0x4cdf80",
+     "val": [
+      "0x6204d4",
+      103,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 5,
+    "tipo": "EventCamera",
+    "dmy1": 2,
+    "dmy2": 330.0,
+    "dmy6": null,
+    "dmy13": -680.0,
+    "pos": [
+     -500.0,
+     0.0,
+     -1600.0
+    ],
+    "grupo": null,
+    "ev": null
+   },
+   {
+    "i": 7,
+    "tipo": "TextEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 2564,
+     "driver": "0x61fc1c",
+     "trgchk": "0x4cd690",
+     "init": "0x4cd5d0",
+     "exec": "0x4cd680",
+     "val": [
+      "0x620504",
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 10,
+    "tipo": "ItemEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3152,
+     "driver": "0x61f4cc",
+     "init": "0x4dc2e0",
+     "exec": "0x4dc250",
+     "end": "0x4dc350",
+     "val": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ],
+  "24/2": [
+   {
+    "i": 9,
+    "tipo": "ItemEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 2246,
+     "driver": "0x61f3f0",
+     "exec": "0x4cd570",
+     "val": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 10,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 12,
+    "dmy6": 6,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 2230,
+     "driver": "0x61fb40",
+     "trgchk": "0x4cd690",
+     "init": "0x4cd5d0",
+     "exec": "0x4cd680",
+     "end": "0x4dddb0",
+     "val": [
+      "0x620304",
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 11,
+    "tipo": "EventCamera",
+    "dmy1": 2,
+    "dmy2": 300.0,
+    "dmy6": null,
+    "dmy13": -797.0,
+    "pos": [
+     870.0,
+     0.0,
+     -1032.1
+    ],
+    "grupo": null,
+    "ev": null
+   }
+  ],
+  "28/2": [
+   {
+    "i": 2,
+    "tipo": "TextEvent",
+    "dmy1": 1,
+    "dmy2": 250.0,
+    "dmy6": 1,
+    "dmy13": 103,
+    "pos": [
+     -128.425,
+     -164.724,
+     -1378.275
+    ],
+    "grupo": null,
+    "ev": {
+     "evnum": 2243,
+     "driver": "0x61fbc4",
+     "trgchk": "0x4cd690",
+     "init": "0x4cd5d0",
+     "exec": "0x4cdf80",
+     "val": [
+      "0x6204d4",
+      103,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 3,
+    "tipo": "EventCamera",
+    "dmy1": 2,
+    "dmy2": 380.0,
+    "dmy6": null,
+    "dmy13": -590.0,
+    "pos": [
+     -300.0,
+     0.0,
+     -1600.0
+    ],
+    "grupo": null,
+    "ev": null
+   },
+   {
+    "i": 5,
+    "tipo": "TextEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 2564,
+     "driver": "0x61fc1c",
+     "trgchk": "0x4cd690",
+     "init": "0x4cd5d0",
+     "exec": "0x4cd680",
+     "val": [
+      "0x620504",
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ]
+ },
+ "ascensor": {
+  "banderas": [
+   [
+    919,
+    920,
+    921
+   ],
+   [
+    922,
+    923,
+    924
+   ]
+  ],
+  "pos": [
+   [
+    [
+     800.0,
+     0.0,
+     0.0
+    ],
+    [
+     800.0,
+     -1600.0,
+     0.0
+    ],
+    [
+     800.0,
+     -3200.0,
+     0.0
+    ]
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1600.0,
+     0.0
+    ],
+    [
+     0.0,
+     -3200.0,
+     0.0
+    ]
+   ]
+  ],
+  "hojas": [
+   [
+    [
+     185.0,
+     185.0,
+     -436.0
+    ],
+    [
+     185.0,
+     305.0,
+     -436.0
+    ],
+    [
+     305.0,
+     305.0,
+     -436.0
+    ]
+   ],
+   [
+    [
+     65.0,
+     185.0,
+     -422.0
+    ],
+    [
+     185.0,
+     305.0,
+     -422.0
+    ],
+    [
+     305.0,
+     305.0,
+     -422.0
+    ]
+   ],
+   [
+    [
+     -55.0,
+     -175.0,
+     -436.0
+    ],
+    [
+     -175.0,
+     -295.0,
+     -436.0
+    ],
+    [
+     -295.0,
+     -295.0,
+     -436.0
+    ]
+   ],
+   [
+    [
+     -175.0,
+     -175.0,
+     -422.0
+    ],
+    [
+     -175.0,
+     -295.0,
+     -422.0
+    ],
+    [
+     -295.0,
+     -295.0,
+     -422.0
+    ]
+   ]
+  ],
+  "cabina": {
+   "modelo": {
+    "id": "0xf00cf130",
+    "indice": 304,
+    "parte": 12,
+    "archivo": "bd12.bin"
+   },
+   "texturas": {
+    "id": "0xf005f130",
+    "indice": 304,
+    "parte": 5,
+    "archivo": "bd12.bin"
+   }
+  },
+  "modelos_hojas": [
+   {
+    "id": "0xf00ff130",
+    "indice": 304,
+    "parte": 15,
+    "archivo": "bd12.bin"
+   },
+   {
+    "id": "0xf010f130",
+    "indice": 304,
+    "parte": 16,
+    "archivo": "bd12.bin"
+   },
+   {
+    "id": "0xf011f130",
+    "indice": 304,
+    "parte": 17,
+    "archivo": "bd12.bin"
+   },
+   {
+    "id": "0xf012f130",
+    "indice": 304,
+    "parte": 18,
+    "archivo": "bd12.bin"
+   }
+  ],
+  "texturas_hojas": [
+   {
+    "id": "0xf008f130",
+    "indice": 304,
+    "parte": 8,
+    "archivo": "bd12.bin"
+   },
+   {
+    "id": "0xf009f130",
+    "indice": 304,
+    "parte": 9,
+    "archivo": "bd12.bin"
+   },
+   {
+    "id": "0xf00af130",
+    "indice": 304,
+    "parte": 10,
+    "archivo": "bd12.bin"
+   },
+   {
+    "id": "0xf00bf130",
+    "indice": 304,
+    "parte": 11,
+    "archivo": "bd12.bin"
+   }
+  ],
+  "puerta_pasillo": {
+   "modelo": {
+    "id": "0xf00ef130",
+    "indice": 304,
+    "parte": 14,
+    "archivo": "bd12.bin"
+   },
+   "texturas": {
+    "id": "0xf007f130",
+    "indice": 304,
+    "parte": 7,
+    "archivo": "bd12.bin"
+   }
+  },
+  "puertas": {
+   "15": 924,
+   "16": 924,
+   "17": 921,
+   "20": 920,
+   "25": 922,
+   "31": 919,
+   "22": null,
+   "26": null
+  },
+  "nota": "cabina 0 en x = 800, cabina 1 en x = 0; piso 0 = y 0 (bd04 / bd11), 1 = y −1600 (bd03 alto), 2 = y −3200 (bd03, bd13). FUN_004db590: sin ninguna bandera de su cabina, la 0 arranca en el piso 1 (920) y la 1 en el 2 (924). La reja (0x38c, 0 cerrada … 2 abierta) solo se abre en el piso 0; FUN_004db640: hoja h, tramo k = (int)reja, x = desde + (hasta − desde)·(reja − k) + x de la cabina, y = y de la cabina, z = z del tramo."
+ },
+ "clave": {
+  "primera": [
+   3,
+   7,
+   5,
+   0
+  ],
+  "segunda": [
+   4,
+   8,
+   9,
+   0
+  ],
+  "botones": [
+   [
+    250.0,
+    247.0,
+    18.0,
+    18.0
+   ],
+   [
+    227.0,
+    177.0,
+    18.0,
+    18.0
+   ],
+   [
+    250.0,
+    177.0,
+    18.0,
+    18.0
+   ],
+   [
+    273.0,
+    177.0,
+    18.0,
+    18.0
+   ],
+   [
+    227.0,
+    200.0,
+    18.0,
+    18.0
+   ],
+   [
+    250.0,
+    200.0,
+    18.0,
+    18.0
+   ],
+   [
+    273.0,
+    200.0,
+    18.0,
+    18.0
+   ],
+   [
+    227.0,
+    224.0,
+    18.0,
+    18.0
+   ],
+   [
+    250.0,
+    224.0,
+    18.0,
+    18.0
+   ],
+   [
+    273.0,
+    224.0,
+    18.0,
+    18.0
+   ],
+   [
+    227.0,
+    247.0,
+    18.0,
+    18.0
+   ],
+   [
+    273.0,
+    247.0,
+    18.0,
+    18.0
+   ]
+  ],
+  "imagen": {
+   "id": "0xf005f132",
+   "indice": 306,
+   "parte": 5,
+   "archivo": "bd14.bin"
+  },
+  "sonidos": {
+   "boton": 50208,
+   "mal": 50209,
+   "bien": 50210
+  },
+  "nota": "FUN_004dcaf0: StageInfoIsLatterHalf() ? 0x5bd2ec : 0x5bd2e8; 0-9, 10 = * (common 78), 11 = # (common 79)"
+ },
+ "escalera_2251": {
+  "mira": [
+   0.0,
+   -8800.0,
+   -800.0
+  ],
+  "sonido": 20218,
+  "nota": "FUN_004dc3c0: congela a Henry, suena el stream 0x4efa hacia (0, −8800, −800) y la cámara mira para arriba (ataca 8 / roce 1,2 / 10, FUN_004fe890) hasta quedarse quieta 2 s"
+ },
+ "guiones": {
+  "ascensor_botonera": [
+   {
+    "msg": 43,
+    "archivo": 8,
+    "si_no": true
+   },
+   {
+    "llamada": "0x50ac40"
+   }
+  ],
+  "ascensor_nada": [
+   {
+    "msg": 44,
+    "archivo": 8
+   }
+  ],
+  "ascensor_no_esta": [
+   {
+    "msg": 48,
+    "archivo": 8
+   }
+  ],
+  "fantasma_espada": [
+   {
+    "msg": 65,
+    "archivo": 8
+   }
+  ],
+  "inventario_lleno": [
+   {
+    "msg": 17,
+    "archivo": 0
+   }
+  ],
+  "fantasma_llave": [
+   {
+    "msg": 66,
+    "archivo": 8,
+    "si_no": true
+   },
+   {
+    "msg": 67,
+    "archivo": 8
+   },
+   {
+    "item": 107
+   }
+  ],
+  "espada_3150": [
+   {
+    "msg": 68,
+    "archivo": 8,
+    "si_no": true
+   },
+   {
+    "msg": 69,
+    "archivo": 8
+   },
+   {
+    "item": 5
+   },
+   {
+    "llamada": "0x4dddd0"
+   }
+  ],
+  "que_es_esto_2252": [
+   {
+    "msg": 70,
+    "archivo": 8
+   }
+  ],
+  "cartel_caos_2253": [
+   {
+    "msg": 354,
+    "archivo": 1,
+    "si_no": true
+   },
+   {
+    "llamada": "0x50abe0"
+   },
+   {
+    "msg": 355,
+    "archivo": 1
+   },
+   {
+    "item": 121
+   }
+  ],
+  "escalera_derrumbe": [
+   {
+    "msg": 45,
+    "archivo": 8
+   }
+  ],
+  "nota_barman_2234": [
+   {
+    "msg": 125,
+    "archivo": 2
+   },
+   {
+    "msg": 126,
+    "archivo": 2,
+    "imagen": "0x18"
+   },
+   {
+    "msg": 127,
+    "archivo": 2
+   },
+   {
+    "item": 175
+   },
+   {
+    "llamada": "0x50ac00"
+   }
+  ],
+  "puerta_cerrada": [
+   {
+    "msg": 21,
+    "archivo": 0
+   }
+  ],
+  "agujero_302": [
+   {
+    "msg": 16,
+    "archivo": 0,
+    "si_no": true
+   }
+  ],
+  "0x618af8": [
+   {
+    "msg": 18,
+    "archivo": 0
+   }
+  ],
+  "0x618b58": [
+   {
+    "msg": 22,
+    "archivo": 0
+   }
+  ],
+  "0x620a88": [
+   {
+    "msg": 336,
+    "archivo": 1
+   }
+  ],
+  "0x620a70": [
+   {
+    "msg": 245,
+    "archivo": 1
+   }
+  ],
+  "0x618b10": [
+   {
+    "msg": 19,
+    "archivo": 0
+   }
+  ],
+  "0x618b28": [
+   {
+    "msg": 20,
+    "archivo": 0
+   }
+  ],
+  "0x618b40": [
+   {
+    "msg": 21,
+    "archivo": 0
+   }
+  ]
+ }
+}

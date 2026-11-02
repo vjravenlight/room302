@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SH4 · Luz antes y después</title>
+<style>
+html,body{margin:0;background:#000;color:#ddd;font:14px Georgia,serif;overflow:hidden}canvas{display:block}.rot{position:fixed;top:6px;padding:2px 8px;background:#0009}#a{left:6px}#d{left:calc(50% + 6px)}#info{position:fixed;bottom:6px;left:6px;background:#0009;padding:2px 8px;white-space:pre}
+</style>
+<script type="importmap">
+{ "imports": { "three": "../lib/three/build/three.module.js", "three/addons/": "../lib/three/examples/jsm/" } }
+</script>
+</head>
+<body>
+<div class="rot" id="a">ANTES (color de vértice ×2, sin niebla)</div>
+<div class="rot" id="d">DESPUÉS (como el PC: lib/sala.js)</div>
+<div id="info"></div>
+<script type="module" src="./comparar.js"></script>
+</body>
+</html>

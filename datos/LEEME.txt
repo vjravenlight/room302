@@ -1,0 +1,11 @@
+Estas tablas se bajan solas de https://sh4.ravenlight.net/datos/ la primera vez que se juega:
+caminos.json
+cine_auto.json
+demos.json
+demos_salas.json
+enemigos.json
+escenas.json
+henry.json
+juego.json
+personajes_cine.json
+sonido.json

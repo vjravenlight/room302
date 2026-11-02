@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:,">
+<title>SH4 · Música y sonido</title>
+<style>
+:root{--fondo: #0b0908;--panel: #15100e;--borde: #3a302a;--texto: #c9c2b6;--suave: #8f857a;--acento: #b59c7a;--rojo: #c0261a}html,body{margin:0;background:var(--fondo);color:var(--texto);font:15px/1.45 Georgia,serif}header{padding:40px 16px 6px;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}h1{font-size:20px;font-weight:400;margin:0;letter-spacing:.04em}a{color:var(--acento)}.barra{position:sticky;top:0;background:var(--panel);border-bottom:1px solid var(--borde);padding:8px 16px;display:flex;gap:8px 10px;flex-wrap:wrap;align-items:center;z-index:5}.barra .grupo{display:flex;gap:6px;align-items:center;flex-wrap:wrap}select,input,button{font:inherit;background:#1a1412;color:var(--texto);border:1px solid #4a3c34;padding:4px 8px;min-height:32px;box-sizing:border-box}button{cursor:pointer;min-width:36px}#filtro{width:13em}#vol{width:110px;min-height:0}#ahora{flex:1 1 100%;color:var(--acento);font-size:14px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}#ahora b{font-weight:400;color:#ece3d2}#tiempo{font:12px/1 monospace;color:var(--suave)}#onda{width:100%;height:64px;display:block;background:#100c0a;border-bottom:1px solid var(--borde);cursor:pointer;touch-action:none}#cuenta{padding:6px 16px 0;color:var(--suave);font-size:12px}ul{list-style:none;margin:0;padding:0 16px 60px}li{display:grid;grid-template-columns:4.6em 1fr auto;gap:2px 12px;padding:8px 4px;border-bottom:1px solid #221a16;cursor:pointer;align-items:baseline}li:hover,li:focus-visible{background:#1a1311;outline:none}li.sonando{background:linear-gradient(90deg,rgba(140,26,18,.35),transparent 70%)}li.sonando .nombre{color:#ece3d2}.num{color:var(--suave);font:12px/1.2 monospace}.nombre{color:var(--texto)}.nombre small{display:block;color:var(--suave);font-size:12px;margin-top:1px}.dato{color:var(--suave);font-size:12px;white-space:nowrap;text-align:right}.sinuso .nombre{color:#9a9086;font-style:italic}#vrLugar:empty{display:none}#VRButton{position:static!important;transform:none!important;width:auto!important;padding:4px 10px!important;font:13px Georgia,serif!important;opacity:1!important;min-height:32px}#VRButton.sinCasco{display:none!important}#reproductor{display:contents}@media (max-width: 640px),(pointer: coarse) and (max-width: 1000px){header{padding-top:48px}.barra{position:static;padding:8px 12px}select,input,button{min-height:42px}#paquete{flex:1 1 100%;max-width:100%}.barra>.grupo:first-of-type{flex:1 1 100%}#filtro{flex:1 1 auto;width:auto;min-width:0}#reproductor{display:flex;flex-direction:column-reverse;gap:4px;position:fixed;left:0;right:0;bottom:0;z-index:6;background:#120c0af7;border-top:1px solid #5a3a2a;padding:6px 12px calc(6px + env(safe-area-inset-bottom));box-shadow:0 -8px 24px #0009}#reproductor .transporte{justify-content:space-between;flex-wrap:nowrap}#reproductor .transporte button{min-width:48px}#reproductor .transporte label{flex:1 1 auto;min-width:0;white-space:normal;font-size:11px;line-height:1.15;display:flex;align-items:center;gap:4px}#reproductor .transporte label.volumen{display:none}#ahora{font-size:13px;flex-wrap:nowrap;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;display:block}li{grid-template-columns:1fr;padding:10px 4px;gap:2px}.dato{text-align:left;white-space:normal}ul{padding:0 12px 140px}}
+</style>
+</head>
+<body>
+<header><h1>Música y sonido</h1><span class="dato">leído directo de <code>demo/*.sh4</code> · <a href="./suite.html">inicio de la Suite</a></span></header>
+<div class="barra">
+  <select id="paquete" title="paquete">
+    <option value="bgm.sh4">Música (bgm.sh4)</option>
+    <option value="se.sh4">Efectos y ambientes (se.sh4)</option>
+  </select>
+  <div class="grupo">
+    <input id="filtro" type="search" placeholder="buscar…" title="buscar por nombre, lugar o número">
+    <label class="dato"><input type="checkbox" id="soloUso"> solo con uso conocido</label>
+  </div>
+  <div id="reproductor">
+    <div class="grupo transporte">
+      <button id="anterior" title="anterior">⏮</button><button id="pausa" title="pausa">⏸</button><button id="siguiente" title="siguiente">⏭</button>
+      <label class="dato"><input type="checkbox" id="loop" checked> repetir como en el juego</label>
+      <label class="dato volumen">volumen <input type="range" id="vol" min="0" max="1" step="0.01" value="0.8"></label>
+      <button id="wav" title="Bajar el tema actual como WAV">WAV</button>
+      <span id="vrLugar"></span>
+    </div>
+    <div id="ahora">—</div>
+  </div>
+</div>
+<canvas id="onda" width="1600" height="128" title="tocá o hacé clic para saltar"></canvas>
+<div id="cuenta"></div>
+<ul id="lista"></ul>
+<script type="importmap">
+{ "imports": { "three": "./lib/three/build/three.module.js", "three/addons/": "./lib/three/examples/jsm/" } }
+</script>
+<script type="module" src="./musica.js"></script>
+<script type="module" src="./suite_nav.js"></script>
+</body>
+</html>

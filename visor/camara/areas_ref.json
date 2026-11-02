@@ -1,0 +1,1671 @@
+{
+ "fuente": "SILENT HILL 4.exe (GOG) · CamDriveArea de 176 bytes a las que apuntan las CamAreaRefInfo",
+ "areas": {
+  "0x63f650": {
+   "nombre": "fr13_AB",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -550.0,
+     73.0,
+     -180.0
+    ],
+    "Pos1": [
+     316.0,
+     -67.0,
+     -43.0
+    ],
+    "Radius": 200.0,
+    "CylinderMode": 0.0
+   },
+   "CamMvType": 1,
+   "CamViewAng": 1.0996,
+   "ColideCamRadius": 200.0,
+   "CamMvArg": [
+    -568.0,
+    -377.0,
+    -180.0,
+    316.0,
+    -517.0,
+    -43.0,
+    100.0,
+    0.0,
+    -180.0,
+    0.0,
+    0.0,
+    1000.0,
+    200.0,
+    -434.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 1,
+   "AreaBit": 1,
+   "ConvineCamMvAreaBit": 1,
+   "JumpCamMvAreaBit": 0,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x63f700": {
+   "nombre": "fr13_BC",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     316.0,
+     -67.0,
+     -43.0
+    ],
+    "Pos1": [
+     1220.0,
+     -245.0,
+     -900.0
+    ],
+    "Radius": 200.0,
+    "CylinderMode": 0.0
+   },
+   "CamMvType": 1,
+   "CamViewAng": 1.0996,
+   "ColideCamRadius": 200.0,
+   "CamMvArg": [
+    316.0,
+    -517.0,
+    -43.0,
+    1220.0,
+    -695.0,
+    -900.0,
+    60.0,
+    0.0,
+    -180.0,
+    0.0,
+    0.0,
+    1000.0,
+    200.0,
+    -434.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 1,
+   "AreaBit": 1,
+   "ConvineCamMvAreaBit": 1,
+   "JumpCamMvAreaBit": 0,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x63f7b0": {
+   "nombre": "fr13_CD",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     1220.0,
+     -245.0,
+     -900.0
+    ],
+    "Pos1": [
+     2200.0,
+     -408.0,
+     -3120.0
+    ],
+    "Radius": 200.0,
+    "CylinderMode": 0.0
+   },
+   "CamMvType": 1,
+   "CamViewAng": 1.0996,
+   "ColideCamRadius": 200.0,
+   "CamMvArg": [
+    1220.0,
+    -695.0,
+    -900.0,
+    2200.0,
+    -858.0,
+    -3120.0,
+    60.0,
+    0.0,
+    -180.0,
+    0.0,
+    0.0,
+    1000.0,
+    200.0,
+    -434.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 1,
+   "AreaBit": 1,
+   "ConvineCamMvAreaBit": 1,
+   "JumpCamMvAreaBit": 0,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x63f860": {
+   "nombre": "fr13_DE",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     2200.0,
+     -408.0,
+     -3120.0
+    ],
+    "Pos1": [
+     2800.0,
+     -565.0,
+     -3368.0
+    ],
+    "Radius": 200.0,
+    "CylinderMode": 0.0
+   },
+   "CamMvType": 1,
+   "CamViewAng": 1.0996,
+   "ColideCamRadius": 200.0,
+   "CamMvArg": [
+    2200.0,
+    -858.0,
+    -3120.0,
+    3120.0,
+    -1015.0,
+    -3360.0,
+    100.0,
+    0.0,
+    -180.0,
+    0.0,
+    0.0,
+    1000.0,
+    200.0,
+    -434.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 1,
+   "AreaBit": 1,
+   "ConvineCamMvAreaBit": 1,
+   "JumpCamMvAreaBit": 0,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x649660": {
+   "nombre": "ie07_Lvng&Kchn",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -1132.0,
+     0.0,
+     -77.5
+    ],
+    "Pos1": [
+     634.0,
+     0.0,
+     -77.5
+    ],
+    "Radius": 577.5,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 1,
+   "CamViewAng": 1.0996,
+   "ColideCamRadius": 200.0,
+   "CamMvArg": [
+    -610.0,
+    -420.0,
+    -135.0,
+    380.0,
+    -420.0,
+    -135.0,
+    205.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    720.0,
+    24.0,
+    -584.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 0,
+   "AreaBit": 1,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65532,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x649450": {
+   "nombre": "ie05_TsuroFrnt",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     319.0,
+     0.0,
+     800.0
+    ],
+    "Pos1": [
+     319.0,
+     0.0,
+     1600.0
+    ],
+    "Radius": 161.0,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 0.9372,
+   "ColideCamRadius": 200.0,
+   "CamMvArg": [
+    323.0,
+    -630.0,
+    1477.0,
+    323.0,
+    -630.0,
+    1477.0,
+    0.0,
+    0.0,
+    0.0,
+    -540.0,
+    200.0,
+    0.0,
+    -1.3963,
+    3.1416,
+    50.2655,
+    0.0,
+    1.0,
+    0.85,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 2,
+   "AreaBit": 4,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65531,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x6495b0": {
+   "nombre": "ie06_TsuroAll",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -30.0,
+     0.0,
+     -1930.0
+    ],
+    "Pos1": [
+     -30.0,
+     0.0,
+     -520.0
+    ],
+    "Radius": 150.0,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.0996,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    -14.0,
+    -680.0,
+    -1765.0,
+    -14.0,
+    -680.0,
+    -1300.0,
+    0.0,
+    0.0,
+    0.0,
+    -540.0,
+    -500.0,
+    -300.0,
+    -1.2217,
+    0.0,
+    50.2655,
+    50.2655,
+    1.0,
+    0.2,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 2,
+   "AreaBit": 4,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65531,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x649500": {
+   "nombre": "ie06_Monooki",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     361.0,
+     0.0,
+     -760.0
+    ],
+    "Pos1": [
+     361.0,
+     0.0,
+     -324.0
+    ],
+    "Radius": 157.0,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.2217,
+   "ColideCamRadius": 200.0,
+   "CamMvArg": [
+    240.0,
+    -810.0,
+    -450.0,
+    240.0,
+    -810.0,
+    -450.0,
+    0.0,
+    0.0,
+    0.0,
+    -540.0,
+    200.0,
+    -300.0,
+    -1.2217,
+    1.3265,
+    50.2655,
+    50.2655,
+    1.0,
+    0.85,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 2,
+   "AreaBit": 4,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65531,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x6499d0": {
+   "nombre": "ie08_ToiletFL",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -920.0,
+     0.0,
+     1375.0
+    ],
+    "Pos1": [
+     -424.0,
+     0.0,
+     1375.0
+    ],
+    "Radius": 225.0,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.2217,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    -500.0,
+    -580.0,
+    1450.0,
+    -500.0,
+    -580.0,
+    1450.0,
+    0.0,
+    0.0,
+    0.0,
+    -540.0,
+    200.0,
+    0.0,
+    -1.2217,
+    -2.0246,
+    0.0,
+    0.0,
+    1.0,
+    0.75,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 1,
+   "AreaBit": 32,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65503,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x649870": {
+   "nombre": "ie07_ToiletBL",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -1100.0,
+     0.0,
+     1862.0
+    ],
+    "Pos1": [
+     -600.0,
+     0.0,
+     1862.0
+    ],
+    "Radius": 222.0,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.4137,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    -685.0,
+    -505.0,
+    1793.0,
+    -685.0,
+    -505.0,
+    1793.0,
+    0.0,
+    0.0,
+    0.0,
+    -540.0,
+    200.0,
+    0.0,
+    -1.3247,
+    -1.8117,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 1,
+   "AreaBit": 16,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65519,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x649920": {
+   "nombre": "ie07_RoomBackR",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -200.0,
+     0.0,
+     1778.0
+    ],
+    "Pos1": [
+     620.0,
+     0.0,
+     1778.0
+    ],
+    "Radius": 292.0,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.2427,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    411.0,
+    -540.0,
+    1850.0,
+    411.0,
+    -540.0,
+    1850.0,
+    0.0,
+    0.0,
+    0.0,
+    -540.0,
+    200.0,
+    -300.0,
+    -1.2217,
+    -1.8326,
+    50.2655,
+    50.2655,
+    1.0,
+    0.75,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 1,
+   "AreaBit": 32,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65503,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x649710": {
+   "nombre": "ie07_TsuroFrnt",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -405.5,
+     0.0,
+     500.0
+    ],
+    "Pos1": [
+     -405.5,
+     0.0,
+     1400.0
+    ],
+    "Radius": 165.5,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.2217,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    -403.0,
+    -447.0,
+    1575.0,
+    -403.0,
+    -447.0,
+    1575.0,
+    0.0,
+    1.0,
+    0.0,
+    -540.0,
+    300.0,
+    -180.0,
+    -1.3963,
+    3.1416,
+    0.9425,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 2,
+   "AreaBit": 4,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65531,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x6497c0": {
+   "nombre": "ie07_TsuuroBack",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -405.0,
+     0.0,
+     1400.0
+    ],
+    "Pos1": [
+     -405.0,
+     0.0,
+     2080.0
+    ],
+    "Radius": 165.0,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.2217,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    -403.0,
+    -610.0,
+    1970.0,
+    -412.0,
+    -610.0,
+    1970.0,
+    0.0,
+    0.0,
+    0.0,
+    -540.0,
+    300.0,
+    -180.0,
+    -1.3963,
+    3.1416,
+    0.9425,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 2,
+   "AreaBit": 4,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65531,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x649a80": {
+   "nombre": "ie09_Lvng&Kchn",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -467.0,
+     0.0,
+     152.5
+    ],
+    "Pos1": [
+     623.0,
+     0.0,
+     152.5
+    ],
+    "Radius": 877.5,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 1,
+   "CamViewAng": 1.0996,
+   "ColideCamRadius": 200.0,
+   "CamMvArg": [
+    -240.0,
+    -480.0,
+    -204.0,
+    270.0,
+    -480.0,
+    -204.0,
+    380.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    720.0,
+    24.0,
+    -509.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 0,
+   "AreaBit": 1,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65532,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x649b30": {
+   "nombre": "ie09_TsuroFrnt",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     700.0,
+     0.0,
+     312.5
+    ],
+    "Pos1": [
+     1600.0,
+     0.0,
+     312.5
+    ],
+    "Radius": 162.5,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 0.8727,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    350.0,
+    -650.0,
+    300.0,
+    1200.0,
+    -650.0,
+    300.0,
+    0.0,
+    0.0,
+    -60.0,
+    -540.0,
+    0.0,
+    -180.0,
+    0.0,
+    1.5708,
+    50.2655,
+    0.0,
+    1.0,
+    0.95,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 2,
+   "AreaBit": 4,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65531,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x649be0": {
+   "nombre": "ie09_RoomFrntR",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     650.0,
+     0.0,
+     -305.0
+    ],
+    "Pos1": [
+     1600.0,
+     0.0,
+     -305.0
+    ],
+    "Radius": 425.0,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.2217,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    1080.0,
+    -460.0,
+    -338.0,
+    660.0,
+    -460.0,
+    -497.0,
+    0.0,
+    0.0,
+    -240.0,
+    -540.0,
+    -60.0,
+    -180.0,
+    -0.3491,
+    1.5708,
+    50.2655,
+    50.2655,
+    1.0,
+    0.95,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 1,
+   "AreaBit": 32,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65503,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x649df0": {
+   "nombre": "ie10_RoomIE10",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -1431.0,
+     0.0,
+     -262.5
+    ],
+    "Pos1": [
+     -470.0,
+     0.0,
+     -262.5
+    ],
+    "Radius": 409.5,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 1,
+   "CamViewAng": 1.0996,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    50.0,
+    -440.0,
+    -463.0,
+    50.0,
+    -440.0,
+    250.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    720.0,
+    24.0,
+    -509.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 1,
+   "AreaBit": 32,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 0,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x649c90": {
+   "nombre": "ie10_TsuroAll",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -2110.0,
+     0.0,
+     325.5
+    ],
+    "Pos1": [
+     -450.0,
+     0.0,
+     325.5
+    ],
+    "Radius": 149.5,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.2217,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    -100.0,
+    -1032.0,
+    335.0,
+    -2110.0,
+    -1032.0,
+    335.0,
+    0.0,
+    1.0,
+    300.0,
+    -540.0,
+    0.0,
+    -180.0,
+    -1.3963,
+    -1.5708,
+    50.2655,
+    50.2655,
+    1.0,
+    0.95,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 2,
+   "AreaBit": 4,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65531,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x649d40": {
+   "nombre": "ie10_OriFrontR",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -1670.0,
+     0.0,
+     747.0
+    ],
+    "Pos1": [
+     -1187.0,
+     0.0,
+     747.0
+    ],
+    "Radius": 263.0,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.2566,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    -1226.0,
+    -477.0,
+    156.0,
+    -1226.0,
+    -477.0,
+    156.0,
+    0.0,
+    0.0,
+    300.0,
+    -540.0,
+    0.0,
+    0.0,
+    -0.4049,
+    0.0384,
+    0.0,
+    0.0,
+    1.0,
+    0.95,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 1,
+   "AreaBit": 32,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65503,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x649ea0": {
+   "nombre": "ie13_RoomBL",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -483.0,
+     0.0,
+     1942.0
+    ],
+    "Pos1": [
+     360.0,
+     0.0,
+     1942.0
+    ],
+    "Radius": 302.0,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.2217,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    -138.5,
+    -515.0,
+    1903.0,
+    -138.5,
+    -515.0,
+    1903.0,
+    138.5,
+    0.0,
+    -500.0,
+    -540.0,
+    0.0,
+    -180.0,
+    -1.2217,
+    1.5708,
+    50.2655,
+    50.2655,
+    1.0,
+    0.95,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 1,
+   "AreaBit": 32,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65503,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x649f50": {
+   "nombre": "ie14_RoomFL",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -815.0,
+     0.0,
+     1038.0
+    ],
+    "Pos1": [
+     23.0,
+     0.0,
+     1038.0
+    ],
+    "Radius": 538.0,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.2217,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    -690.0,
+    -560.0,
+    650.0,
+    -690.0,
+    -560.0,
+    1280.0,
+    0.0,
+    0.0,
+    -360.0,
+    -380.0,
+    0.0,
+    -180.0,
+    -1.5533,
+    1.5708,
+    50.2655,
+    50.2655,
+    0.95,
+    0.95,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 1,
+   "AreaBit": 32,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65503,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x64a160": {
+   "nombre": "ie16_RoomFrntR",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -147.0,
+     0.0,
+     1000.0
+    ],
+    "Pos1": [
+     732.0,
+     0.0,
+     1000.0
+    ],
+    "Radius": 560.0,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.227,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    89.0,
+    -580.0,
+    1344.0,
+    476.0,
+    -580.0,
+    670.0,
+    0.0,
+    0.0,
+    -100.0,
+    -540.0,
+    160.0,
+    -180.0,
+    -1.3963,
+    2.042,
+    50.2655,
+    50.2655,
+    1.0,
+    0.95,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 2,
+   "AreaBit": 32,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65503,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x64a2c0": {
+   "nombre": "ie18_RoomBR",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     1654.0,
+     154.0,
+     -257.5
+    ],
+    "Pos1": [
+     2250.0,
+     154.0,
+     -257.5
+    ],
+    "Radius": 422.5,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.227,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    1780.0,
+    -420.0,
+    -153.0,
+    1780.0,
+    -420.0,
+    -513.0,
+    0.0,
+    0.0,
+    0.0,
+    -540.0,
+    -360.0,
+    -180.0,
+    0.0,
+    0.2182,
+    50.2655,
+    50.2655,
+    1.0,
+    0.95,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 2,
+   "AreaBit": 32,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65503,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x64a210": {
+   "nombre": "ie18_BigMonooki",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     510.0,
+     154.0,
+     805.5
+    ],
+    "Pos1": [
+     1140.0,
+     154.0,
+     805.5
+    ],
+    "Radius": 267.5,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.2217,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    656.0,
+    -460.0,
+    762.0,
+    656.0,
+    -460.0,
+    762.0,
+    0.0,
+    0.0,
+    0.0,
+    -540.0,
+    -360.0,
+    -180.0,
+    -1.309,
+    1.5708,
+    50.2655,
+    50.2655,
+    1.0,
+    0.95,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 2,
+   "AreaBit": 32,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65503,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x64a580": {
+   "nombre": "ie22_RoomFR",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -337.0,
+     0.0,
+     343.5
+    ],
+    "Pos1": [
+     450.0,
+     0.0,
+     343.5
+    ],
+    "Radius": 511.5,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.227,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    270.0,
+    -500.0,
+    12.0,
+    270.0,
+    -500.0,
+    600.0,
+    0.0,
+    0.0,
+    20.0,
+    -500.0,
+    0.0,
+    -180.0,
+    -1.2217,
+    -1.5708,
+    50.2655,
+    50.2655,
+    1.0,
+    0.95,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 2,
+   "AreaBit": 32,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65503,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x64a000": {
+   "nombre": "cm15_OriBL",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     13.0,
+     0.0,
+     -1795.0
+    ],
+    "Pos1": [
+     520.0,
+     0.0,
+     -1795.0
+    ],
+    "Radius": 255.0,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.2217,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    108.0,
+    -676.0,
+    -1867.0,
+    108.0,
+    -676.0,
+    -1867.0,
+    0.0,
+    0.0,
+    0.0,
+    -540.0,
+    200.0,
+    0.0,
+    -1.309,
+    1.1519,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 1,
+   "AreaBit": 16,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65519,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x64a0b0": {
+   "nombre": "ie07_f15Lv&K",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -1132.0,
+     0.0,
+     -77.5
+    ],
+    "Pos1": [
+     634.0,
+     0.0,
+     -77.5
+    ],
+    "Radius": 577.5,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 1,
+   "CamViewAng": 1.0996,
+   "ColideCamRadius": 200.0,
+   "CamMvArg": [
+    -760.0,
+    -420.0,
+    -135.0,
+    380.0,
+    -420.0,
+    -135.0,
+    205.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    720.0,
+    24.0,
+    -584.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 0,
+   "AreaBit": 128,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65407,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x64be30": {
+   "nombre": "cm19_walterFirer",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -523.0,
+     0.0,
+     405.0
+    ],
+    "Pos1": [
+     -106.0,
+     0.0,
+     405.0
+    ],
+    "Radius": 275.0,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 0.8517,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    385.0,
+    -450.0,
+    170.0,
+    385.0,
+    -450.0,
+    170.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -240.0,
+    -0.2618,
+    -1.3212,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 2,
+   "AreaBit": 1024,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 64511,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x64bee0": {
+   "nombre": "cm19_DoorFront",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     -523.0,
+     0.0,
+     5340.0
+    ],
+    "Pos1": [
+     -173.0,
+     0.0,
+     5340.0
+    ],
+    "Radius": 4660.0,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.0996,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    -297.0,
+    -500.0,
+    183.0,
+    -297.0,
+    -500.0,
+    183.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -240.0,
+    -0.4014,
+    -0.0175,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 2,
+   "AreaBit": 2048,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 63487,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x64a370": {
+   "nombre": "cm21_TsuroFrnt",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     63.0,
+     0.0,
+     1227.5
+    ],
+    "Pos1": [
+     394.0,
+     0.0,
+     1227.5
+    ],
+    "Radius": 453.5,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 0.7994,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    240.0,
+    -660.0,
+    200.0,
+    240.0,
+    -660.0,
+    1300.0,
+    0.0,
+    0.0,
+    0.0,
+    -500.0,
+    -400.0,
+    -220.0,
+    -1.3753,
+    -0.0227,
+    50.2655,
+    0.0,
+    1.0,
+    0.95,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 2,
+   "AreaBit": 4,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65531,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x64a420": {
+   "nombre": "cm21_TsuroFrntE",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     63.0,
+     0.0,
+     1550.5
+    ],
+    "Pos1": [
+     394.0,
+     0.0,
+     1550.5
+    ],
+    "Radius": 130.5,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.3648,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    225.0,
+    -446.0,
+    1448.0,
+    225.0,
+    -446.0,
+    1448.0,
+    0.0,
+    0.0,
+    0.0,
+    -500.0,
+    -200.0,
+    -220.0,
+    -1.2636,
+    -0.0227,
+    0.0,
+    0.0,
+    1.0,
+    0.95,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 3,
+   "AreaBit": 8,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65527,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "0x64a4d0": {
+   "nombre": "cm21_ToiletFR",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     415.0,
+     0.0,
+     1257.0
+    ],
+    "Pos1": [
+     905.0,
+     0.0,
+     1257.0
+    ],
+    "Radius": 268.0,
+    "CylinderMode": 1.0
+   },
+   "CamMvType": 2,
+   "CamViewAng": 1.2741,
+   "ColideCamRadius": 0.0,
+   "CamMvArg": [
+    531.0,
+    -682.0,
+    1312.0,
+    531.0,
+    -682.0,
+    1312.0,
+    0.0,
+    0.0,
+    20.0,
+    -500.0,
+    0.0,
+    -180.0,
+    -1.3753,
+    1.1606,
+    0.0,
+    0.0,
+    1.0,
+    0.95,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 2,
+   "AreaBit": 32,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 65503,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "DfltOutDoor": {
+   "nombre": "DfltOutDoor",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Pos1": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Radius": 20000.0,
+    "CylinderMode": 0.0
+   },
+   "CamMvType": 1,
+   "CamViewAng": 1.0996,
+   "ColideCamRadius": 200.0,
+   "CamMvArg": [
+    0.0,
+    -380.0,
+    0.0,
+    0.0,
+    -380.0,
+    0.0,
+    20000.0,
+    0.0,
+    -180.0,
+    0.0,
+    0.0,
+    1000.0,
+    200.0,
+    -434.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 1,
+   "AreaBit": 0,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 0,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  },
+  "DfltRoom": {
+   "nombre": "DfltRoom",
+   "DataNo": 0,
+   "DriveArea": {
+    "Pos0": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Pos1": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Radius": 20000.0,
+    "CylinderMode": 0.0
+   },
+   "CamMvType": 1,
+   "CamViewAng": 1.0996,
+   "ColideCamRadius": 200.0,
+   "CamMvArg": [
+    0.0,
+    -380.0,
+    0.0,
+    0.0,
+    -380.0,
+    0.0,
+    20000.0,
+    0.0,
+    -180.0,
+    0.0,
+    0.0,
+    1000.0,
+    200.0,
+    -434.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AreaPriority": 1,
+   "AreaBit": 0,
+   "ConvineCamMvAreaBit": 0,
+   "JumpCamMvAreaBit": 0,
+   "InhibitChgAreaBit": 0,
+   "UseThisCheckFunc": null
+  }
+ }
+}

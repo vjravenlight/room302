@@ -1,0 +1,857 @@
+{
+ "fuente": "SILENT HILL 4.exe (GOG) solo lectura + datos/escenas.json. tools/hospital/hospital_datos.py",
+ "como_se_lee": {
+  "fin": "evnum -> banderas que prende (+n) o apaga (-n) al terminar (tablas 0x620B50[7] y 0x620B80)",
+  "cerraduras": "tabla 0x634188[7]: tipo 0/1/2 bandera + escena del lado que abre + guiones + ítem; 3/4 siempre cerrada; 5 la puerta existe solo si las banderas valen lo pedido; 6 por bandera"
+ },
+ "fin": {
+  "comun": {
+   "3017": [
+    1801
+   ],
+   "3018": [
+    0
+   ],
+   "3019": [
+    0
+   ],
+   "3106": [
+    1851
+   ],
+   "3107": [
+    -1851
+   ],
+   "3120": [
+    1852
+   ],
+   "3121": [
+    1853
+   ],
+   "2705": [
+    1858
+   ],
+   "3135": [
+    3
+   ],
+   "3015": [
+    0
+   ],
+   "73": [
+    0
+   ],
+   "1400": [
+    1854
+   ],
+   "3167": [
+    1856
+   ]
+  },
+  "etapa7": {
+   "155": [
+    1301
+   ],
+   "156": [
+    1302
+   ],
+   "157": [
+    1303
+   ],
+   "158": [
+    1304
+   ],
+   "159": [
+    1314
+   ],
+   "3074": [
+    1315
+   ],
+   "3075": [
+    1316
+   ],
+   "3076": [
+    1317
+   ],
+   "3077": [
+    1318
+   ],
+   "3078": [
+    1319
+   ],
+   "44": [
+    1310
+   ],
+   "163": [
+    1311
+   ],
+   "3087": [
+    1322
+   ],
+   "45": [
+    1312
+   ],
+   "170": [
+    1313
+   ],
+   "2290": [
+    1326
+   ],
+   "2291": [
+    1327
+   ],
+   "2561": [
+    1329
+   ]
+  }
+ },
+ "agujeros": [
+  {
+   "fila": 19,
+   "etapa": 7,
+   "escena": 6,
+   "bandera": 19,
+   "bandera2": 48,
+   "pos": [
+    -180.0,
+    0.0,
+    -40.0
+   ],
+   "rot": 1.57
+  }
+ ],
+ "cerraduras": [
+  {
+   "door": 10,
+   "tipo": 1,
+   "bandera": 2126,
+   "escena": 32,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x626670"
+   ],
+   "item": 79
+  },
+  {
+   "door": 34,
+   "tipo": 1,
+   "bandera": 1317,
+   "escena": 4,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x626688"
+   ],
+   "item": 81
+  },
+  {
+   "door": 35,
+   "tipo": 6,
+   "bandera": 1318,
+   "guiones": [
+    "0x6267f4"
+   ]
+  },
+  {
+   "door": 36,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  },
+  {
+   "door": 37,
+   "tipo": 3,
+   "guiones": [
+    "0x618b28"
+   ]
+  }
+ ],
+ "guiones": {
+  "agujero_302": [
+   {
+    "msg": 16,
+    "archivo": 0,
+    "si_no": true
+   }
+  ],
+  "agujero_163": [
+   {
+    "msg": 16,
+    "archivo": 0,
+    "si_no": true
+   }
+  ],
+  "sin_eileen": [
+   {
+    "msg": 26,
+    "archivo": 0
+   }
+  ],
+  "boton_ascensor": [
+   {
+    "msg": 59,
+    "archivo": 10,
+    "si_no": true
+   },
+   {
+    "llamada": "0x50abe0"
+   }
+  ],
+  "jaula_cerrada": [
+   {
+    "msg": 18,
+    "archivo": 0
+   }
+  ],
+  "jaula_llave": [
+   {
+    "msg": 49,
+    "archivo": 10
+   }
+  ],
+  "ascensor_otro_piso": [
+   {
+    "msg": 61,
+    "archivo": 10
+   }
+  ],
+  "0x618af8": [
+   {
+    "msg": 18,
+    "archivo": 0
+   }
+  ],
+  "0x618b58": [
+   {
+    "msg": 22,
+    "archivo": 0
+   }
+  ],
+  "0x626670": [
+   {
+    "msg": 49,
+    "archivo": 10
+   }
+  ],
+  "0x626688": [
+   {
+    "msg": 218,
+    "archivo": 1
+   }
+  ],
+  "0x6267f4": [
+   {
+    "msg": 61,
+    "archivo": 10
+   }
+  ],
+  "0x618b28": [
+   {
+    "msg": 20,
+    "archivo": 0
+   }
+  ]
+ },
+ "llegada": {
+  "escena": 1,
+  "demo": 40,
+  "ev": 155,
+  "despues": {
+   "escena": 4,
+   "porPuerta": 1
+  },
+  "nota": "ev 154 del 302 (exec 0x4da590): sin 1301 FUN_004f72b0(10, 6) (túnel 6) y FUN_004d18e0(7, 1) (hs01). ev 155 (hs01, \"!F1301\") → d_040; end 0x4e2ac0: FUN_004fa2d0(escena, 1) = la primera puerta de hs01 → FUN_004f7220(puerta, 1): Henry sale por la puerta 1 → hs04."
+ },
+ "d038": {
+  "henry": [
+   -233.0,
+   0.0,
+   1930.0
+  ],
+  "rot": -0.89,
+  "nota": "end 0x4e2c20 (ev 2290, hs04)"
+ },
+ "eileen_hs10": {
+  "pos": [
+   238.577,
+   0.0,
+   -216.183
+  ],
+  "rot": 0.0,
+  "bandera": 1302,
+  "nota": "end 0x4e2b30 (ev 44, d_042): EileenCall (0x44b5b0) + EileenWarp(7, 10, 0x625960, giro 0) y 0x13d8142 |= 0x40 (1302)"
+ },
+ "eileen_cama": {
+  "pos": [
+   210.0,
+   71.0,
+   94.0
+  ],
+  "modelo": [
+   "eil.bin",
+   0,
+   1,
+   2
+  ],
+  "enfermera": [
+   "eol.bin"
+  ],
+  "anim": [
+   "hs10.bin",
+   5
+  ],
+  "nota": "hs10 objeto 1 (cnst 0x4e2c80, exec 0x4e2d10): Eileen en la cama (eil.bin, o eol.bin con el traje de enfermera) con la animación hs10.bin #5; se dibuja con !1310 (FUN_004cdb30(obj, ~(0x13d8143 >> 6) & 1))"
+ },
+ "agujero_hs06": {
+  "eileen_cerca": {
+   "driver": "0x625a10",
+   "evnum": 0,
+   "trgchk": "0x4cd690",
+   "init": "0x4cd5d0",
+   "exec": "0x4cd680",
+   "end": "0x4e2ba0",
+   "archivos": [],
+   "val": [
+    "0x618abc",
+    0,
+    0,
+    0
+   ]
+  },
+  "eileen_lejos": {
+   "driver": "0x625a3c",
+   "evnum": 0,
+   "trgchk": "0x4cd690",
+   "init": "0x4cd5d0",
+   "exec": "0x4cd680",
+   "archivos": [],
+   "val": [
+    "0x618bb8",
+    0,
+    0,
+    0
+   ]
+  },
+  "demo163": {
+   "driver": "0x6259e4",
+   "evnum": 163,
+   "trgchk": "0x44bdd0",
+   "init": "0x4cd170",
+   "exec": "0x4cd1b0",
+   "end": "0x4e2b90",
+   "archivos": [
+    "henhk.bin",
+    "eihk.bin"
+   ],
+   "val": [
+    43,
+    0,
+    0,
+    0
+   ]
+  },
+  "comun": {
+   "driver": "0x618a60",
+   "evnum": 0,
+   "trgchk": "0x4cd690",
+   "init": "0x4cd5d0",
+   "exec": "0x4d1bf0",
+   "archivos": [],
+   "val": [
+    "0x618abc",
+    0,
+    0,
+    0
+   ]
+  },
+  "nota": "hs06 objeto 1 (exec 0x4e2bc0): con 1310 y sin 1311, si EileenIsWithHenry → 0x625a10 (común #16; end 0x4e2ba0: con Sí corre 0x6259e4 = ev 163 → d_043, end 0x4e2b90 = FUN_004d1b60: túnel de vuelta (FUN_004d1920: etapa 7 → túnel 6), checkpoint de hs06 y EileenSetAlone); si no → 0x625a3c (común #26). Con 1311 (o sin 1310) → 0x618a60 (común #16 + 0x4d1bf0, el agujero de siempre)."
+ },
+ "jaula_hs14": {
+  "inicio": [
+   49.986,
+   -1599.463,
+   -54.384
+  ],
+  "fin_y": -720.7015,
+  "aceleracion": 1960.0,
+  "radio": 212.0,
+  "alto": 400.0,
+  "segmentos": 32,
+  "camara": {
+   "pos": [
+    348.97,
+    -39.325,
+    192.917
+   ],
+   "mira": [
+    -306.117,
+    -799.324,
+    -298.952
+   ],
+   "fov": 1.0996
+  },
+  "sonidos": {
+   "cae": 50501,
+   "golpe": 50500,
+   "paso": 50508,
+   "llave": 50507,
+   "cerrada": 40088
+  },
+  "paso": [
+   {
+    "pos": [
+     -231.39,
+     -0.45,
+     -34.99
+    ],
+    "rot": -1.536
+   },
+   {
+    "pos": [
+     -91.22,
+     -0.45,
+     -58.99
+    ],
+    "rot": 1.536
+   }
+  ],
+  "banderas": {
+   "cayo": 1324,
+   "abierta": 1325
+  },
+  "modelo": [
+   "hs14.bin",
+   5,
+   6
+  ],
+  "nota": "ev_hospital0_hs14_cage_fall (cnst 0x4e36f0, exec 0x4e3790): la jaula arriba en inicio; al agarrar la llave (end 0x4e4840 → 0x4e3770) cae acelerando 1960 u/s² hasta fin_y (0xc545 mientras cae, 0xc544 al golpear), 1 s de temblor de la cámara fija y queda abajo (1324). Pared: cilindro de radio 212 y alto 400 alrededor (FUN_005622b0, 32 lados). Puerta de la jaula: usar la llave 79 (obj 5, trgchk 0x4e3bd0 = !1325, init 0x4e3bf0: 0xc54b + hospital0 #49; end 0x4e3c10 prende 1325); sin la llave, obj 6 (init 0x4e0ba0: 0x9c98 + común #18). Pasar (obj 3/4, exec 0x4e3a90): fundido, 0xc54c y Henry del otro lado."
+ },
+ "techo_hs13": {
+  "inicio": [
+   -92.582,
+   -1119.464,
+   39.94
+  ],
+  "fin_y": -519.464,
+  "aceleracion": 1960.0,
+  "sube": 100.0,
+  "camara": {
+   "pos": [
+    461.0,
+    -66.0,
+    210.0
+   ],
+   "mira": [
+    -306.117,
+    -799.324,
+    -298.952
+   ],
+   "fov": 1.3282
+  },
+  "sonidos": {
+   "golpe": 50502,
+   "sube": 51503
+  },
+  "bandera": 1323,
+  "modelo": [
+   "hs13.bin",
+   5,
+   6
+  ],
+  "nota": "ev_hospital0_hs13_ceiling_fall (cnst 0x4e32b0, exec 0x4e3330): la primera vez (sin 1323, la prende) espera 1 s, el techo cae acelerando 1960 u/s² hasta fin_y (0xc546), 1 s de temblor, sube a 100 u/s con 0xc92f hasta volver arriba. Cámara fija mientras dura."
+ },
+ "foto_hs09": {
+  "pos": [
+   [
+    -381.308,
+    -241.376,
+    -8.33
+   ],
+   [
+    -316.771,
+    -10.0,
+    -84.401
+   ]
+  ],
+  "quat": [
+   [
+    0.0,
+    0.0,
+    0.707,
+    0.707
+   ],
+   [
+    0.0,
+    0.88,
+    0.0,
+    0.475
+   ]
+  ],
+  "bandera": 1302,
+  "modelo": [
+   "hs09.bin",
+   6,
+   5
+  ],
+  "nota": "cnst 0x4e31f0 / exec 0x4e3260: posición y giro según 0x13d8142 & 0x40 (1302)"
+ },
+ "puerta_ascensor_hs04": {
+  "pos": [
+   [
+    -324.263,
+    -219.404,
+    3105.708
+   ],
+   [
+    -324.263,
+    9999.0,
+    3105.708
+   ]
+  ],
+  "bandera": 1318,
+  "pared": {
+   "x": [
+    -500.0,
+    -150.0
+   ],
+   "z": 3090.0,
+   "y": [
+    -420.0,
+    0.0
+   ]
+  },
+  "nota": "cnst 0x4e4330 / exec 0x4e43e0 (ev_hospital0_hs04_elvdoor): la puerta del ascensor de hs04 (hs04.bin 5/6) y su pared (0x625cf0); con 1318 se van a y = 9999 / bajo el piso"
+ },
+ "ojos_hs20": {
+  "modelo": [
+   "hs20.bin",
+   7,
+   5
+  ],
+  "alto": 165.0,
+  "escala": 1.1,
+  "nota": "ev_hospital0_eil_eye (cnst 0x4e2d40, exec 0x4e2eb0; modelo hs20.bin #7, texturas #5): dos ojos que miran a Henry (a la altura de su cabeza: −165) con un temblor: 1 de cada 4 cuadros al azar ±(0,2…0,8)·½"
+ },
+ "peluca_hs20": {
+  "pos": [
+   1027.418,
+   -639.463,
+   40.87
+  ],
+  "sonido": 51505,
+  "pos_sonido": [
+   785.895,
+   -80.788,
+   5.552
+  ],
+  "radio": 4000,
+  "modelo": [
+   "hs20.bin",
+   8,
+   6
+  ],
+  "nota": "ev_hospital0_eil_wig (cnst 0x4e3070, exec 0x4e30f0): la peluca de Eileen y su sonido en loop"
+ },
+ "cadaver_hs28": {
+  "pos": [
+   -963.633,
+   -799.463,
+   55.123
+  ],
+  "velocidad": 0.1,
+  "amplitud": 30.0,
+  "modelo": [
+   "hs28.bin",
+   5,
+   6
+  ],
+  "nota": "ev_hospital0_hs28_corpse (cnst 0x4e4590, exec 0x4e4620): se mece; fase += 0,1 por cuadro, giro x = atan(cos·30·½ / 400), z = −atan(sen·30·½ / 400)"
+ },
+ "boton_ascensor": {
+  "sonido": 50204,
+  "espera": 1.8,
+  "bandera": 1318,
+  "nota": "ev 3077 (hs32 obj 31, exec 0x4e4500): «¿Pulso el botón?»; con Sí 0xc41c y 1,8 s → 1318"
+ },
+ "salida": {
+  "tabla": [
+   {
+    "etapa": 7,
+    "escena": 34,
+    "mundo_pos": [
+     0.0,
+     2619.0,
+     5858.0
+    ],
+    "mundo_rot": 3.1416,
+    "a_escena": 1,
+    "pos": [
+     -55.0,
+     -1.052,
+     0.0
+    ],
+    "rot": 0.0,
+    "musica": 1,
+    "banderas": []
+   },
+   {
+    "etapa": 2,
+    "escena": 19,
+    "mundo_pos": [
+     -400.0,
+     -2.849,
+     -1890.0
+    ],
+    "mundo_rot": 0.0,
+    "a_escena": 1,
+    "pos": [
+     -55.0,
+     3811.0,
+     0.0
+    ],
+    "rot": 3.1416,
+    "musica": 1,
+    "banderas": [
+     316
+    ]
+   },
+   {
+    "etapa": 2,
+    "escena": 23,
+    "mundo_pos": [
+     48.0,
+     0.0,
+     -2922.0
+    ],
+    "mundo_rot": 0.0,
+    "a_escena": 2,
+    "pos": [
+     -55.0,
+     -1.052,
+     0.0
+    ],
+    "rot": 0.0,
+    "musica": 1,
+    "banderas": []
+   },
+   {
+    "etapa": 3,
+    "escena": 19,
+    "mundo_pos": [
+     239.0,
+     0.0,
+     2725.0
+    ],
+    "mundo_rot": 3.1416,
+    "a_escena": 2,
+    "pos": [
+     -55.0,
+     3811.0,
+     0.0
+    ],
+    "rot": 3.1416,
+    "musica": 1,
+    "banderas": [
+     328,
+     523
+    ]
+   },
+   {
+    "etapa": 3,
+    "escena": 22,
+    "mundo_pos": [
+     -171.0,
+     0.0,
+     390.0
+    ],
+    "mundo_rot": 2.531,
+    "a_escena": 3,
+    "pos": [
+     -55.0,
+     -1.052,
+     0.0
+    ],
+    "rot": 0.0,
+    "musica": 1,
+    "banderas": []
+   },
+   {
+    "etapa": 11,
+    "escena": 6,
+    "mundo_pos": [
+     -326.0,
+     0.0,
+     8.0
+    ],
+    "mundo_rot": 1.57,
+    "a_escena": 3,
+    "pos": [
+     -55.0,
+     3811.0,
+     0.0
+    ],
+    "rot": 3.1416,
+    "musica": 1,
+    "banderas": []
+   },
+   {
+    "etapa": 11,
+    "escena": 3,
+    "mundo_pos": [
+     -55.0,
+     3811.0,
+     0.0
+    ],
+    "mundo_rot": 3.1416,
+    "a_escena": 6,
+    "pos": [
+     -326.0,
+     0.0,
+     8.0
+    ],
+    "rot": 1.57,
+    "musica": 1,
+    "banderas": []
+   },
+   {
+    "etapa": 4,
+    "escena": 43,
+    "mundo_pos": [
+     75.0,
+     0.0,
+     -350.0
+    ],
+    "mundo_rot": 3.1416,
+    "a_escena": 6,
+    "pos": [
+     -406.675,
+     0.0,
+     2.144
+    ],
+    "rot": -1.57,
+    "musica": 0,
+    "banderas": []
+   },
+   {
+    "etapa": 4,
+    "escena": 42,
+    "mundo_pos": [
+     -4278.0,
+     0.0,
+     -4280.0
+    ],
+    "mundo_rot": 0.768,
+    "a_escena": 4,
+    "pos": [
+     -55.0,
+     -1.052,
+     0.0
+    ],
+    "rot": 0.0,
+    "musica": 1,
+    "banderas": []
+   },
+   {
+    "etapa": 5,
+    "escena": 3,
+    "mundo_pos": [
+     -2250.0,
+     1600.0,
+     1627.0
+    ],
+    "mundo_rot": 1.57,
+    "a_escena": 4,
+    "pos": [
+     -55.0,
+     3811.0,
+     0.0
+    ],
+    "rot": 3.1416,
+    "musica": 1,
+    "banderas": [
+     721
+    ]
+   },
+   {
+    "etapa": 5,
+    "escena": 27,
+    "mundo_pos": [
+     141.0,
+     6400.0,
+     0.0
+    ],
+    "mundo_rot": 1.57,
+    "a_escena": 7,
+    "pos": [
+     79.0,
+     0.0,
+     -755.0
+    ],
+    "rot": 0.0,
+    "musica": 1,
+    "banderas": []
+   },
+   {
+    "etapa": 11,
+    "escena": 5,
+    "mundo_pos": [
+     -52.0,
+     -8.219,
+     0.0
+    ],
+    "mundo_rot": 0.0,
+    "a_escena": 7,
+    "pos": [
+     73.0,
+     0.0,
+     1705.0
+    ],
+    "rot": 3.1416,
+    "musica": 1,
+    "banderas": []
+   },
+   {
+    "etapa": 11,
+    "escena": 7,
+    "mundo_pos": [
+     73.0,
+     0.0,
+     1705.0
+    ],
+    "mundo_rot": 3.1416,
+    "a_escena": 5,
+    "pos": [
+     -52.0,
+     -8.219,
+     0.0
+    ],
+    "rot": 0.0,
+    "musica": 1,
+    "banderas": []
+   },
+   {
+    "etapa": 8,
+    "escena": 21,
+    "mundo_pos": [
+     649.0,
+     0.0,
+     411.0
+    ],
+    "mundo_rot": -1.57,
+    "a_escena": 5,
+    "pos": [
+     -1094.0,
+     6287.474,
+     863.0
+    ],
+    "rot": 3.1416,
+    "musica": 2,
+    "banderas": [
+     917,
+     1173
+    ]
+   }
+  ],
+  "nota": "hs34 objeto 4 (driver 0x61820c: init 0x4cde20, exec 0x4cde80): si EileenIsWithHenry → EileenSetWithHenry y FUN_004e70a0 (fila (7, 34) de 0x628110 → st01); si no → común #26"
+ }
+}

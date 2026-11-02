@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:,">
+<title>SH4 · Modelos</title>
+<style>
+html,body{margin:0;height:100%;background:#0b0908;color:#c9c2b6;font:14px/1.4 Georgia,serif;overflow:hidden}canvas{display:block;touch-action:none}#panel{position:fixed;top:10px;left:10px;background:#000000a6;padding:8px 10px;border:1px solid #3a302a;max-width:min(600px,calc(100vw - 40px));max-height:calc(100vh - 60px);overflow:auto;box-sizing:border-box}#panel select,#panel button,#panel input[type=search]{font:inherit;background:#1a1412;color:#c9c2b6;border:1px solid #4a3c34;padding:2px 6px;max-width:100%;box-sizing:border-box}#panel .fila{margin-top:6px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}#panel label{font-size:12px;color:#a59a8c;white-space:nowrap}#buscar{flex:1 1 12em;min-width:8em}#modelo{flex:1 1 18em;min-width:0}#anim{flex:1 1 14em;min-width:0;max-width:380px}#filtroAnim{width:9em}#tiempo{flex:1;min-width:140px;accent-color:#8a5a3a}#cuadro{font-size:12px;color:#8f857a;min-width:70px}#estado{margin-top:6px;font-size:12px;color:#8f857a;white-space:pre-line}#ayuda{position:fixed;bottom:10px;left:10px;right:10px;font-size:12px;color:#7d746a}#filaArma[hidden],#cual[hidden]{display:none!important}#VRButton{position:static!important;transform:none!important;width:auto!important;padding:3px 10px!important;font:13px Georgia,serif!important;opacity:1!important}#VRButton.sinCasco{display:none!important}a{color:#b59c7a}
+</style>
+</head>
+<body>
+<div id="panel">
+  <div class="fila" style="margin-top:0">
+    <input id="buscar" type="search" placeholder="buscar un personaje, monstruo, arma u objeto…" title="buscar por nombre o archivo">
+    <select id="categoria" title="categoría">
+      <option value="">Todo</option><option value="personajes">Personajes</option><option value="monstruos">Monstruos</option>
+      <option value="armas">Armas</option><option value="items">Objetos</option><option value="otros">Otros archivos</option>
+    </select>
+  </div>
+  <div class="fila"><select id="modelo" title="modelo"></select> <select id="cual" title="modelo dentro del archivo"></select></div>
+  <div class="fila"><label>animaciones de</label> <select id="fuente"></select> <input id="filtroAnim" type="search" placeholder="filtrar…" title="filtrar animaciones"></div>
+  <div class="fila"><select id="anim" title="animación"></select></div>
+  <div class="fila">
+    <button id="play" title="reproducir / pausa">❚❚</button>
+    <select id="vel" title="velocidad"><option value="0.1">×0,1</option><option value="0.25">×0,25</option><option value="0.5">×0,5</option><option value="1" selected>×1</option><option value="2">×2</option></select>
+    <input id="tiempo" type="range" min="0" max="1" step="0.1" value="0"> <span id="cuadro"></span>
+  </div>
+  <div class="fila" id="filaArma" hidden><label>arma en la mano</label> <select id="arma" title="arma en la mano"></select></div>
+  <div class="fila">
+    <label><input id="loop" type="checkbox"> repetir</label>
+    <label><input id="ik" type="checkbox" checked> IK (piernas y brazos)</label>
+    <label><input id="lugar" type="checkbox"> en el lugar</label>
+    <label><input id="huesos" type="checkbox"> huesos</label>
+    <label><input id="redondear" type="checkbox"> redondear (U)</label>
+    <select id="luz" title="luz"><option value="juego">Luz del juego</option><option value="estudio">Luz de estudio</option></select>
+    <span id="vrLugar"></span>
+  </div>
+  <div id="estado">cargando…</div>
+</div>
+<div id="ayuda">Arrastrá para girar · rueda para acercar · 30 cuadros por segundo, como el juego · <a href="./">volver a los escenarios</a></div>
+<script type="importmap">
+{ "imports": { "three": "./lib/three/build/three.module.js", "three/addons/": "./lib/three/examples/jsm/" } }
+</script>
+<script type="module" src="./modelos.js"></script>
+<script type="module" src="./suite_nav.js"></script>
+<script type="module" src="./celular_visor.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!doctype html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ventana (prueba)</title>
+<style>
+html,body{margin:0;background:#000;overflow:hidden;color:#ccc;font:13px monospace}#info{position:fixed;left:6px;top:6px}
+</style>
+<script type="importmap">
+{ "imports": { "three": "../lib/three/build/three.module.js", "three/addons/": "../lib/three/examples/jsm/" } }
+</script>
+</head>
+<body>
+<div id="info">cargando…</div>
+<script type="module">
+import * as THREE from "three";
+
+import { armarSala, crearLucesPersonajes } from "../lib/sala.js";
+
+import { bajar } from "./motor.js";
+
+import { crearCalle, VISTAS, ojoVentana, direccionVentana, rotacionVisor, texturasVidrio, armarVidrio, aCamara, armarFranjas, ESCENAS } from "./ventana.js";
+
+const q = new URLSearchParams(location.search);
+
+const hora = +(q.get("hora") ?? 0), lado = +(q.get("lado") ?? 1), escena = +(q.get("escena") ?? -1);
+
+const B = new Set(String(q.get("banderas") || "").split(/[^0-9]+/).filter(Boolean).map(Number));
+
+const F = n => B.has(n);
+
+const renderer = new THREE.WebGLRenderer({
+  antialias: false,
+  preserveDrawingBuffer: true
+});
+
+renderer.setSize(innerWidth, innerHeight);
+
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+document.body.appendChild(renderer.domElement);
+
+const escenaT = new THREE.Scene;
+
+const camara = new THREE.PerspectiveCamera(34.5, innerWidth / innerHeight, .02, 400);
+
+camara.rotation.order = "YXZ";
+
+escenaT.add(camara);
+
+const info = document.getElementById("info");
+
+const E = escena >= 0 ? ESCENAS[escena] : null;
+
+let giro = +(q.get("giro") ?? (E ? E.cam[lado][0] : -.00434)), cabeceo = +(q.get("cabeceo") ?? (E ? E.cam[lado][1] : .99645));
+
+let lente = +(q.get("lente") ?? (E ? E.lente : 45));
+
+function mirar(g = giro, c = cabeceo, l = lente) {
+  giro = g;
+  cabeceo = c;
+  lente = l;
+  const o = ojoVentana(lado);
+  camara.position.set(-o[0] * .005, -o[1] * .005, o[2] * .005);
+  const r = rotacionVisor(direccionVentana(g, c));
+  camara.rotation.set(r.x, r.y, 0);
+  camara.fov = THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(THREE.MathUtils.degToRad(l) / 2) * 3 / 4));
+  camara.updateProjectionMatrix();
+  camara.updateMatrixWorld(true);
+  if (vid) {
+    aCamara(vid.g, camara.fov);
+    vid.acomodar(g, c);
+  }
+  if (franjas) aCamara(franjas, camara.fov);
+}
+
+let vid = null, franjas = null, calle = null;
+
+const s = await armarSala(THREE, bajar, VISTAS[hora], new Map, {
+  todosLosModelos: true
+});
+
+escenaT.add(s.grupo);
+
+escenaT.add(crearLucesPersonajes(THREE, s.luces));
+
+escenaT.background = (new THREE.Color).setRGB(...s.nieblaSala?.activa ? s.colorFondo : [ 0, 0, 0 ], THREE.SRGBColorSpace);
+
+if (q.get("vidrio") !== "0") {
+  const T = await texturasVidrio();
+  vid = armarVidrio(T);
+  camara.add(vid.g);
+}
+
+if (E) {
+  franjas = armarFranjas();
+  camara.add(franjas);
+}
+
+calle = crearCalle({
+  grupo: escenaT,
+  hora: hora,
+  F: F,
+  escena: escena,
+  ojo: () => camara.getWorldPosition(new THREE.Vector3),
+  dirOjo: () => direccionVentana(giro, cabeceo),
+  forzarEscenas: q.has("forzar"),
+  forzarGlobo: q.has("globo"),
+  forzarCae: q.has("cae")
+});
+
+mirar();
+
+async function simular(seg) {
+  for (let i = 0; i < seg * 30; i++) {
+    calle.actualizar(1 / 30);
+    if (i % 60 === 59) await new Promise(r => setTimeout(r, 0));
+  }
+}
+
+function dibujar() {
+  renderer.render(escenaT, camara);
+}
+
+async function grilla(lista) {
+  const n = Math.ceil(Math.sqrt(lista.length)), W = innerWidth / n, H = innerHeight / Math.ceil(lista.length / n);
+  renderer.setScissorTest(true);
+  const asp = camara.aspect;
+  for (const [i, [g, c, l, seg]] of lista.entries()) {
+    if (seg) await simular(seg);
+    const x = i % n * W, y = innerHeight - (Math.floor(i / n) + 1) * H;
+    renderer.setViewport(x, y, W, H);
+    renderer.setScissor(x, y, W, H);
+    camara.aspect = W / H;
+    mirar(g, c, l ?? 45);
+    renderer.setScissorTest(true);
+    renderer.render(escenaT, camara);
+  }
+  renderer.setScissorTest(false);
+  renderer.setViewport(0, 0, innerWidth, innerHeight);
+  camara.aspect = asp;
+  camara.updateProjectionMatrix();
+}
+
+function apuntar(p, l = 10) {
+  const o = ojoVentana(lado), d = new THREE.Vector3(p[0] - o[0], p[1] - o[1], p[2] - o[2]).normalize();
+  let mejor = null, md = -2;
+  for (let g = -3; g <= 3; g += .01) for (let c = -3; c <= 3; c += .02) {
+    const v = direccionVentana(g, c);
+    const k = v.dot(d);
+    if (k > md) {
+      md = k;
+      mejor = [ g, c ];
+    }
+  }
+  return [ ...mejor, l ];
+}
+
+function blancos(l = 8) {
+  const L = [];
+  const pe = calle.peatones.find(x => x.pj), au = calle.autos.find(x => x.pj && x.carril < 2), es = calle.escenaActores[0];
+  if (pe) L.push(apuntar([ pe.pos[0], -150, pe.pos[2] ], l));
+  if (au) L.push(apuntar([ au.pos[0], -150, au.pos[2] ], l * 2));
+  if (es) {
+    const w = es.pj.huesos[0].getWorldPosition(new THREE.Vector3);
+    L.push(apuntar([ -w.x / .005, -w.y / .005, w.z / .005 ], l * 2));
+  }
+  return L;
+}
+
+window.prueba = {
+  simular: simular,
+  dibujar: dibujar,
+  mirar: mirar,
+  grilla: grilla,
+  apuntar: apuntar,
+  estado: () => calle.estado(),
+  calle: calle,
+  camara: camara,
+  THREE: THREE,
+  escena: escenaT,
+  hoja: async () => await texturasVidrio(),
+  info: t => {
+    info.textContent = t;
+  }
+};
+
+await new Promise(r => setTimeout(r, 4e3));
+
+await simular(+(q.get("seg") ?? 2));
+
+await new Promise(r => setTimeout(r, 1500));
+
+if (q.has("blancos")) {
+  const b = blancos(+q.get("blancos") || 8);
+  info.dataset.b = JSON.stringify(b);
+  await grilla(b);
+} else if (q.get("grilla")) await grilla(JSON.parse(q.get("grilla"))); else dibujar();
+
+info.textContent = `${VISTAS[hora]} lado ${lado} · ` + JSON.stringify(calle.estado());
+
+window.listo = true;
+</script>
+</body>
+</html>

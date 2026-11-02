@@ -1,0 +1,2326 @@
+{
+ "fuente": "SILENT HILL 4.exe (GOG) solo lectura + datos/escenas.json. tools/departamentos/departamentos_datos.py",
+ "como_se_lee": {
+  "fin": "evnum -> banderas que prende (+n) o apaga (-n) al terminar (tablas 0x620B50[6] y 0x620B80)",
+  "cerraduras": "tabla 0x634188[6]: tipo 0/1/2 bandera + escena del lado que abre + guiones + ítem; 3/4 siempre cerrada; 5 la puerta existe solo si las banderas valen lo pedido; 6 por bandera",
+  "zonas": "escena/mitad -> objetos atados a una puerta (dmy1 6, dmy2 = puerta), de escena (dmy1 5) o de ítem (dmy13)"
+ },
+ "fin": {
+  "comun": {
+   "3017": [
+    1801
+   ],
+   "3018": [
+    0
+   ],
+   "3019": [
+    0
+   ],
+   "3106": [
+    1851
+   ],
+   "3107": [
+    -1851
+   ],
+   "3120": [
+    1852
+   ],
+   "3121": [
+    1853
+   ],
+   "2705": [
+    1858
+   ],
+   "3135": [
+    3
+   ],
+   "3015": [
+    0
+   ],
+   "73": [
+    0
+   ],
+   "1400": [
+    1854
+   ],
+   "3167": [
+    1856
+   ]
+  },
+  "etapa6": {
+   "40": [
+    1101
+   ],
+   "118": [
+    1102
+   ],
+   "119": [
+    1103
+   ],
+   "121": [
+    1105
+   ],
+   "3042": [
+    1144
+   ],
+   "122": [
+    1106
+   ],
+   "3122": [
+    1193
+   ],
+   "3123": [
+    1194
+   ],
+   "123": [
+    1107
+   ],
+   "3124": [
+    1195
+   ],
+   "3125": [
+    1196
+   ],
+   "41": [
+    1108
+   ],
+   "3043": [
+    1145
+   ],
+   "3044": [
+    1146
+   ],
+   "3045": [
+    1147
+   ],
+   "124": [
+    1109
+   ],
+   "3046": [
+    1148
+   ],
+   "3047": [
+    1149
+   ],
+   "125": [
+    1110
+   ],
+   "126": [
+    1111
+   ],
+   "3048": [
+    1150
+   ],
+   "3049": [
+    1151
+   ],
+   "127": [
+    1112
+   ],
+   "128": [
+    1113
+   ],
+   "129": [
+    1114
+   ],
+   "130": [
+    1115
+   ],
+   "131": [
+    1116
+   ],
+   "3050": [
+    1152
+   ],
+   "3051": [
+    1153
+   ],
+   "132": [
+    1117
+   ],
+   "133": [
+    1118
+   ],
+   "3052": [
+    1154
+   ],
+   "3053": [
+    1155
+   ],
+   "3054": [
+    1156
+   ],
+   "3055": [
+    1157
+   ],
+   "3056": [
+    1158
+   ],
+   "3057": [
+    1159
+   ],
+   "3058": [
+    1160
+   ],
+   "3059": [
+    1161
+   ],
+   "3060": [
+    1162
+   ],
+   "3061": [
+    1163
+   ],
+   "3062": [
+    1164
+   ],
+   "3063": [
+    1165
+   ],
+   "3064": [
+    1166
+   ],
+   "134": [
+    1119
+   ],
+   "135": [
+    1120
+   ],
+   "3034": [
+    1121
+   ],
+   "136": [
+    1122
+   ],
+   "137": [
+    1123
+   ],
+   "139": [
+    1124
+   ],
+   "3126": [
+    1125
+   ],
+   "3127": [
+    1197
+   ],
+   "3128": [
+    1198
+   ],
+   "140": [
+    1126
+   ],
+   "3129": [
+    1199
+   ],
+   "3130": [
+    1200
+   ],
+   "141": [
+    1167
+   ],
+   "3065": [
+    1168
+   ],
+   "3066": [
+    1169
+   ],
+   "3067": [
+    1170
+   ],
+   "3068": [
+    1171
+   ],
+   "3098": [
+    1172
+   ],
+   "144": [
+    1127
+   ],
+   "3035": [
+    1128
+   ],
+   "3036": [
+    1129
+   ],
+   "42": [
+    1130,
+    1612
+   ],
+   "2280": [
+    1203
+   ],
+   "2281": [
+    1204
+   ],
+   "3168": [
+    1208
+   ],
+   "3169": [
+    1209
+   ]
+  },
+  "etapa1": {
+   "63": [
+    1501
+   ],
+   "64": [
+    1502
+   ],
+   "65": [
+    1503
+   ],
+   "67": [
+    1504
+   ],
+   "68": [
+    1505
+   ],
+   "1": [
+    1506
+   ],
+   "2": [
+    1507
+   ],
+   "3": [
+    1508
+   ],
+   "69": [
+    1509
+   ],
+   "70": [
+    1510
+   ],
+   "71": [
+    1511
+   ],
+   "72": [
+    1512
+   ],
+   "4": [
+    1513
+   ],
+   "5": [
+    1514
+   ],
+   "6": [
+    1515
+   ],
+   "7": [
+    1516
+   ],
+   "73": [
+    1517
+   ],
+   "11": [
+    1518
+   ],
+   "12": [
+    1519
+   ],
+   "77": [
+    1520
+   ],
+   "78": [
+    1521
+   ],
+   "13": [
+    1522
+   ],
+   "3020": [
+    1529
+   ],
+   "79": [
+    1523
+   ],
+   "3013": [
+    1524
+   ],
+   "3014": [
+    1525
+   ],
+   "14": [
+    1526
+   ],
+   "80": [
+    1527
+   ],
+   "81": [
+    1528
+   ],
+   "18": [
+    1530
+   ],
+   "19": [
+    1531
+   ],
+   "87": [
+    1532
+   ],
+   "88": [
+    1533
+   ],
+   "89": [
+    1534
+   ],
+   "3025": [
+    1535
+   ],
+   "93": [
+    0
+   ],
+   "21": [
+    1537
+   ],
+   "3015": [
+    0
+   ],
+   "3016": [
+    0
+   ],
+   "29": [
+    1538
+   ],
+   "30": [
+    1539
+   ],
+   "3031": [
+    1540
+   ],
+   "99": [
+    1541
+   ],
+   "75": [
+    1542
+   ],
+   "106": [
+    1543
+   ],
+   "108": [
+    1545
+   ],
+   "3032": [
+    1546
+   ],
+   "3033": [
+    1547
+   ],
+   "109": [
+    1548
+   ],
+   "110": [
+    1549
+   ],
+   "115": [
+    1550
+   ],
+   "116": [
+    1551
+   ],
+   "38": [
+    1552
+   ],
+   "117": [
+    1553
+   ],
+   "39": [
+    1554
+   ],
+   "138": [
+    1555
+   ],
+   "142": [
+    1583
+   ],
+   "3069": [
+    1584
+   ],
+   "3070": [
+    1585
+   ],
+   "3071": [
+    1586
+   ],
+   "3072": [
+    1587
+   ],
+   "3073": [
+    1588
+   ],
+   "143": [
+    1556
+   ],
+   "189": [
+    1575
+   ],
+   "196": [
+    1576
+   ],
+   "3105": [
+    1606
+   ],
+   "197": [
+    1577
+   ],
+   "198": [
+    1578
+   ],
+   "3198": [
+    1680
+   ],
+   "199": [
+    1579
+   ],
+   "200": [
+    1580
+   ],
+   "145": [
+    1557
+   ],
+   "146": [
+    1558
+   ],
+   "43": [
+    1559
+   ],
+   "147": [
+    1560
+   ],
+   "3099": [
+    1561
+   ],
+   "148": [
+    1562
+   ],
+   "149": [
+    1563
+   ],
+   "150": [
+    1564
+   ],
+   "151": [
+    1565
+   ],
+   "152": [
+    1566
+   ],
+   "153": [
+    1567
+   ],
+   "3100": [
+    1601
+   ],
+   "3101": [
+    1602
+   ],
+   "3102": [
+    1603
+   ],
+   "3103": [
+    1604
+   ],
+   "3104": [
+    1605
+   ],
+   "154": [
+    1568
+   ],
+   "164": [
+    1569
+   ],
+   "165": [
+    1570
+   ],
+   "1334": [
+    1686
+   ],
+   "166": [
+    1572
+   ],
+   "167": [
+    1573
+   ],
+   "3088": [
+    1589
+   ],
+   "3089": [
+    1590
+   ],
+   "168": [
+    1574
+   ],
+   "169": [
+    1591
+   ],
+   "216": [
+    1581
+   ],
+   "217": [
+    1582
+   ],
+   "3134": [
+    2057
+   ],
+   "221": [
+    2058
+   ],
+   "53": [
+    2059
+   ],
+   "54": [
+    2061
+   ],
+   "3136": [
+    1608
+   ],
+   "3137": [
+    1609
+   ],
+   "3138": [
+    1610
+   ],
+   "3139": [
+    1611
+   ],
+   "3140": [
+    1612
+   ],
+   "2200": [
+    1613
+   ],
+   "2201": [
+    1615
+   ],
+   "3142": [
+    1616
+   ],
+   "2202": [
+    1617
+   ],
+   "3143": [
+    1618
+   ],
+   "3144": [
+    1619
+   ],
+   "2203": [
+    1620
+   ],
+   "2204": [
+    1622
+   ],
+   "2205": [
+    1623
+   ],
+   "2206": [
+    1624
+   ],
+   "2207": [
+    1625
+   ],
+   "2208": [
+    1627
+   ],
+   "2209": [
+    1628
+   ],
+   "3147": [
+    1629
+   ],
+   "3148": [
+    1631
+   ],
+   "2210": [
+    1632
+   ],
+   "2211": [
+    1633
+   ],
+   "2212": [
+    1634
+   ],
+   "2216": [
+    1635
+   ],
+   "2217": [
+    1637
+   ],
+   "2213": [
+    1638
+   ],
+   "2214": [
+    1639
+   ],
+   "2215": [
+    1640
+   ],
+   "2310": [
+    1641
+   ],
+   "2219": [
+    1642
+   ],
+   "1335": [
+    1683
+   ],
+   "1336": [
+    1684
+   ],
+   "1333": [
+    1685
+   ],
+   "3156": [
+    1567
+   ],
+   "3157": [
+    1643
+   ],
+   "3158": [
+    1644
+   ],
+   "3159": [
+    1645
+   ],
+   "3160": [
+    1646
+   ],
+   "3193": [
+    1675
+   ],
+   "3194": [
+    1676
+   ],
+   "3195": [
+    1677
+   ],
+   "3196": [
+    1678
+   ],
+   "2320": [
+    1666
+   ],
+   "2322": [
+    1667
+   ],
+   "3187": [
+    1669
+   ],
+   "3188": [
+    1670
+   ],
+   "3189": [
+    1671
+   ],
+   "3190": [
+    1672
+   ],
+   "3191": [
+    1673
+   ],
+   "3192": [
+    1674
+   ],
+   "1331": [
+    1679
+   ]
+  }
+ },
+ "agujeros": [
+  {
+   "fila": 17,
+   "etapa": 6,
+   "escena": 22,
+   "bandera": 18,
+   "bandera2": 47,
+   "pos": [
+    -98.0,
+    0.0,
+    1347.0
+   ],
+   "rot": 1.57
+  },
+  {
+   "fila": 18,
+   "etapa": 6,
+   "escena": 1,
+   "bandera": 26,
+   "bandera2": 55,
+   "pos": [
+    -818.0,
+    0.0,
+    -114.0
+   ],
+   "rot": 1.57
+  }
+ ],
+ "cerraduras": [
+  {
+   "door": 3,
+   "tipo": 1,
+   "bandera": 2101,
+   "escena": 3,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x6258c0"
+   ],
+   "item": 74
+  },
+  {
+   "door": 1,
+   "tipo": 2,
+   "bandera": 2102,
+   "escena": 3,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x6258f0"
+   ],
+   "item": 84
+  },
+  {
+   "door": 2,
+   "tipo": 2,
+   "bandera": 2103,
+   "escena": 3,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x6258f0"
+   ],
+   "item": 84
+  },
+  {
+   "door": 6,
+   "tipo": 2,
+   "bandera": 2104,
+   "escena": 2,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x6258f0"
+   ],
+   "item": 84
+  },
+  {
+   "door": 7,
+   "tipo": 2,
+   "bandera": 2105,
+   "escena": 2,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x6258f0"
+   ],
+   "item": 84
+  },
+  {
+   "door": 8,
+   "tipo": 2,
+   "bandera": 2106,
+   "escena": 2,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x6258f0"
+   ],
+   "item": 84
+  },
+  {
+   "door": 9,
+   "tipo": 2,
+   "bandera": 2107,
+   "escena": 2,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x6258f0"
+   ],
+   "item": 84
+  },
+  {
+   "door": 10,
+   "tipo": 2,
+   "bandera": 2108,
+   "escena": 12,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x6258f0"
+   ],
+   "item": 84
+  },
+  {
+   "door": 11,
+   "tipo": 2,
+   "bandera": 2109,
+   "escena": 12,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x6258f0"
+   ],
+   "item": 84
+  },
+  {
+   "door": 12,
+   "tipo": 2,
+   "bandera": 2110,
+   "escena": 12,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x6258f0"
+   ],
+   "item": 84
+  },
+  {
+   "door": 15,
+   "tipo": 2,
+   "bandera": 2111,
+   "escena": 11,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x6258f0"
+   ],
+   "item": 84
+  },
+  {
+   "door": 16,
+   "tipo": 2,
+   "bandera": 2112,
+   "escena": 11,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x6258f0"
+   ],
+   "item": 84
+  },
+  {
+   "door": 17,
+   "tipo": 2,
+   "bandera": 2113,
+   "escena": 11,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x6258f0"
+   ],
+   "item": 84
+  },
+  {
+   "door": 18,
+   "tipo": 2,
+   "bandera": 2114,
+   "escena": 11,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x6258f0"
+   ],
+   "item": 84
+  },
+  {
+   "door": 19,
+   "tipo": 2,
+   "bandera": 2115,
+   "escena": 24,
+   "guiones": [
+    "0x618af8",
+    "0x618b58",
+    "0x6258f0"
+   ],
+   "item": 84
+  },
+  {
+   "door": 24,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 25,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 26,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 27,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 28,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 29,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 30,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 31,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 32,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 33,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 34,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 35,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 36,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 37,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 38,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 39,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 40,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 41,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 42,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 43,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  },
+  {
+   "door": 44,
+   "tipo": 4,
+   "guiones": [
+    "0x618b40"
+   ]
+  }
+ ],
+ "zonas": {
+  "1/1": [
+   {
+    "i": 6,
+    "tipo": "ItemEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 0,
+     "driver": "0x623cf8",
+     "trgchk": "0x4e1130",
+     "init": "0x4e1150",
+     "exec": "0x4e1170",
+     "end": "0x4e1480",
+     "val": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 9,
+    "tipo": "TextEvent",
+    "dmy1": 2,
+    "dmy2": 250.0,
+    "dmy6": 2,
+    "dmy13": 75,
+    "pos": [
+     525.0,
+     -170.0,
+     550.0
+    ],
+    "grupo": null,
+    "ev": {
+     "evnum": 3046,
+     "driver": "0x624618",
+     "trgchk": "0x4cd690",
+     "init": "0x4cd5d0",
+     "exec": "0x4e2970",
+     "end": "0x44bdd0",
+     "val": [
+      "0x625338",
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 14,
+    "tipo": "EventCamera",
+    "dmy1": 2,
+    "dmy2": 461.0,
+    "dmy6": null,
+    "dmy13": -1912.0,
+    "pos": [
+     867.0,
+     -1560.0,
+     561.0
+    ],
+    "grupo": null,
+    "ev": null
+   },
+   {
+    "i": 15,
+    "tipo": "EventCamera",
+    "dmy1": 1,
+    "dmy2": 270.0,
+    "dmy6": null,
+    "dmy13": -509.0,
+    "pos": [
+     500.0,
+     0.0,
+     520.0
+    ],
+    "grupo": null,
+    "ev": null
+   }
+  ],
+  "2/1": [
+   {
+    "i": 3,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 6,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3174,
+     "driver": "0x624314",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2104,
+      0
+     ]
+    }
+   },
+   {
+    "i": 4,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 7,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3175,
+     "driver": "0x624340",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2105,
+      0
+     ]
+    }
+   },
+   {
+    "i": 5,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 8,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3176,
+     "driver": "0x62436c",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2106,
+      0
+     ]
+    }
+   },
+   {
+    "i": 6,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 9,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3177,
+     "driver": "0x624398",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2107,
+      0
+     ]
+    }
+   }
+  ],
+  "3/1": [
+   {
+    "i": 2,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 3,
+    "dmy6": 2,
+    "dmy13": 74,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3171,
+     "driver": "0x624290",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd770",
+     "val": [
+      "0x6258c0",
+      74,
+      2101,
+      0
+     ]
+    }
+   },
+   {
+    "i": 3,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 1,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3172,
+     "driver": "0x6242bc",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2102,
+      0
+     ]
+    }
+   },
+   {
+    "i": 4,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 2,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3173,
+     "driver": "0x6242e8",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2103,
+      0
+     ]
+    }
+   }
+  ],
+  "9/1": [
+   {
+    "i": 5,
+    "tipo": "EventCamera",
+    "dmy1": 1,
+    "dmy2": 270.0,
+    "dmy6": null,
+    "dmy13": -436.0,
+    "pos": [
+     -323.0,
+     0.0,
+     -71.0
+    ],
+    "grupo": null,
+    "ev": null
+   }
+  ],
+  "11/1": [
+   {
+    "i": 3,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 15,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3181,
+     "driver": "0x624448",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2111,
+      0
+     ]
+    }
+   },
+   {
+    "i": 4,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 16,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3182,
+     "driver": "0x624474",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2112,
+      0
+     ]
+    }
+   },
+   {
+    "i": 5,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 17,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3183,
+     "driver": "0x6244a0",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2113,
+      0
+     ]
+    }
+   },
+   {
+    "i": 6,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 18,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3184,
+     "driver": "0x6244cc",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2114,
+      0
+     ]
+    }
+   }
+  ],
+  "12/1": [
+   {
+    "i": 5,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 10,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3178,
+     "driver": "0x6243c4",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2108,
+      0
+     ]
+    }
+   },
+   {
+    "i": 6,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 11,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3179,
+     "driver": "0x6243f0",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2109,
+      0
+     ]
+    }
+   },
+   {
+    "i": 7,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 12,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3180,
+     "driver": "0x62441c",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2110,
+      0
+     ]
+    }
+   }
+  ],
+  "13/1": [
+   {
+    "i": 4,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 15,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3181,
+     "driver": "0x624448",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2111,
+      0
+     ]
+    }
+   },
+   {
+    "i": 5,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 16,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3182,
+     "driver": "0x624474",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2112,
+      0
+     ]
+    }
+   },
+   {
+    "i": 6,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 17,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3183,
+     "driver": "0x6244a0",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2113,
+      0
+     ]
+    }
+   },
+   {
+    "i": 7,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 18,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3184,
+     "driver": "0x6244cc",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2114,
+      0
+     ]
+    }
+   }
+  ],
+  "14/1": [
+   {
+    "i": 21,
+    "tipo": "EventCamera",
+    "dmy1": 1,
+    "dmy2": 170.0,
+    "dmy6": null,
+    "dmy13": -484.0,
+    "pos": [
+     433.0,
+     0.0,
+     261.0
+    ],
+    "grupo": null,
+    "ev": null
+   }
+  ],
+  "17/1": [
+   {
+    "i": 5,
+    "tipo": "EventCamera",
+    "dmy1": 2,
+    "dmy2": 1130.0,
+    "dmy6": null,
+    "dmy13": -424.0,
+    "pos": [
+     244.0,
+     0.0,
+     -129.0
+    ],
+    "grupo": null,
+    "ev": null
+   }
+  ],
+  "20/1": [
+   {
+    "i": 1,
+    "tipo": "ItemEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 42,
+     "driver": "0x623d5c",
+     "init": "0x4cd170",
+     "exec": "0x4cd1b0",
+     "end": "0x4e1530",
+     "val": [
+      21,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ],
+  "24/1": [
+   {
+    "i": 5,
+    "tipo": "ItemEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 40,
+     "driver": "0x623ca0",
+     "init": "0x4cd170",
+     "exec": "0x4cd1b0",
+     "end": "0x4e10e0",
+     "val": [
+      19,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 7,
+    "tipo": "TextEvent",
+    "dmy1": 1,
+    "dmy2": 100.0,
+    "dmy6": 2,
+    "dmy13": 66,
+    "pos": [
+     -280.0,
+     0.0,
+     3830.0
+    ],
+    "grupo": null,
+    "ev": {
+     "evnum": 1168,
+     "driver": "0x623dcc",
+     "init": "0x4e1930",
+     "exec": "0x4e1a60",
+     "end": "0x44bdd0",
+     "val": [
+      "0x625820",
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 8,
+    "tipo": "TextEvent",
+    "dmy1": 1,
+    "dmy2": 100.0,
+    "dmy6": 2,
+    "dmy13": 67,
+    "pos": [
+     -280.0,
+     0.0,
+     3830.0
+    ],
+    "grupo": null,
+    "ev": {
+     "evnum": 1169,
+     "driver": "0x623df8",
+     "init": "0x4e1930",
+     "exec": "0x4e1a80",
+     "end": "0x44bdd0",
+     "val": [
+      "0x625820",
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 9,
+    "tipo": "TextEvent",
+    "dmy1": 1,
+    "dmy2": 100.0,
+    "dmy6": 2,
+    "dmy13": 71,
+    "pos": [
+     -280.0,
+     0.0,
+     3830.0
+    ],
+    "grupo": null,
+    "ev": {
+     "evnum": 1170,
+     "driver": "0x623e24",
+     "init": "0x4e1930",
+     "exec": "0x4e1aa0",
+     "end": "0x44bdd0",
+     "val": [
+      "0x625838",
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 10,
+    "tipo": "TextEvent",
+    "dmy1": 1,
+    "dmy2": 100.0,
+    "dmy6": 2,
+    "dmy13": 72,
+    "pos": [
+     -280.0,
+     0.0,
+     3830.0
+    ],
+    "grupo": null,
+    "ev": {
+     "evnum": 1171,
+     "driver": "0x623e50",
+     "init": "0x4e1930",
+     "exec": "0x4e1ac0",
+     "end": "0x44bdd0",
+     "val": [
+      "0x625838",
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 11,
+    "tipo": "TextEvent",
+    "dmy1": 1,
+    "dmy2": 100.0,
+    "dmy6": 2,
+    "dmy13": 73,
+    "pos": [
+     -280.0,
+     0.0,
+     3830.0
+    ],
+    "grupo": null,
+    "ev": {
+     "evnum": 1172,
+     "driver": "0x623e7c",
+     "init": "0x4e1930",
+     "exec": "0x4e1ae0",
+     "end": "0x44bdd0",
+     "val": [
+      "0x625838",
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 18,
+    "tipo": "ObjDontMove",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": null
+   },
+   {
+    "i": 21,
+    "tipo": "ItemEvent",
+    "dmy1": 5,
+    "dmy2": null,
+    "dmy6": null,
+    "dmy13": null,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 0,
+     "driver": "0x623d88",
+     "trgchk": "0x4e1620",
+     "init": "0x4e1650",
+     "exec": "0x4e16a0",
+     "end": "0x4e1900",
+     "val": [
+      327,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "i": 22,
+    "tipo": "EventCamera",
+    "dmy1": 1,
+    "dmy2": 361.0,
+    "dmy6": null,
+    "dmy13": -509.0,
+    "pos": [
+     -294.0,
+     0.0,
+     3789.0
+    ],
+    "grupo": null,
+    "ev": null
+   },
+   {
+    "i": 23,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 20,
+    "dmy6": 2,
+    "dmy13": 77,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3170,
+     "driver": "0x624264",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd770",
+     "val": [
+      "0x6258d8",
+      77,
+      2116,
+      0
+     ]
+    }
+   },
+   {
+    "i": 24,
+    "tipo": "TextEvent",
+    "dmy1": 6,
+    "dmy2": 19,
+    "dmy6": 2,
+    "dmy13": 84,
+    "pos": null,
+    "grupo": null,
+    "ev": {
+     "evnum": 3185,
+     "driver": "0x6244f8",
+     "trgchk": "0x4cd6c0",
+     "init": "0x4cd720",
+     "exec": "0x4cd7f0",
+     "val": [
+      "0x6258f0",
+      84,
+      2115,
+      0
+     ]
+    }
+   }
+  ]
+ },
+ "guiones": {
+  "inventario_lleno": [
+   {
+    "msg": 17,
+    "archivo": 0
+   }
+  ],
+  "puerta_cerrada": [
+   {
+    "msg": 21,
+    "archivo": 0
+   }
+  ],
+  "agujero_302": [
+   {
+    "msg": 16,
+    "archivo": 0,
+    "si_no": true
+   }
+  ],
+  "puerta302_cerrada": [
+   {
+    "msg": 41,
+    "archivo": 9
+   }
+  ],
+  "puerta302_papel": [
+   {
+    "msg": 16,
+    "archivo": 9
+   }
+  ],
+  "puerta302_llave": [
+   {
+    "msg": 39,
+    "archivo": 9
+   }
+  ],
+  "puerta20_cerrada": [
+   {
+    "msg": 17,
+    "archivo": 9
+   }
+  ],
+  "puerta20_cerrada_1121": [
+   {
+    "msg": 18,
+    "archivo": 9
+   }
+  ],
+  "puerta20_llave": [
+   {
+    "msg": 229,
+    "archivo": 9
+   }
+  ],
+  "armas_primera": [
+   {
+    "msg": 183,
+    "archivo": 9
+   }
+  ],
+  "armas_despues": [
+   {
+    "msg": 184,
+    "archivo": 9
+   }
+  ],
+  "0x618af8": [
+   {
+    "msg": 18,
+    "archivo": 0
+   }
+  ],
+  "0x618b58": [
+   {
+    "msg": 22,
+    "archivo": 0
+   }
+  ],
+  "0x6258c0": [
+   {
+    "msg": 30,
+    "archivo": 9
+   }
+  ],
+  "0x6258f0": [
+   {
+    "msg": 38,
+    "archivo": 9
+   }
+  ],
+  "0x618b40": [
+   {
+    "msg": 21,
+    "archivo": 0
+   }
+  ]
+ },
+ "llegada": {
+  "escena": 24,
+  "pos": [
+   0,
+   0,
+   7600
+  ],
+  "rot": 3.1416,
+  "nota": "FUN_004e7a60 (fin del túnel 5): sin 1101 Henry en ie24 (0, 0, 7600) mirando a π; con 1101 el checkpoint"
+ },
+ "papeles": [
+  {
+   "k": 0,
+   "objeto": 17,
+   "pos": [
+    -344.0,
+    -5.0,
+    3777.0
+   ],
+   "rot": 1.17,
+   "bandera": 1101,
+   "nota": 144,
+   "modelo": [
+    "event_ie.bin",
+    10
+   ],
+   "texturas": [
+    "event_ie.bin",
+    11
+   ]
+  },
+  {
+   "k": 1,
+   "objeto": 15,
+   "pos": [
+    -339.0,
+    -5.0,
+    3831.0
+   ],
+   "rot": 1.52,
+   "bandera": 1168,
+   "nota": 145,
+   "modelo": [
+    "event_ie.bin",
+    10
+   ],
+   "texturas": [
+    "event_ie.bin",
+    11
+   ]
+  },
+  {
+   "k": 2,
+   "objeto": 12,
+   "pos": [
+    -346.0,
+    -5.0,
+    3905.0
+   ],
+   "rot": 1.6,
+   "bandera": 1169,
+   "nota": 146,
+   "modelo": [
+    "event_ie.bin",
+    10
+   ],
+   "texturas": [
+    "event_ie.bin",
+    11
+   ]
+  },
+  {
+   "k": 3,
+   "objeto": 16,
+   "pos": [
+    -338.0,
+    -5.0,
+    3803.0
+   ],
+   "rot": 1.62,
+   "bandera": 1170,
+   "nota": 147,
+   "modelo": [
+    "event_ie.bin",
+    12
+   ],
+   "texturas": [
+    "event_ie.bin",
+    13
+   ]
+  },
+  {
+   "k": 4,
+   "objeto": 14,
+   "pos": [
+    -338.0,
+    -8.0,
+    3844.0
+   ],
+   "rot": 1.31,
+   "bandera": 1171,
+   "nota": 148,
+   "modelo": [
+    "event_ie.bin",
+    12
+   ],
+   "texturas": [
+    "event_ie.bin",
+    13
+   ]
+  },
+  {
+   "k": 5,
+   "objeto": 13,
+   "pos": [
+    -335.0,
+    -5.0,
+    3868.0
+   ],
+   "rot": 1.7,
+   "bandera": 1172,
+   "nota": 149,
+   "modelo": [
+    "event_ie.bin",
+    12
+   ],
+   "texturas": [
+    "event_ie.bin",
+    13
+   ]
+  }
+ ],
+ "poner_papel": {
+  "zona": [
+   -280,
+   0,
+   3830
+  ],
+  "radio": 100,
+  "filas": [
+   [
+    66,
+    1168
+   ],
+   [
+    67,
+    1169
+   ],
+   [
+    71,
+    1170
+   ],
+   [
+    72,
+    1171
+   ],
+   [
+    73,
+    1172
+   ]
+  ],
+  "pide": 1102,
+  "nota": "ie24 objetos 7–11 (dmy6 2, dmy13 = ítem): FUN_004e1970 funde a negro, prende la bandera, guion #74/#75, saca el ítem (FUN_00516eb0) y vuelve. Condición: \"!F116x AND F1102\" (ev 3065–3068, 3098)."
+ },
+ "walter": {
+  "pos": [
+   1030,
+   -1730,
+   634
+  ],
+  "radio_choque": 85,
+  "alto_choque": 255,
+  "hablar": {
+   "pos": [
+    1006,
+    -1526,
+    626
+   ],
+   "radio": 200
+  },
+  "demos": {
+   "quieto": 318,
+   "habla": 319,
+   "muneca": 320,
+   "quieto2": 321
+  },
+  "modelos": {
+   "walter": {
+    "id": "0xf000f188",
+    "indice": 392,
+    "parte": 0,
+    "archivo": "kl1lk.bin"
+   },
+   "muneca": {
+    "id": "0xf000f16d",
+    "indice": 365,
+    "parte": 0,
+    "archivo": "event_ie.bin"
+   }
+  },
+  "voz": {
+   "cerca": 300,
+   "lejos": 2000
+  },
+  "nota": "ie01 objeto 6 (trgchk 0x4e1130: !1203 y !1108; exec 0x4e1170; end 0x4e1480). Media demo: 318 en loop; hablarle (objeto 5, init 0x4e10f0) sin 1108 → 319 y prende 1108; con 1145 (la muñeca) → 320. Al terminar una: sin 1108 otra vez 318; con 1108 → 321 y prende 1147 y 1218. El end, con 1108, prende 1146, 1147, 1218."
+ },
+ "nino": {
+  "pos": [
+   -291,
+   -100,
+   3827
+  ],
+  "demo": 327,
+  "cerca": 500,
+  "baja_por_cuadro": 0.00125,
+  "voz": {
+   "cerca": 300,
+   "lejos": 2000
+  },
+  "nota": "ie24 objeto 21 (trgchk 0x4e1620: !1108, !1197 y 1101; exec 0x4e16a0): Walter de chico en la puerta del 302 (chik.bin, personaje 303). Si Henry pasa a menos de 500 se desvanece (alfa −= 30·0,00125 por cuadro) y la voz baja con él."
+ },
+ "heladera": {
+  "bandera": 1124,
+  "cerrada": 6,
+  "abierta": 5,
+  "sonido": 50400,
+  "henry": [
+   515.0,
+   0.0,
+   -215.0
+  ],
+  "rot": 3.1416,
+  "nota": "ie05 objeto 11 (cnst 0x4e2120, exec 0x4e21f0): con 1124 funde a negro (0x80, 8 cuadros), 0xc4e0, modelo abierto, Henry en (515, 0, −215) mirando a π y vuelve"
+ },
+ "taquilla": {
+  "bandera": 1148,
+  "cerrada": 6,
+  "abierta": 5,
+  "sonido": 50403,
+  "item": 75,
+  "nota": "ie01 objeto 7 (cnst 0x4e1ef0, exec 0x4e1f80): con 1148 funde a negro, 0xc4e3 y modelo abierto"
+ },
+ "asesino": {
+  "pos": [
+   630.0,
+   0.0,
+   -236.0
+  ],
+  "rot": 1.5708,
+  "modelo": {
+   "id": "0xf000f18a",
+   "indice": 394,
+   "parte": 0,
+   "archivo": "ev_killer.bin"
+  },
+  "texturas": {
+   "id": "0xf001f18a",
+   "indice": 394,
+   "parte": 1,
+   "archivo": "ev_killer.bin"
+  },
+  "nota": "ie17 objeto 1 (cnst 0x4e2490, exec 0x4e2600): sin 1120 ni 1203 Walter (ev_killer.bin) en (630, 0, −236); con 1120 (ev 135, zona de radio 300) se desvanece en 30 cuadros: alfa = (i/30 − 1)²"
+ },
+ "puerta20": {
+  "bandera": 2116,
+  "item": 77,
+  "mira": 1121,
+  "escena": 24
+ },
+ "zona_2280": {
+  "pos": [
+   -245,
+   0,
+   1100
+  ],
+  "stream": 20220,
+  "lejos": 1000,
+  "nota": "trgchk 0x4e1d80: 1197 y no (1556 y la Llave de Muñeca); exec 0x4e1db0: stream 0x4efc y 1218; termina (corta el stream) cuando Henry se aleja más de 1000"
+ },
+ "zona_3035": {
+  "pos": [
+   -245,
+   0,
+   1100
+  ],
+  "sonido": 50404,
+  "nota": "trgchk 0x4e1e70: !1128, 1556 y la Llave de Muñeca; prende 1218; exec 0x4e1eb0: 0xc4e4"
+ },
+ "telefono": {
+  "pos": [
+   344.244,
+   -186.516,
+   112.511
+  ],
+  "sonido": 51402,
+  "nota": "ie07 ev 130 (end 0x4e29d0: con la elección 0, 1116); ie14 ev 132 (llamada 0x4e2aa0: 1117 y corta 0xc8ca; end 0x4e2a10: con Sí apaga 1153). La luz del teléfono de ie14 (0x4e2830 / 0x4e2900) titila con 1116 y !1117."
+ },
+ "metralleta": {
+  "nota": "ie05 ev 3169 (trgchk 0x4e6d00): DAT_013d1a74 > 89 y DAT_013d1aa0 ≠ 1 (dos valores de la partida que este port no lleva)"
+ }
+}

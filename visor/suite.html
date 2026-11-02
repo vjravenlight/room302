@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>SH4 Suite</title>
+<script type="importmap">
+{ "imports": { "three": "./lib/three/build/three.module.js", "three/addons/": "./lib/three/examples/jsm/" } }
+</script>
+<style>
+*{box-sizing:border-box}html,body{margin:0;background:#050404;color:#d6cdbd;font:17px/1.55 Cormorant Garamond,Garamond,Georgia,serif}body{overflow-x:clip}a{color:inherit}#portada{position:relative;min-height:100vh;min-height:100svh;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 16px 24px}#fondo{position:absolute;inset:-3%;background:#0a0807 center / cover no-repeat;filter:brightness(.55) contrast(1.12) saturate(.85);animation:respira 24s ease-in-out infinite alternate,titila 9s steps(1) infinite}@keyframes respira{0%{transform:scale(1)}to{transform:scale(1.06) translateY(-1%)}}@keyframes titila{0%,61%,63%,88%,to{opacity:1}62%{opacity:.78}89%{opacity:.86}90%{opacity:.95}}#portada:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 60% at 50% 45%,transparent 30%,rgba(5,4,4,.75) 100%),linear-gradient(180deg,rgba(5,4,4,.3),transparent 30%,transparent 70%,#050404)}#niebla{position:absolute;left:-10%;right:-10%;bottom:8%;height:34%;opacity:.16;background-size:100% 100%;filter:blur(3px);animation:deriva 40s linear infinite alternate;pointer-events:none;z-index:1}@keyframes deriva{0%{transform:translate(-4%)}to{transform:translate(4%)}}#logo{position:relative;z-index:2;width:min(760px,88vw);height:auto;filter:drop-shadow(0 0 18px rgba(255,240,220,.18)) drop-shadow(0 0 2px rgba(0,0,0,.9));animation:tiembla 7s steps(1) infinite}@keyframes tiembla{0%,92%,to{transform:none;filter:drop-shadow(0 0 18px rgba(255,240,220,.18))}93%{transform:translate(1px,-1px);filter:drop-shadow(0 0 18px rgba(192,38,26,.5))}95%{transform:translate(-1px)}}#logoTexto{position:relative;z-index:2;font-size:clamp(34px,7vw,76px);letter-spacing:.12em;color:#ece3d2;text-align:center;line-height:1.05}#suite{position:relative;z-index:2;margin-top:18px;letter-spacing:.6em;text-indent:.6em;font-size:14px;color:#a8463a;text-transform:uppercase}#menu{position:relative;z-index:2;list-style:none;margin:34px 0 0;padding:0;text-align:center;width:100%;max-width:460px}#menu a{position:relative;display:block;padding:7px 24px;text-decoration:none;text-transform:uppercase;letter-spacing:.32em;font-size:17px;color:#ece3d2b8;transition:color .25s,text-shadow .25s}#menu a[hidden]{display:none}#menu a:before{content:"";position:absolute;inset:2px 0;z-index:-1;opacity:0;transition:opacity .25s;background:linear-gradient(90deg,transparent,rgba(140,26,18,.55) 25%,rgba(140,26,18,.55) 75%,transparent)}#menu a:hover,#menu a:focus-visible,#menu a.sel{color:#fff4e4;text-shadow:0 0 10px rgba(255,90,60,.55);outline:none}#menu a:hover:before,#menu a:focus-visible:before,#menu a.sel:before{opacity:1}#menu a.sel:after{content:"◄";position:absolute;right:2px;top:50%;transform:translateY(-50%);font-size:11px;color:#c0503c;animation:late 1.2s ease-in-out infinite}#menu a.vr{color:#e2a08f}#menu a.conLetraJuego .etq{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}#menu canvas.etqJuego{display:block;margin:0 auto 2px;max-width:100%;opacity:.72;transition:opacity .25s,filter .25s}#menu a:hover canvas.etqJuego,#menu a:focus-visible canvas.etqJuego,#menu a.sel canvas.etqJuego{opacity:1;filter:drop-shadow(0 0 6px rgba(255,90,60,.6))}#menu a.vr canvas.etqJuego{filter:sepia(.6) saturate(2) hue-rotate(-20deg)}#menu small{display:block;letter-spacing:.08em;text-transform:none;font-size:13px;color:#d6cdbd73;font-style:italic}#estadoJuego{position:relative;z-index:2;margin-top:14px;text-align:center;font-size:14px;color:#8f857a;font-style:italic;max-width:640px}#estadoJuego.mal{color:#d0786a}#bajar{position:relative;z-index:2;margin-top:26px;color:#6f655c;font-size:13px;letter-spacing:.3em;text-decoration:none;animation:late 3s ease-in-out infinite}@keyframes late{50%{opacity:.35}}#teclasMenu{position:relative;z-index:2;margin-top:8px;font-size:12.5px;color:#5f574f;font-style:italic;text-align:center}@media (hover: none),(pointer: coarse){#teclasMenu{display:none}}@media (max-width: 760px){#menu{margin-top:24px}#menu a{padding:8px 12px;letter-spacing:.2em;font-size:16px}#suite{margin-top:10px}}@media (orientation: landscape) and (max-height: 560px){#portada{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto auto auto;grid-template-areas:"logo menu" "suite menu" "estado menu";align-content:center;align-items:center;column-gap:24px;padding:48px 16px 16px}#logo,#logoTexto{grid-area:logo;width:100%;max-width:420px;justify-self:center;align-self:end}#logoTexto{font-size:clamp(26px,5vw,44px)}#suite{grid-area:suite;justify-self:center}#estadoJuego{grid-area:estado;align-self:start;font-size:12.5px}#menu{grid-area:menu;margin:0;justify-self:center}#menu a{padding:5px 12px;font-size:15px;letter-spacing:.2em}#menu small,#bajar,#teclasMenu{display:none}}main{max-width:1120px;margin:0 auto;padding:10px 16px 70px}h2{font-weight:500;font-size:15px;letter-spacing:.4em;text-transform:uppercase;color:#a8463a;margin:64px 0 18px;display:flex;align-items:center;gap:14px}h2:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(122,59,30,.7),transparent)}.accesos{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}.accesos a{position:relative;display:block;padding:12px 14px 12px 16px;text-decoration:none;background:#0e0a09e6;border:1px solid rgba(122,59,30,.3);border-left:2px solid #5a2414;transition:border-color .2s,background .2s;overflow:hidden}.accesos a:hover{border-color:#c0261a99;background:#1e0e0bf2}.accesos a b{display:block;font-weight:500;font-size:18px;color:#ece3d2}.accesos a small{color:#8f857a;font-size:14px;font-style:italic}.accesos a i{position:absolute;right:10px;top:10px;font-style:normal;font-size:11px;letter-spacing:.2em;color:#6f4a3a;text-transform:uppercase}.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:center}@media (orientation: portrait) and (max-width: 1100px){.accesos,.duo{grid-template-columns:minmax(0,1fr)}.cifras{grid-template-columns:repeat(2,minmax(0,1fr))}.docs{columns:1}}@media (orientation: landscape) and (max-width: 1199px){.accesos{grid-template-columns:repeat(2,minmax(0,1fr))}.duo{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}@media (max-width: 760px){h2{margin:44px 0 14px;letter-spacing:.3em;font-size:14px}.accesos a{padding:12px 64px 12px 14px}.cita{font-size:19px}.cifras b{font-size:26px}.nota{min-height:220px}}#mirilla{width:min(340px,80vw);aspect-ratio:1;border-radius:50%;margin:0 auto;background:#0b0807 center / 150% no-repeat;box-shadow:inset 0 0 60px 30px #000,0 0 0 10px #120c0a,0 0 0 11px #3a2418,0 0 50px #000000e6;filter:sepia(.25) contrast(1.1);animation:titila 11s steps(1) infinite}.cita{font-size:22px;font-style:italic;color:#e6dccb}.cita span{display:block;font-style:normal;font-size:14px;letter-spacing:.3em;color:#a8463a;margin-top:6px}.nota{min-height:280px;background:#0b0807 center / cover no-repeat;border:1px solid rgba(122,59,30,.35);filter:brightness(.9)}.cifras{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#7a3b1e40;border:1px solid rgba(122,59,30,.3)}.cifras div{background:#0b0807;padding:14px 16px}.cifras b{display:block;font-size:32px;font-weight:400;color:#ece3d2;line-height:1.1}.cifras span{font-size:13px;color:#8f857a;font-style:italic}.docs{columns:2 260px}.docs a{display:block;break-inside:avoid;text-decoration:none;padding:5px 0;color:#c9bba5;border-bottom:1px dotted rgba(122,59,30,.3)}.docs a:hover{color:#fff4e4}.docs a small{color:#6f655c;font-style:italic}footer{margin-top:70px;text-align:center;color:#5f574f;font-size:13px}footer canvas{display:block;margin:0 auto 10px;opacity:.5;max-width:90%}
+</style>
+</head>
+<body class="sh-portada">
+<section id="portada">
+  <div id="fondo"></div>
+  <div id="niebla"></div>
+  <div id="logoTexto">SILENT HILL 4<br>THE ROOM</div>
+  <div id="suite">Suite</div>
+  <nav id="menu" aria-label="Herramientas">
+    <a href="./modo_juego/juego.html"><span class="etq">Jugar</span><small>la pesadilla, el fantasma y el 302, como en el juego</small></a>
+    <a href="./index.html"><span class="etq">Escenarios</span><small>recorrer cada sala, en la PC o en el casco</small></a>
+    <a href="./modelos.html"><span class="etq">Modelos</span><small>personajes y monstruos con sus animaciones</small></a>
+    <a href="./cine.html"><span class="etq">Cinemáticas</span><small>las escenas del juego, dentro del motor</small></a>
+    <a href="./musica.html"><span class="etq">Música y sonido</span><small>Akira Yamaoka, ambientes y voces</small></a>
+    <a href="#archivo"><span class="etq">Archivo</span><small>lo que encontramos adentro del juego</small></a>
+    <a href="./sin_usar.html"><span class="etq">Contenido sin usar</span><small>escenas, monstruos y salas que quedaron adentro del juego</small></a>
+    <a href="#opciones" id="irOpciones"><span class="etq">Opciones</span><small>las del juego y las de este aparato</small></a>
+    <a href="#vr" id="entrarVR" class="vr" hidden><span class="etq">Entrar en VR</span><small>el menú en el casco, con manos y mira roja</small></a>
+  </nav>
+  <div id="teclasMenu">flechas o joystick: elegir · Enter / A: entrar · Esc / B: volver</div>
+  <a id="bajar" href="#accesos">▾ ACCESOS DIRECTOS ▾</a>
+  <div id="estadoJuego">revisando los archivos del juego…</div>
+</section>
+
+<main>
+  <h2 id="accesos">Accesos directos</h2>
+  <div class="accesos">
+    <a href="./modo_juego/juego.html"><i>Jugar</i><b>Desde la pesadilla</b><small>el comienzo del juego, en la PC, el celular o el casco</small></a>
+    <a href="./modo_juego/juego.html?ir=302"><i>Jugar</i><b>Directo al 302</b><small>recién despierto, para recorrer el departamento</small></a>
+    <a href="./index.html?sala=rl00g"><i>Sala</i><b>La pesadilla</b><small>el 302 oxidado y con sangre</small></a>
+    <a href="./index.html?sala=rl00a"><i>Sala</i><b>Cuarto 302</b><small>living, cocina y pasillo</small></a>
+    <a href="./index.html?sala=rl00f"><i>Sala</i><b>El agujero</b><small>oxidado, con el agujero del pasillo</small></a>
+    <a href="./index.html?sala=rl05a"><i>Sala</i><b>Por el agujero</b><small>el departamento de Eileen</small></a>
+    <a href="./index.html?sala=sb02"><i>Sala</i><b>El subte</b><small>donde aparece el primer monstruo</small></a>
+    <a href="./index.html?sala=hs01"><i>Sala</i><b>El hospital</b><small>la sala de emergencias</small></a>
+    <a href="./index.html?sala=st01"><i>Sala</i><b>La escalera caracol</b><small>entre un mundo y otro</small></a>
+    <a href="./index.html?sala=ed01"><i>Sala</i><b>South Ashfield</b><small>la calle del final</small></a>
+    <a href="./modelos.html?archivo=henry01"><i>Modelo</i><b>Henry Townshend</b><small>con sus 170 animaciones</small></a>
+    <a href="./modelos.html?archivo=eil"><i>Modelo</i><b>Eileen Galvin</b><small>la vecina del 303</small></a>
+    <a href="./modelos.html?archivo=enemy_hyena"><i>Modelo</i><b>El perro</b><small>Sniffer Dog, el primer monstruo</small></a>
+    <a href="./modelos.html?archivo=enemy_wall_ghost"><i>Modelo</i><b>Fantasma de pared</b><small>haunting de la segunda mitad</small></a>
+    <a href="./cine.html?paquete=rl&demo=d_049"><i>Escena</i><b>"¿Diga...?"</b><small>Henry atiende el teléfono</small></a>
+    <a href="./cine.html?paquete=rl&demo=d_050"><i>Escena</i><b>La puerta encadenada</b><small>"Desde entonces no he podido salir…"</small></a>
+    <a href="./cine.html?paquete=rl&demo=d_061"><i>Escena</i><b>Eileen y el encargado</b><small>el pasillo de las manos</small></a>
+    <a href="./cine.html?paquete=rl&demo=d_139"><i>Escena</i><b>Henry fantasma</b><small>por la mirilla; la PC original no lo mostraba</small></a>
+  </div>
+
+  <h2>La mirilla</h2>
+  <div class="duo">
+    <div id="mirilla" role="img" aria-label="la vista por la mirilla de la puerta"></div>
+    <div>
+      <p class="cita">"Hace cinco días… Tuve por primera vez la pesadilla. Desde entonces no he podido salir del apartamento."<span>HENRY TOWNSHEND · CUARTO 302</span></p>
+      <p class="cita" style="font-size:19px">"¡¡No salgas!!"<span>WALTER</span></p>
+      <p style="color:#8f857a">Todo lo que ves en esta suite se lee en vivo de tu copia del juego: escenarios, texturas, luces, modelos, animaciones, cinemáticas, música y textos. Nada se convirtió ni se copió.</p>
+    </div>
+  </div>
+
+  <h2 id="archivo">Archivo</h2>
+  <div class="cifras">
+    <div><b>285</b><span>salas con nombre</span></div>
+    <div><b>1.156</b><span>animaciones</span></div>
+    <div><b>183</b><span>cinemáticas</span></div>
+    <div><b id="cMusica">—</b><span>temas de música</span></div>
+    <div><b>451</b><span>modelos con esqueleto</span></div>
+    <div><b>8</b><span>idiomas, con castellano</span></div>
+    <div><b>33</b><span>escenas de Eileen por el agujero</span></div>
+    <div><b>589</b><span>funciones nombradas del juego</span></div>
+  </div>
+  <div class="accesos" style="margin-top:22px">
+    <a href="./sin_usar.html"><i>Archivo</i><b>Contenido sin usar</b><small>lo que quedó adentro del juego: escenas, monstruos, salas de prueba y la demo E3</small></a>
+    <a href="./escalera_sin_usar.html"><i>Archivo</i><b>Las criaturas de la escalera</b><small>los modelos que el juego tiene para el hueco y nunca pone</small></a>
+    <a href="./index.html?sala=st01&amp;sinusar"><i>Sala</i><b>La escalera, restaurada</b><small>las criaturas en sus nichos y los nichos numerados</small></a>
+  </div>
+  <div class="duo" style="margin-top:26px">
+    <div class="docs">
+      <a href="./sin_usar.html">Contenido sin usar y curiosidades <small>· en tarjetas, con imágenes y botón para verlo</small></a>
+      <a href="./escalera_sin_usar.html">La escalera en espiral: las criaturas sin usar <small>· los 17 modelos animados</small></a>
+      <a href="/md/CONTENIDO_SIN_USAR.md">El informe en texto <small>· todos los detalles y las fuentes</small></a>
+      <a href="/md/NOMBRES.md">Nombres de las 285 salas</a>
+      <a href="/md/PLAN_SH4_VR.md">El plan</a>
+      <a href="/md/INVENTARIO.md">Inventario de archivos</a>
+      <a href="/md/INVESTIGACION_INTERNET.md">Investigación</a>
+      <a href="/md/docs/ANIMACIONES.md">Animaciones</a>
+      <a href="/md/docs/CINEMATICAS.md">Cinemáticas</a>
+      <a href="/md/docs/DATOS_EXE.md">Datos del ejecutable</a>
+      <a href="/md/docs/MEJORADO.md">Modo mejorado</a>
+    </div>
+    <div class="nota" id="nota" role="img" aria-label="la primera nota, deslizada bajo la puerta"></div>
+  </div>
+
+  <footer><canvas id="copyright"></canvas>FeniXVOID · Project Ravenlight<br>Silent Hill 4: The Room © Konami. Esta suite no trae archivos del juego: los lee de tu copia.</footer>
+</main>
+
+<script type="module">
+import { mostrarIntro } from "./intro_tributo.js";
+
+window.sh4introLista = mostrarIntro().catch(() => {});
+</script>
+<script type="module">
+import { recorte, fondoJuego, RECORTES } from "./suite_juego.js";
+
+import { t } from "./textos_sitio.js";
+
+const $ = id => document.getElementById(id);
+
+const est = $("estadoJuego");
+
+try {
+  const l = await (await fetch("/juego-lista.json")).json();
+  if (!l.data.length) throw new Error("vacío");
+  est.textContent = t("suite.estado", l.data.length, l.demo.length, l.movie.length);
+  addEventListener("sh4idioma", () => {
+    if (!est.classList.contains("mal")) est.textContent = t("suite.estado", l.data.length, l.demo.length, l.movie.length);
+  });
+  fondoJuego($("fondo"), ...RECORTES.tituloFondo);
+  fondoJuego($("mirilla"), ...RECORTES.gameover);
+  fondoJuego($("nota"), ...RECORTES.nota);
+  recorte("logo").then(c => {
+    c.id = "logo";
+    c.setAttribute("role", "img");
+    c.setAttribute("aria-label", "Silent Hill 4: The Room");
+    $("logoTexto").replaceWith(c);
+  }).catch(() => {});
+  recorte("niebla").then(c => {
+    $("niebla").style.backgroundImage = `url(${c.toDataURL()})`;
+  }).catch(() => {});
+  recorte("copyright").then(c => {
+    const d = $("copyright");
+    d.width = c.width;
+    d.height = c.height;
+    d.getContext("2d").drawImage(c, 0, 0);
+  }).catch(() => {});
+  const r = await fetch("/juego/demo/bgm.sh4", {
+    headers: {
+      Range: "bytes=0-4095"
+    }
+  }).catch(() => null);
+  if (r?.ok) $("cMusica").textContent = new DataView(await r.arrayBuffer()).getUint32(4, true); else {
+    est.textContent += " · " + t("suite.bloqueada");
+    est.className = "mal";
+  }
+} catch {
+  est.textContent = t("suite.noJuego");
+  est.className = "mal";
+}
+</script>
+<script type="module">
+import { crearEntrada, abrirPantallaOpciones, cargarTextosJuego } from "./opciones_sitio.js";
+
+import { recorte } from "./suite_juego.js";
+
+import { t } from "./textos_sitio.js";
+
+import { prepararPortada } from "./suite_titulo.js";
+
+const $ = id => document.getElementById(id);
+
+const q = new URLSearchParams(location.search);
+
+const portada = prepararPortada({
+  esperarIntro: window.sh4introLista || Promise.resolve()
+});
+
+window.sh4portada = portada;
+
+const items = () => [ ...document.querySelectorAll("#menu a:not([hidden])") ];
+
+const marcar = a => {
+  for (const x of items()) x.classList.toggle("sel", x === a);
+};
+
+document.addEventListener("focusin", e => marcar(e.target.closest?.("#menu a") || null));
+
+let pantalla = null, fondoOpc = null;
+
+async function abrirOpciones() {
+  if (pantalla) return;
+  pantalla = {
+    accion() {}
+  };
+  portada.pausarMusica();
+  const [tx, fondo] = await Promise.all([ cargarTextosJuego().catch(() => ({})), fondoOpc || recorte("opciones").catch(() => null) ]);
+  fondoOpc = fondo;
+  pantalla = abrirPantallaOpciones({
+    fuente: tx.fuente,
+    textos: tx.textos,
+    fondo: fondo,
+    alCerrar: () => {
+      pantalla = null;
+      portada.seguirMusica();
+      if (location.hash === "#opciones") history.replaceState(null, "", location.pathname + location.search);
+      $("irOpciones").focus({
+        preventScroll: true
+      });
+    }
+  });
+}
+
+$("irOpciones").addEventListener("click", e => {
+  e.preventDefault();
+  abrirOpciones();
+});
+
+addEventListener("hashchange", () => {
+  if (location.hash === "#opciones") abrirOpciones();
+});
+
+if (location.hash === "#opciones") abrirOpciones();
+
+crearEntrada((a, origen) => {
+  if (pantalla) {
+    pantalla.accion(a);
+    return;
+  }
+  if (vrPrevia) {
+    vrPrevia.accion(a);
+    return;
+  }
+  const lista = items(), i = lista.indexOf(document.activeElement);
+  if (a === "arriba" || a === "abajo") {
+    if (i < 0 && origen === "teclado" && (scrollY > 80 || document.activeElement && document.activeElement !== document.body)) return false;
+    const j = i < 0 ? 0 : (i + (a === "abajo" ? 1 : -1) + lista.length) % lista.length;
+    lista[j].focus({
+      preventScroll: true
+    });
+    marcar(lista[j]);
+    portada.cursor();
+    if (scrollY > 0 && lista[j].getBoundingClientRect().top < 0) scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+    return;
+  }
+  if (a === "aceptar") {
+    if (i >= 0) {
+      lista[i].click();
+      return;
+    }
+    if (origen === "teclado" && document.activeElement && document.activeElement !== document.body) return false;
+    lista[0].focus();
+    marcar(lista[0]);
+    return;
+  }
+  if (a === "cancelar") {
+    portada.cancelar();
+    if (i < 0) {
+      scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+      lista[0].focus({
+        preventScroll: true
+      });
+    }
+    return;
+  }
+  return false;
+});
+
+let vr = null, vrPrevia = null, concedida = false;
+
+const botonVR = $("entrarVR");
+
+try {
+  navigator.xr?.addEventListener("sessiongranted", () => {
+    concedida = true;
+    vr?.entrar().catch(() => {});
+  });
+} catch {}
+
+const previa = q.get("vr");
+
+if (previa && previa !== "1") {
+  const m = await (import("./suite_vr.js"));
+  vr = await m.prepararSuiteVR();
+  vrPrevia = vr.vistaPrevia(previa);
+  window.sh4suiteVR = vrPrevia;
+} else if (navigator.xr && await navigator.xr.isSessionSupported("immersive-vr").catch(() => false)) {
+  botonVR.hidden = false;
+  botonVR.addEventListener("click", e => {
+    e.preventDefault();
+    if (!vr) {
+      $("estadoJuego").textContent = t("suite.preparando");
+      return;
+    }
+    vr.entrar().catch(er => {
+      $("estadoJuego").textContent = t("suite.noCasco") + er.message;
+    });
+  });
+  import("./suite_vr.js").then(m => m.prepararSuiteVR()).then(v => {
+    vr = v;
+    if (concedida) vr.entrar().catch(() => {});
+  }).catch(er => {
+    console.warn(er);
+    botonVR.hidden = true;
+  });
+}
+</script>
+<script type="module" src="./suite_nav.js"></script>
+</body>
+</html>
