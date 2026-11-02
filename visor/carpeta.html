@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:,">
+<title>SH4 · Tu carpeta del juego</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+:root{--negro: #070505;--panel: rgba(16, 11, 9, .92);--borde: rgba(122, 59, 30, .45);--borde-fuerte: #7a3b1e;--texto: #d6cdbd;--suave: #8f857a;--tenue: #5f574f;--hueso: #ece3d2;--sangre: #8c1a12;--sangre-viva: #c0261a;--bien: #8fae7a;--serif: "Cormorant Garamond", "Garamond", "Georgia", serif}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--negro);color:var(--texto);font:18px/1.5 var(--serif)}body{display:grid;place-items:center;padding:24px 16px;min-height:100vh;background:radial-gradient(ellipse at 50% 30%,#1a110d 0%,var(--negro) 70%)}main{width:min(640px,100%);background:var(--panel);border:1px solid var(--borde);padding:26px 28px 22px}h1{margin:0 0 4px;font-weight:500;font-size:30px;letter-spacing:.04em;color:var(--hueso)}.sub{margin:0 0 18px;color:var(--suave);font-style:italic}p{margin:10px 0}button,.boton{font:500 19px var(--serif);color:var(--hueso);background:#1d1310;border:1px solid var(--borde-fuerte);padding:9px 18px;cursor:pointer;text-decoration:none;display:inline-block;margin:6px 8px 6px 0}button:hover,.boton:hover,button:focus-visible,.boton:focus-visible{background:#2a1914;border-color:var(--sangre-viva);outline:none}button.principal{background:var(--sangre);border-color:var(--sangre-viva)}button.principal:hover{background:#a3211a}button.secundario{font-size:16px;color:var(--suave);background:transparent}button:disabled{opacity:.5;cursor:default}a{color:#d9a57a}.ayuda{color:var(--suave);font-size:15px}.ayuda code{font:14px Consolas,monospace;color:var(--texto)}#informe{list-style:none;padding:0;margin:14px 0}#informe li{padding:6px 0;border-top:1px solid rgba(122,59,30,.2)}#informe li:first-child{border-top:0}#informe .marca{display:inline-block;width:1.4em;font-weight:600}#informe .ok .marca{color:var(--bien)}#informe .mal .marca{color:var(--sangre-viva)}#informe .det{display:block;padding-left:1.4em;color:var(--suave);font-size:15px}.aviso{border-left:3px solid var(--sangre-viva);padding:6px 12px;background:#8c1a121f}.bien{border-left:3px solid var(--bien);padding:6px 12px;background:#8fae7a14}#idiomas{float:right;font-size:15px}#idiomas button{font-size:14px;padding:2px 8px;margin:0 0 0 4px}#idiomas button[aria-pressed=true]{border-color:var(--sangre-viva);color:var(--hueso)}footer{margin-top:18px;padding-top:10px;border-top:1px solid rgba(122,59,30,.2);color:var(--tenue);font-size:14px}.oculto{display:none!important}@media (max-width: 480px){main{padding:18px 16px}h1{font-size:25px}button,.boton{width:100%;margin-right:0}}
+</style>
+</head>
+<body>
+<main>
+  <div id="idiomas" role="group" aria-label="Idioma / Language">
+    <button type="button" data-idioma="s">ES</button><button type="button" data-idioma="e">EN</button>
+  </div>
+  <h1>Silent Hill 4 · The Room</h1>
+  <p class="sub" id="sub"></p>
+  <div id="contenido" aria-live="polite"></div>
+  <footer id="pie"></footer>
+</main>
+<script type="module" src="./carpeta.js"></script>
+</body>
+</html>
