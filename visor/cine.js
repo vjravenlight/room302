@@ -5,6 +5,8 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 import { VRButton } from "three/addons/webxr/VRButton.js";
 
+import { soloConCasco } from "./vr_boton.js";
+
 import { partesBin } from "./lib/sh4bin.js";
 
 import { indiceSh4 } from "./lib/remoto.js";
@@ -149,17 +151,11 @@ prepararBrillo(renderer.domElement);
 
 VRButton.registerSessionGrantedListener();
 
-const botonVR = VRButton.createButton(renderer);
+const botonVR = soloConCasco(VRButton.createButton(renderer));
 
 document.body.appendChild(botonVR);
 
-const vrSinCasco = () => {
-  if (/NOT SUPPORTED|NOT AVAILABLE|NOT ALLOWED/i.test(botonVR.textContent || "")) botonVR.style.display = "none";
-};
-
-setTimeout(vrSinCasco, 1500);
-
-setTimeout(vrSinCasco, 4e3);
+soloConCasco(document.getElementById("vrmodo"));
 
 const escena = new THREE.Scene;
 

@@ -135,6 +135,29 @@ export function crearMira({M: M, juego: juego, fuente: fuente, tactil: tactil = 
     lineas.geometry = geo;
   }
   let claveResalte = null;
+  const rayoPared = new THREE.Raycaster, vT = new THREE.Vector3, vC = new THREE.Vector3, vD = new THREE.Vector3;
+  function aLaPared(caja0) {
+    const caja = caja0.clone();
+    caja.getSize(vT);
+    caja.getCenter(vC);
+    const eje = vT.x < vT.z ? "x" : "z";
+    const salas = M.escena.children.filter(o => o !== lineas && o !== brillo && o !== M.jugador && o.visible);
+    let mejor = null;
+    for (const s of [ 1, -1 ]) {
+      vD.set(0, 0, 0);
+      vD[eje] = s;
+      rayoPared.set(vC, vD);
+      rayoPared.far = 1;
+      const h = rayoPared.intersectObjects(salas, true).find(x => x.object.isMesh && x.object.material?.depthTest !== false);
+      if (h && (!mejor || h.distance < mejor.distance)) mejor = {
+        distance: h.distance,
+        punto: h.point[eje],
+        s: s
+      };
+    }
+    if (mejor) caja.min[eje] = caja.max[eje] = mejor.punto - mejor.s * .01;
+    return caja;
+  }
   function textoDe(a, info) {
     if (!a) return null;
     if (a.tipo === "puerta") {
@@ -186,10 +209,10 @@ export function crearMira({M: M, juego: juego, fuente: fuente, tactil: tactil = 
       }
     }
     let clave = null, caja = null, pos = null;
-    if (completa) {
+    if (completa && juego.opciones?.guias) {
       if (a.tipo === "puerta") {
         clave = "p" + a.puerta.door_no;
-        caja = (a.puerta.rect || a.puerta.caja).clone().expandByScalar(.02);
+        caja = aLaPared(a.puerta.rect || a.puerta.caja).expandByScalar(.02);
       } else if (a.p.caja && !a.p.caja.isEmpty()) {
         clave = "c" + a.p.e.escena + "/" + a.p.e.indice;
         caja = a.p.caja.clone().expandByScalar(.03);

@@ -5,6 +5,8 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 import { VRButton } from "three/addons/webxr/VRButton.js";
 
+import { soloConCasco } from "./vr_boton.js";
+
 import { partesBin } from "./lib/sh4bin.js";
 
 import { leerModelo } from "./lib/modelo.js";
@@ -956,7 +958,7 @@ renderer.xr.addEventListener("sessionend", () => {
 VRButton.registerSessionGrantedListener();
 
 {
-  const b = VRButton.createButton(renderer);
+  const b = soloConCasco(VRButton.createButton(renderer));
   $("vrLugar").appendChild(b);
   const sinCasco = () => b.classList.toggle("sinCasco", /NOT SUPPORTED|NOT AVAILABLE|NOT ALLOWED/i.test(b.textContent || ""));
   sinCasco();

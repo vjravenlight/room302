@@ -5,6 +5,8 @@ import { PointerLockControls } from "three/addons/controls/PointerLockControls.j
 
 import { VRButton } from "three/addons/webxr/VRButton.js";
 
+import { soloConCasco } from "../vr_boton.js";
+
 import { partesBin } from "../lib/sh4bin.js";
 
 import { leerMundo } from "../lib/mundo.js";
@@ -43,7 +45,7 @@ renderer.xr.enabled = true;
 
 document.body.appendChild(renderer.domElement);
 
-if (!q.has("limpio")) document.body.appendChild(VRButton.createButton(renderer));
+if (!q.has("limpio")) document.body.appendChild(soloConCasco(VRButton.createButton(renderer)));
 
 const escena = new THREE.Scene;
 

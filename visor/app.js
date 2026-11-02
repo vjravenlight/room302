@@ -7,6 +7,8 @@ import { PointerLockControls } from "three/addons/controls/PointerLockControls.j
 
 import { VRButton } from "three/addons/webxr/VRButton.js";
 
+import { soloConCasco } from "./vr_boton.js";
+
 import { armarSala, crearLucesPersonajes } from "./lib/sala.js";
 
 import { iniciarInspeccion } from "./inspeccion.js";
@@ -80,7 +82,7 @@ prepararBrillo(renderer.domElement);
 
 VRButton.registerSessionGrantedListener();
 
-document.body.appendChild(VRButton.createButton(renderer));
+document.body.appendChild(soloConCasco(VRButton.createButton(renderer)));
 
 const escena = new THREE.Scene;
 

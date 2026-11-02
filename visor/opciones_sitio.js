@@ -14,6 +14,7 @@ export const DEFECTO = {
   vistaCineVR: true,
   cine1ra: false,
   apuntar: "completa",
+  guias: false,
   niebla: 5,
   brilloPersonajes: 5,
   sombrasPersonajes: "siempre",
@@ -188,6 +189,10 @@ const COMUNES = [ {
   id: "apuntar",
   valores: [ "completa", "mira", "nada" ],
   ay: "op.apuntar.ay"
+}, {
+  id: "guias",
+  valores: [ false, true ],
+  ay: "op.guias.ay"
 } ];
 
 const CALIDAD = {

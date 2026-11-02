@@ -5,6 +5,8 @@ import { usoTactil } from "../opciones_sitio.js";
 
 import { VRButton } from "three/addons/webxr/VRButton.js";
 
+import { soloConCasco, soloEnMenu } from "../vr_boton.js";
+
 import { prepararBrillo } from "../lib/brillo.js";
 
 import { prepararCasco, casco, opciones, alCambiarOpciones, mouse, aplicarCalidad, pixelesPorPunto, escalaBotones, joystickALaDerecha, vibrarCelular, dominanteXR, girarConPalito } from "../jugador/casco_comun.js";
@@ -24,8 +26,9 @@ export function crearMotor() {
   document.body.appendChild(renderer.domElement);
   prepararBrillo(renderer.domElement);
   VRButton.registerSessionGrantedListener();
-  const botonVR = VRButton.createButton(renderer);
+  const botonVR = soloConCasco(VRButton.createButton(renderer));
   botonVR.id = "VRButton";
+  soloEnMenu(botonVR, false);
   document.body.appendChild(botonVR);
   const escena = new THREE.Scene;
   escena.background = new THREE.Color(0);
@@ -683,6 +686,13 @@ export function crearMotor() {
     teclas: teclas,
     enVR: () => renderer.xr.isPresenting,
     quieto: quieto,
+    botonVR: {
+      el: botonVR,
+      mostrar: v => soloEnMenu(botonVR, v),
+      get visible() {
+        return !botonVR.classList.contains("vrFueraDeMenu");
+      }
+    },
     pulsar: a => pulsos.push(a),
     tactil: tactil,
     casco: cascoVR,

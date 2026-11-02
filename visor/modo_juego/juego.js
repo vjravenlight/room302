@@ -29,6 +29,8 @@ import { iniciarModoFoto } from "./modo_foto.js";
 
 import { aplicarBrillo } from "../lib/brillo.js";
 
+import { averiguarCasco, hayCasco } from "../vr_boton.js";
+
 const PEDIDOS = [];
 
 {
@@ -170,7 +172,8 @@ fuenteDom = fuente;
 
 function pintarTextosPagina() {
   const ay = $("ayuda");
-  if (ay) pintarConFuente(ay, fuente, t("juego.ayuda").replace(/ · /g, "\n"), {
+  const sinCasco = txt => txt.split(" · ").filter(x => !/^(en el casco|headset):/i.test(x)).map(x => x.replace(/; (en el casco|headset):?[^)]*\)/i, ")")).join(" · ");
+  if (ay) pintarConFuente(ay, fuente, (hayCasco ? t("juego.ayuda") : sinCasco(t("juego.ayuda"))).replace(/ · /g, "\n"), {
     px: .6
   });
   const vo = $("volver");
@@ -187,6 +190,10 @@ function pintarTextosPagina() {
 }
 
 pintarTextosPagina();
+
+averiguarCasco().then(h => {
+  if (h) pintarTextosPagina();
+});
 
 vigilarBoton($("VRButton"), fuente, {
   px: .65
@@ -260,6 +267,8 @@ function animar(seg, dibujo, saltable = true) {
 async function pantallaInicio() {
   if (q.has("auto") || q.has("quieto")) return;
   juego.fase = "inicio";
+  M.botonVR.mostrar(true);
+  averiguarCasco();
   if (![ "intro", "video", "302" ].includes(q.get("ir"))) musica.tocar(TEMA_TITULO, {
     siNoSuena: true
   });
@@ -278,7 +287,7 @@ async function pantallaInicio() {
         alfa: .55 + .35 * Math.sin(t0 * 3),
         color: "#d8cfc2"
       });
-      fuente.escribir(g, t("juego.casco"), P.W / 2, 292, {
+      if (hayCasco) fuente.escribir(g, t("juego.casco"), P.W / 2, 292, {
         escala: P.ESC,
         alinear: "centro",
         color: "#7a7067"
@@ -319,8 +328,11 @@ async function logos() {
 
 export async function reproducirVideo(n, {saltable: saltable = true, maxSeg: maxSeg = null} = {}) {
   const faseAntes = juego.fase, faseVideo = "video " + n;
+  const vrAntes = M.botonVR.visible;
+  M.botonVR.mostrar(false);
   const volverFase = () => {
     if (juego.fase === faseVideo) juego.fase = faseAntes;
+    M.botonVR.mostrar(vrAntes);
   };
   juego.fase = faseVideo;
   const nombre = "m_" + String(n).padStart(2, "0") + ".pac";
@@ -606,6 +618,16 @@ function ayudaIdioma() {
 
 async function opciones() {
   juego.fase = "opciones";
+  const vrAntes = M.botonVR.visible;
+  M.botonVR.mostrar(true);
+  try {
+    await opcionesMenu();
+  } finally {
+    M.botonVR.mostrar(vrAntes);
+  }
+}
+
+async function opcionesMenu() {
   await I.esperar("opciones");
   const T = P.MSG.op;
   try {
@@ -676,6 +698,12 @@ async function opciones() {
       valor: t("op.apuntar.v." + (OPC.apuntar || "completa")),
       ayuda: t("op.apuntar.ay")
     }, {
+      id: "guias",
+      nombre: t("op.guias"),
+      lista: [ false, true ],
+      valor: t("op.guias.v." + !!OPC.guias),
+      ayuda: t("op.guias.ay")
+    }, {
       id: "niebla",
       nombre: t("op.niebla"),
       valor: OPC.niebla ? String(OPC.niebla) : textoComun(T.off),
@@ -704,12 +732,12 @@ async function opciones() {
       nombre: t("op.camara"),
       valor: ">",
       ayuda: t("op.camara.ay")
-    }, {
+    }, ...hayCasco === false && !M.renderer.xr.isPresenting ? [] : [ {
       id: "casco",
       nombre: t("op.casco"),
       valor: ">",
       ayuda: t("op.casco.ay")
-    }, {
+    } ], {
       id: "salir",
       nombre: textoComun(T.salir) || t("op.salir"),
       valor: null
@@ -855,6 +883,7 @@ juego.abrirOpciones = opciones;
 
 async function arranque() {
   const ir = q.get("ir");
+  averiguarCasco();
   await pantallaInicio();
   if (ir === "video") {
     await reproducirVideo(+(q.get("n") || 0));
@@ -882,6 +911,7 @@ async function arranque() {
     await reproducirVideo(DATOS.arranque?.video_apertura ?? 0);
   }
   for (;;) {
+    M.botonVR.mostrar(true);
     const r = await titulo();
     if (r === "video") {
       await reproducirVideo(DATOS.arranque?.video_titulo_quieto ?? 0);
@@ -949,6 +979,7 @@ async function mensajeTitulo(texto) {
 
 async function empezarPartida(modo) {
   juego.fase = "partida";
+  M.botonVR.mostrar(false);
   juego.enPartida = true;
   await animar(.8, k => {
     g.save();
