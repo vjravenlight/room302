@@ -2,7 +2,20 @@
 (() => {
   try {
     const p = location.pathname;
-    if (p.startsWith("/full/") || /\/carpeta\.html$/.test(p) || new URLSearchParams(location.search).has("sincarpeta")) return;
+    if (location.hostname === "sh4.ravenlight.net" && p.startsWith("/sh4/")) return location.replace(p.slice(4) + location.search + location.hash);
+    if (p.startsWith("/full/")) {
+      if (/\/clave\.html$/.test(p)) return;
+      fetch("/full/juego-lista.json", {
+        method: "HEAD",
+        cache: "no-store"
+      }).then(r => {
+        if (r.status === 403) location.replace("/full/clave.html?volver=" + encodeURIComponent(p + location.hash)); else if (r.ok) try {
+          sessionStorage.removeItem("sh4intento");
+        } catch {}
+      }, () => {});
+      return;
+    }
+    if (/\/carpeta\.html$/.test(p) || new URLSearchParams(location.search).has("sincarpeta")) return;
     fetch("/juego-lista.json", {
       method: "HEAD",
       cache: "no-store"
