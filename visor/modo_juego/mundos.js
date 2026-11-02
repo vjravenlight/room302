@@ -97,6 +97,8 @@ MUNDOS.cm = DEPARTAMENTOS_PASADO;
 
 import { crearManejoEileen, entrarEscena, guardadoNuevo, ITEM_A_ARMA, escenasConectadas, lugarDeEntrada } from "../enemigos/eileen.js";
 
+import { marcarModelo, seRepite } from "../lib/repetidos_demo.js";
+
 const ETAPA_N = {
   rl: 1,
   sb: 2,
@@ -614,6 +616,7 @@ async function prepararMundos(juego, ctx) {
         pj.reproductor.loop = true;
       }
     }
+    marcarModelo(pj.grupo, arch, pm);
     return pj;
   }
   async function salaDe(nombre) {
@@ -762,6 +765,7 @@ async function prepararMundos(juego, ctx) {
           semilla: n
         });
         if (escena !== +n) v.dispose(); else {
+          v.grupo.userData.modelo = "velas";
           cont.add(v.grupo);
           objetosFijos.push(v);
           velasSala = v;
@@ -1156,8 +1160,8 @@ async function prepararMundos(juego, ctx) {
     items = items.filter(x => x.o !== o);
     M.redibujar();
   }
-  function esconderParaDemo() {
-    const quedan = o => /^sala_/.test(o.name) || o.isLight || o.name === "luces de personajes" || o.userData?.enDemo;
+  function esconderParaDemo(D) {
+    const quedan = o => /^sala_/.test(o.name) || o.isLight || o.name === "luces de personajes" || o.userData?.enDemo || !seRepite(o, D);
     const escondidos = [];
     for (const o of cont.children) if (o.visible && !quedan(o)) {
       o.visible = false;
@@ -1195,7 +1199,7 @@ async function prepararMundos(juego, ctx) {
     const eilVis = eileen.actual ? eileen.actual.pj.grupo.visible : null;
     if (eileen.actual) eileen.actual.pj.grupo.visible = false;
     mod?.alDemo?.(true);
-    const escondidos = esconderParaDemo();
+    const escondidos = esconderParaDemo(D);
     cont.position.copy(aMundo(off));
     cont.updateMatrixWorld(true);
     juego.fase = "demo " + n;

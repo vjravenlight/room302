@@ -41,6 +41,8 @@ import { crearTelefono302 } from "./telefono_302.js";
 
 import { t as textoSitio } from "../textos_sitio.js";
 
+import { seRepite } from "../lib/repetidos_demo.js";
+
 const giroDeAngulo = a => Math.atan2(Math.sin(a), -Math.cos(a));
 
 const BANDERAS_DIA1_SUPUESTAS = [ 1607 ];
@@ -198,7 +200,7 @@ export async function iniciarPartida(juego, modo) {
     });
     const escondidos = [];
     for (const o of cuarto.grupo?.children || []) {
-      if (o.visible && !(/^sala_/.test(o.name) || o.isLight || o.name === "luces de personajes" || o.userData?.enDemo)) {
+      if (o.visible && !(/^sala_/.test(o.name) || o.isLight || o.name === "luces de personajes" || o.userData?.enDemo) && seRepite(o, D)) {
         o.visible = false;
         escondidos.push(o);
       }

@@ -17,6 +17,8 @@ import { crearPiso } from "../lib/colision.js";
 
 import { EQUIPO_CHICO } from "./motor.js";
 
+import { marcarModelo } from "../lib/repetidos_demo.js";
+
 const ANIM_VENT_LIVING = [ "event_rl00_cmn.bin", 19 ], ANIM_VENT_DORM = [ "event_rl01_cmn.bin", 2 ];
 
 const OBJ_RADIO = {
@@ -207,6 +209,7 @@ export function crearCuarto({M: M, bajar: bajar, E: E}) {
       }
     }
     pj.grupo.name = `objeto ${arch} #${pm}`;
+    marcarModelo(pj.grupo, arch, pm);
     return pj;
   }
   const mundosExtra = new Map;
@@ -247,6 +250,7 @@ export function crearCuarto({M: M, bajar: bajar, E: E}) {
         }));
         const s = await mundosExtra.get(extra);
         s.grupo.name = "extra " + extra;
+        s.grupo.userData.modelo = "extra:" + extra;
         if (EXTRAS_ESTADO[extra]) s.grupo.visible = !!EXTRAS_ESTADO[extra](api.estado || {
           F: () => false,
           heladera: false

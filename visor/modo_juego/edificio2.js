@@ -208,7 +208,6 @@ function crearEdificio2(api, base) {
     },
     alDemo(si) {
       base.alDemo?.(si);
-      for (const c of colocados) c.pj.grupo.visible = !si && F(c.L.bandera);
     },
     alSalir() {
       activo = false;

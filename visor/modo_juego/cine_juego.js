@@ -31,11 +31,13 @@ import { crearUniformsLuz, materialJuego, lucesDelJuego, aplicarLucesPersonaje }
 
 import { sombraDemo, esHalfDemo, opcionesLuzPj } from "../lib/luz_personajes.js";
 
-import { armarExtras } from "../lib/extras_cine.js";
+import { armarExtras, EXTRAS_DEMO } from "../lib/extras_cine.js";
+
+import { claveModelo } from "../lib/repetidos_demo.js";
 
 import { ocultarGrupos } from "../lib/extras_cine.js";
 
-import { crearEventosDemo } from "../efectos/eventos_demo.js";
+import { crearEventosDemo, OKIMONO } from "../efectos/eventos_demo.js";
 
 import { crearCapasCamara } from "../efectos/pantalla_demo.js";
 
@@ -313,6 +315,14 @@ export function crearCine({M: M, bajar: bajar, DJ: DJ, PC: PC, tablaSubs: tablaS
         ev = null;
       }
     }
+    const modelos = new Set;
+    for (const p of sqt.modelos) {
+      const c = PC?.personajes?.[String(p.id)]?.modelo;
+      if (c?.archivo) modelos.add(claveModelo(c.archivo, c.parte));
+    }
+    for (const o of OKIMONO[id] || []) modelos.add(claveModelo(o.arch, o.m));
+    for (const x of EXTRAS_DEMO[id] || []) modelos.add("extra:" + x.modelo);
+    if (+id === 65) modelos.add("velas");
     return {
       id: id,
       nom: nom,
@@ -328,7 +338,8 @@ export function crearCine({M: M, bajar: bajar, DJ: DJ, PC: PC, tablaSubs: tablaS
       duracion: sqt.n / FPS,
       ev: ev,
       padreEv: padreEv,
-      off: off
+      off: off,
+      modelos: modelos
     };
   }
   const _qc = new THREE.Quaternion, _pOjo = new THREE.Vector3, _qOjo = new THREE.Quaternion, _camPlano = nuevaCamara(), _qPlano = new THREE.Quaternion;
