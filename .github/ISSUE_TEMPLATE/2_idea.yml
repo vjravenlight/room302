@@ -1,0 +1,59 @@
+name: "Tengo una idea / Feature idea"
+description: "Algo que sumarías o cambiarías. / Something you would add or change."
+title: "[Idea] "
+labels: ["idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Contá la idea con tus palabras; no hace falta que sea técnica. Castellano o inglés.
+        Describe the idea in your own words; it doesn't need to be technical. Spanish or English.
+  - type: textarea
+    id: idea
+    attributes:
+      label: "La idea / The idea"
+      description: "Qué te gustaría que haga. / What you would like it to do."
+    validations:
+      required: true
+  - type: textarea
+    id: para_que
+    attributes:
+      label: "Para qué / Why"
+      description: "Qué problema resuelve o qué suma al jugar. / What problem it solves or what it adds."
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: "Área / Area"
+      multiple: true
+      options:
+        - "Jugar / Play"
+        - "Casco VR / VR headset"
+        - "Controles / Controls"
+        - "Cámaras / Cameras"
+        - "Cinemáticas / Cutscenes"
+        - "Escenarios / Rooms"
+        - "Modelos / Models"
+        - "Música / Music"
+        - "Modo foto o video / Photo or video mode"
+        - "Opciones / Options"
+        - "Traducciones / Translations"
+        - "Instalar o abrir / Install or start"
+        - "Otro / Other"
+    validations:
+      required: true
+  - type: textarea
+    id: como
+    attributes:
+      label: "Cómo lo imaginás (opcional) / How you picture it (optional)"
+      description: "Un dibujo, una captura de otro juego o una referencia ayudan. / A sketch, a screenshot or a reference help."
+    validations:
+      required: false
+  - type: checkboxes
+    id: ayuda
+    attributes:
+      label: "¿Te sumás? / Would you help?"
+      options:
+        - label: "Me gustaría ayudar a hacerlo (código, pruebas o traducción). / I'd like to help build it (code, testing or translation)."
+          required: false

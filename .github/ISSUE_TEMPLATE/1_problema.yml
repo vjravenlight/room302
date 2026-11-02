@@ -1,0 +1,127 @@
+name: "Algo no anda / Bug report"
+description: "Algo se rompe, se ve mal o no hace lo que debería. / Something breaks, looks wrong or doesn't work."
+title: "[Problema] "
+labels: ["problema"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por avisar! Cuanto más concreto, más fácil de arreglar. Podés escribir en castellano o en inglés.
+        Thanks for reporting! The more specific, the easier to fix. Spanish or English are both fine.
+
+        **No adjuntes archivos del juego.** / **Do not attach game files.**
+  - type: textarea
+    id: que_paso
+    attributes:
+      label: "Qué pasó / What happened"
+      description: "Lo que viste. / What you saw."
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: "Pasos para que pase / Steps to reproduce"
+      description: "Desde dónde arrancaste y qué apretaste. / Where you started and what you pressed."
+      placeholder: |
+        1. Suite → Jugar → Desde la pesadilla
+        2. En el 302, examiné la radio
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: "Qué esperabas / What you expected"
+    validations:
+      required: false
+  - type: dropdown
+    id: modo
+    attributes:
+      label: "Cómo jugás / How you play"
+      options:
+        - "Online (sh4.ravenlight.net)"
+        - "Descargado / Downloaded (Release)"
+        - "Desde el código / From source"
+    validations:
+      required: true
+  - type: dropdown
+    id: donde
+    attributes:
+      label: "Dónde / Where"
+      multiple: true
+      options:
+        - "Jugar: el 302 / Play: room 302"
+        - "Jugar: los mundos / Play: the worlds"
+        - "Cinemáticas / Cutscenes"
+        - "Escenarios / Rooms"
+        - "Modelos / Models"
+        - "Música / Music"
+        - "Modo foto o video / Photo or video mode"
+        - "Opciones / Options"
+        - "Instalar o abrir / Install or start"
+        - "Otro / Other"
+    validations:
+      required: true
+  - type: dropdown
+    id: control
+    attributes:
+      label: "Con qué jugabas / Input"
+      multiple: true
+      options:
+        - "Teclado y mouse / Keyboard and mouse"
+        - "Joystick / Gamepad"
+        - "Táctil / Touch"
+        - "Casco con controles / Headset with controllers"
+        - "Casco con las manos / Headset hand tracking"
+    validations:
+      required: true
+  - type: input
+    id: navegador
+    attributes:
+      label: "Navegador y versión / Browser and version"
+      placeholder: "Chrome 131, Edge 131, navegador del Quest…"
+    validations:
+      required: true
+  - type: input
+    id: sistema
+    attributes:
+      label: "Sistema / OS"
+      placeholder: "Windows 11, Windows 10, macOS, Linux, Android…"
+    validations:
+      required: true
+  - type: input
+    id: casco
+    attributes:
+      label: "Casco y cómo se conecta (si aplica) / Headset and connection (if any)"
+      placeholder: "Quest 3 con Air Link / Quest 2 por USB / Pico 4…"
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: "Versión / Version"
+      placeholder: "v1.1 (el nombre del .zip) / online"
+    validations:
+      required: false
+  - type: textarea
+    id: captura
+    attributes:
+      label: "Captura o video / Screenshot or video"
+      description: "Arrastrá la imagen acá. El modo foto (C o F2) sirve. / Drag the image here. Photo mode (C or F2) helps."
+    validations:
+      required: false
+  - type: textarea
+    id: consola
+    attributes:
+      label: "Consola del navegador (F12 → Consola) / Browser console (F12 → Console)"
+      description: "Los mensajes en rojo, si hay. / Red messages, if any."
+      render: shell
+    validations:
+      required: false
+  - type: checkboxes
+    id: sin_archivos
+    attributes:
+      label: "Aviso / Notice"
+      options:
+        - label: "No adjunto archivos del juego. / I am not attaching game files."
+          required: true
