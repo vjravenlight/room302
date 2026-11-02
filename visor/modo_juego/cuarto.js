@@ -316,15 +316,12 @@ export function crearCuarto({M: M, bajar: bajar, E: E}) {
         caja: rect.clone().expandByScalar(.4)
       };
     });
-    let g = giro;
-    if (pos) {
-      M.jugador.position.copy(pos);
-      pisar(true);
-    } else {
+    let g = giro, llegada = null;
+    if (pos) M.jugador.position.copy(pos); else {
       const p = porPuerta != null && puertas.find(x => x.door_no === porPuerta) || null;
       if (p?.arranque_pos) {
-        M.jugador.position.copy(aMundo(p.arranque_pos));
-        pisar();
+        llegada = aMundo(p.arranque_pos);
+        M.jugador.position.copy(llegada);
         g = g ?? rumboDe(p.arranque_dir || [ 0, 0, 1 ]);
       }
     }
@@ -337,6 +334,11 @@ export function crearCuarto({M: M, bajar: bajar, E: E}) {
         M.jugador.rotation.set(0, g, 0);
       }
     }
+    if (llegada) {
+      if (M.enVR()) aLaCabeza(llegada);
+      pisar();
+    } else if (pos) pisar(true);
+    nuevoLugar();
     try {
       api.alCargar?.(s, nombre);
     } catch (e) {
@@ -346,10 +348,22 @@ export function crearCuarto({M: M, bajar: bajar, E: E}) {
     return s;
   }
   const pisoComun = crearPiso(THREE, ESCALA);
+  function cabeza() {
+    if (!M.enVR()) return M.jugador.position.clone();
+    M.jugador.updateMatrixWorld(true);
+    const c = M.camara.getWorldPosition(new THREE.Vector3);
+    c.y = M.jugador.position.y;
+    return c;
+  }
+  function aLaCabeza(p) {
+    const c = cabeza();
+    M.jugador.position.x += p.x - c.x;
+    M.jugador.position.z += p.z - c.z;
+  }
   function pisar(forzar) {
     if (!colision) return;
-    const p = M.jugador.position;
-    const y = pisoComun.visor(colision, p.x, p.y, p.z, forzar ? 5 : PASO, forzar ? 45 : 2.5);
+    const p = M.jugador.position, c = cabeza();
+    const y = pisoComun.visor(colision, c.x, p.y, c.z, forzar ? 5 : PASO, forzar ? 45 : 2.5);
     if (y != null) p.y = y;
   }
   function libre(desde, dir, dist) {
@@ -404,6 +418,7 @@ export function crearCuarto({M: M, bajar: bajar, E: E}) {
     cab.y = M.jugador.position.y;
     if (holgado(cab)) return 0;
     const p = new THREE.Vector3;
+    const afuera = !sobrePiso(cab);
     for (let r = .05; r <= 1.5; r += .05) {
       const n = Math.max(8, Math.round(2 * Math.PI * r / .05));
       for (let i = 0; i < n; i++) {
@@ -412,7 +427,7 @@ export function crearCuarto({M: M, bajar: bajar, E: E}) {
         const y = colision.userData?.derivada ? cab.y : pisoComun.visor(colision, p.x, p.y, p.z, PASO, PASO + .3, PISO_MIN_NY);
         if (y == null) continue;
         p.y = y;
-        if (!holgado(p)) continue;
+        if (!afuera && !holgado(p)) continue;
         M.jugador.position.x += p.x - cab.x;
         M.jugador.position.z += p.z - cab.z;
         M.jugador.position.y = y;
@@ -421,6 +436,43 @@ export function crearCuarto({M: M, bajar: bajar, E: E}) {
       }
     }
     return -1;
+  }
+  const VUELTA_MAX = .8, PASO_VUELTA = .02;
+  const bueno = new THREE.Vector3, _v = new THREE.Vector3;
+  let hayBueno = false, desatascado = false;
+  function nuevoLugar() {
+    hayBueno = false;
+    desatascado = false;
+  }
+  function contener() {
+    if (!colision || colision.userData?.derivada) return 0;
+    const cab = cabeza();
+    if (sobrePiso(cab)) {
+      bueno.copy(cab);
+      hayBueno = true;
+      return 0;
+    }
+    const dx = cab.x - bueno.x, dz = cab.z - bueno.z, L = Math.hypot(dx, dz);
+    if (hayBueno && L <= VUELTA_MAX) {
+      let t = 0;
+      for (let s = PASO_VUELTA; s < L; s += PASO_VUELTA) {
+        _v.set(bueno.x + dx * s / L, bueno.y, bueno.z + dz * s / L);
+        if (!sobrePiso(_v)) break;
+        t = s;
+      }
+      _v.set(bueno.x + dx * t / L, bueno.y, bueno.z + dz * t / L);
+      aLaCabeza(_v);
+      pisar();
+      return L - t;
+    }
+    if (desatascado) return 0;
+    desatascado = true;
+    const r = desatascar();
+    if (r > 0) {
+      bueno.copy(cabeza());
+      hayBueno = true;
+    }
+    return r;
   }
   const adelante = new THREE.Vector3, costado = new THREE.Vector3, arriba = new THREE.Vector3(0, 1, 0);
   let giroPendiente = 0;
@@ -442,6 +494,7 @@ export function crearCuarto({M: M, bajar: bajar, E: E}) {
   }
   function actualizar(dt, {ejes: ejes, teclas: teclas}) {
     const vr = M.enVR();
+    const corrido = contener() > 0;
     const corre = !!(teclas.ShiftLeft || teclas.ShiftRight || teclas.CorrerVR);
     const v = (corre ? 3.4 : 1.5) * dt;
     M.camara.getWorldDirection(adelante);
@@ -479,7 +532,7 @@ export function crearCuarto({M: M, bajar: bajar, E: E}) {
       pisar();
       movio = true;
     }
-    return movio || teclas.ArrowLeft || teclas.ArrowRight || !!(ejes.gx || ejes.gy);
+    return movio || corrido || teclas.ArrowLeft || teclas.ArrowRight || !!(ejes.gx || ejes.gy);
   }
   function girarRig(ang) {
     const cab = M.camara.getWorldPosition(new THREE.Vector3);
@@ -632,7 +685,9 @@ export function crearCuarto({M: M, bajar: bajar, E: E}) {
   }
   function ponerEn(pos, giro = null) {
     M.jugador.position.copy(pos);
+    if (M.enVR()) aLaCabeza(pos);
     pisar(true);
+    nuevoLugar();
     if (giro != null) M.camara.rotation.set(0, giro, 0);
   }
   function puertaAdelante() {
@@ -663,6 +718,8 @@ export function crearCuarto({M: M, bajar: bajar, E: E}) {
     apuntado: apuntado,
     desatascar: desatascar,
     sobrePiso: sobrePiso,
+    holgado: holgado,
+    contener: contener,
     queHayAdelante: queHayAdelante,
     puertaAdelante: puertaAdelante,
     girarRig: girarRig,
