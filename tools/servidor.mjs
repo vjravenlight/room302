@@ -15,6 +15,10 @@ const iReg = process.argv.indexOf("--registrar");
 
 const REGISTRO = iReg > 0 ? process.argv[iReg + 1] : null;
 
+const RED = process.argv.includes("--red");
+
+const HOST_LOCAL = /^(127\.0\.0\.1|localhost|\[::1\])(:\d+)?$/i;
+
 const VISOR = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "visor");
 
 const DATOS = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "datos");
@@ -52,6 +56,10 @@ http.createServer((req, res) => {
     res.writeHead(405);
     return res.end();
   }
+  if (!RED && !req.headers["cf-connecting-ip"] && !HOST_LOCAL.test(req.headers.host || "")) {
+    res.writeHead(403);
+    return res.end();
+  }
   if (CLAVE && req.headers["cf-connecting-ip"]) {
     const u = new URL(req.url, "http://x");
     const galleta = /(?:^|;\s*)sh4clave=([^;]+)/.exec(req.headers.cookie || "")?.[1];
@@ -70,7 +78,13 @@ http.createServer((req, res) => {
       return res.end('<body style="background:#070505;color:#8f857a;font:18px Georgia;display:grid;place-items:center;height:90vh">Hace falta el link con la clave.</body>');
     }
   }
-  let url = decodeURIComponent(new URL(req.url, "http://x").pathname);
+  let url;
+  try {
+    url = decodeURIComponent(new URL(req.url, "http://x").pathname);
+  } catch {
+    res.writeHead(400);
+    return res.end();
+  }
   let raiz = VISOR;
   if (url === "/juego-lista.json") {
     const lista = {};
@@ -105,7 +119,8 @@ http.createServer((req, res) => {
   }
   if (url.endsWith("/")) url += "index.html";
   const f = path.join(raiz, path.normalize(url));
-  if (!f.startsWith(path.resolve(raiz))) {
+  const base = path.resolve(raiz);
+  if (f !== base && !f.startsWith(base + path.sep)) {
     res.writeHead(403);
     return res.end();
   }
@@ -166,4 +181,4 @@ http.createServer((req, res) => {
       enviar(0);
     });
   }
-}).listen(PUERTO, "0.0.0.0", () => console.log(`SH4 visor en http://127.0.0.1:${PUERTO}/  (juego: ${JUEGO})`));
+}).listen(PUERTO, RED ? "0.0.0.0" : "127.0.0.1", () => console.log(`SH4 visor en http://127.0.0.1:${PUERTO}/  (juego: ${JUEGO})${RED ? "  [abierto a la red]" : ""}`));

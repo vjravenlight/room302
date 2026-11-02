@@ -96,8 +96,10 @@ playing. Nothing else to install: Node is included.
 
 **The first run needs internet:** it downloads some data tables (about 6 MB) from `sh4.ravenlight.net` and keeps them. After that it works offline.
 
-**Phone or tablet:** with the downloaded version running on the PC, open `http://<your PC's IP>:8130/suite.html` from a
-phone on the same Wi-Fi network (if Windows asks about the firewall, allow it on private networks).
+**Phone or tablet:** on the PC run `JUGAR_EN_RED.cmd` instead of `JUGAR.cmd`. It shows the address
+(`http://<your PC's IP>:8130/suite.html`) to open from a phone on the same Wi-Fi. Use it **only on your home network**:
+`JUGAR.cmd` only serves the PC itself, for safety (if Windows asks about the firewall, allow it on "Private networks"
+only).
 
 ### 3. With a VR headset (Meta Quest / Pico)
 

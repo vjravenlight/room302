@@ -96,8 +96,10 @@ dejala abierta mientras jugás. No hay que instalar nada más, porque Node ya vi
 
 **La primera vez necesita internet:** baja unas tablas de datos (unos 6 MB) de `sh4.ravenlight.net` y las guarda. Después anda sin conexión.
 
-**Celular o tablet:** con la versión descargada abierta en la PC, desde el celular conectado a la misma red Wi-Fi abrí
-`http://<IP de tu PC>:8130/suite.html` (si Windows pregunta por el firewall, dejá pasar la conexión en la red privada).
+**Celular o tablet:** en la PC abrí `JUGAR_EN_RED.cmd` en vez de `JUGAR.cmd`. Te muestra la dirección
+(`http://<IP de tu PC>:8130/suite.html`) para abrir desde el celular conectado al mismo Wi-Fi. Usalo **solo en la red de
+tu casa**: `JUGAR.cmd` atiende únicamente a la propia PC, por seguridad (si Windows pregunta por el firewall, dejá pasar la
+conexión solo en "Redes privadas").
 
 ### 3. Con casco de realidad virtual (Meta Quest / Pico)
 

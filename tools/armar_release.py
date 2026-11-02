@@ -78,14 +78,57 @@ cd /d "%~dp0"
 if not exist "config\carpeta_juego.txt" ( call "%~dp0INSTALAR.cmd" & exit /b )
 set /p CARPETA=<"config\carpeta_juego.txt"
 echo.
-echo   SH4 web en / at:  http://127.0.0.1:8130/suite.html
-echo   Juego / Game:     %CARPETA%
+echo   SH4 web - SOLO EN ESTA PC / THIS PC ONLY
+echo   -----------------------------------------
+echo   En esta PC / On this PC:   http://127.0.0.1:8130/suite.html   (se abre solo / opens by itself)
+echo   Juego / Game:              %CARPETA%
 echo.
-echo   Dejala abierta mientras jugas. Para el casco por cable: CASCO_USB.cmd
-echo   Keep this window open while playing. For a headset over USB: CASCO_USB.cmd
+echo   Otras formas / Other ways:
+echo     - Casco con Link, Air Link o Virtual Desktop: la misma direccion en Chrome o Edge de esta PC.
+echo     - Casco por cable USB / Headset over USB:   CASCO_USB.cmd  (en el casco: http://127.0.0.1:8130/suite.html)
+echo     - Celular, tablet o casco por wifi / over Wi-Fi:  cerra esta ventana y abri JUGAR_EN_RED.cmd
+echo       (solo en la red de tu casa / home network only)
+echo.
+echo   Dejala abierta mientras jugas. / Keep this window open while playing.
 echo.
 start "" "http://127.0.0.1:8130/suite.html"
 "%~dp0node\node.exe" "%~dp0app\tools\servidor.mjs" 8130 "%CARPETA%"
+pause
+'''
+
+# Igual que JUGAR pero abierto a la red de la casa (celular o casco por wifi). El normal solo atiende a esta PC
+# (seguridad, 02/11/2026).
+JUGAR_RED = r'''@echo off
+chcp 65001 >nul
+title SH4 web - servidor EN LA RED (cerra esta ventana para apagarlo / close this window to stop it)
+cd /d "%~dp0"
+if not exist "config\carpeta_juego.txt" ( call "%~dp0INSTALAR.cmd" & exit /b )
+set /p CARPETA=<"config\carpeta_juego.txt"
+echo.
+echo   SH4 web - EN LA RED DE TU CASA / ON YOUR HOME NETWORK
+echo   -----------------------------------------------------
+echo   OJO: asi cualquiera en tu misma red wifi puede abrirlo. Usalo solo en la red de tu casa,
+echo   nunca en un wifi publico (bar, hotel, facultad). Para jugar solo en esta PC usa JUGAR.cmd.
+echo   WARNING: anyone on your Wi-Fi can open it. Use it only on your home network, never on public Wi-Fi.
+echo.
+echo   En esta PC / On this PC:   http://127.0.0.1:8130/suite.html   (se abre solo / opens by itself)
+echo   Juego / Game:              %CARPETA%
+echo.
+echo   En el celular, tablet o casco (mismo wifi) / On your phone, tablet or headset (same Wi-Fi):
+for /f "usebackq delims=" %%i in (`powershell -NoProfile -Command "(Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.IPAddress -notlike '127.*' -and $_.IPAddress -notlike '169.254.*' }).IPAddress"`) do echo      http://%%i:8130/suite.html
+echo   (si aparece mas de una, proba la que empieza con 192.168 / if there are several, try the 192.168 one)
+echo.
+echo   Otras formas / Other ways:
+echo     - Casco con Link, Air Link o Virtual Desktop: la direccion 127.0.0.1 en Chrome o Edge de esta PC.
+echo     - Casco por cable USB / Headset over USB:   CASCO_USB.cmd
+echo.
+echo   Si Windows pregunta por el firewall, deja pasar la conexion solo en "Redes privadas".
+echo   If Windows asks about the firewall, allow it on "Private networks" only.
+echo.
+echo   Dejala abierta mientras jugas. / Keep this window open while playing.
+echo.
+start "" "http://127.0.0.1:8130/suite.html"
+"%~dp0node\node.exe" "%~dp0app\tools\servidor.mjs" 8130 "%CARPETA%" --red
 pause
 '''
 
@@ -134,7 +177,12 @@ CÓMO SE USA (3 pasos)
 CASCO VR (Meta Quest / Pico)
 - Desde la PC: con Quest Link, Air Link o Virtual Desktop, abrí http://127.0.0.1:8130/suite.html en Chrome o Edge de la PC.
 - Con el navegador del casco y el cable USB: corré CASCO_USB.cmd (necesita adb, ahí te dice cómo).
+- Con el navegador del casco por wifi: JUGAR_EN_RED.cmd (solo en la red de tu casa).
 - Navegadores recomendados: Chrome o Edge en la PC; el navegador del Quest/Pico en el casco.
+
+CELULAR O TABLET
+- Cerrá JUGAR.cmd y abrí JUGAR_EN_RED.cmd: te muestra la dirección para abrir en el celular (misma red wifi).
+- Usalo solo en la red de tu casa, nunca en un wifi público. JUGAR.cmd solo atiende a esta PC, por seguridad.
 
 HOW TO USE (3 steps)
 1. Unzip this folder anywhere.
@@ -142,6 +190,7 @@ HOW TO USE (3 steps)
 3. Your browser opens and you're in. Next times: the "SH4 web" shortcut on the Desktop (or JUGAR.cmd).
    Keep the black server window open while playing.
 VR: Quest Link / Air Link / Virtual Desktop with Chrome or Edge on the PC, or CASCO_USB.cmd for the headset browser over USB.
+Phone, tablet or headset over Wi-Fi: close JUGAR.cmd and run JUGAR_EN_RED.cmd (home network only, never public Wi-Fi).
 
 FeniXVOID · Project Ravenlight
 '''
@@ -156,6 +205,7 @@ if __name__ == '__main__':
     shutil.copy2(NODE, os.path.join(SALIDA, 'node', 'node.exe'))
     os.makedirs(os.path.join(SALIDA, 'adb'))
     escribir('INSTALAR.cmd', INSTALAR); escribir('JUGAR.cmd', JUGAR); escribir('CASCO_USB.cmd', CASCO)
+    escribir('JUGAR_EN_RED.cmd', JUGAR_RED)
     escribir('LEEME.txt', LEEME); escribir(os.path.join('adb', 'PONER_ADB_ACA.txt'), 'adb.exe, AdbWinApi.dll, AdbWinUsbApi.dll (Android Platform Tools)\n')
     zipruta = os.path.join(RAIZ, '_release', f'SH4web_v{VERSION}.zip')
     with zipfile.ZipFile(zipruta, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
