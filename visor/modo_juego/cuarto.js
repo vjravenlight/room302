@@ -216,6 +216,7 @@ export function crearCuarto({M: M, bajar: bajar, E: E}) {
       try {
         const pj = await crearModelo(def);
         pj.radio = !!def.radio;
+        if (!pj.radio) pj.grupo.userData.enDemo = true;
         if (pj.radio) {
           pj.grupo.visible = !!api.radioPrendida;
           pj.grupo.traverse(x => {
